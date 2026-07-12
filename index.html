@@ -9,6 +9,9 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600;700&family=Archivo:wght@500;600;700;800&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"RealEstateAgent","name":"J&J Real Estate Group","alternateName":"J&J Real Estate Group at Capstone Realty","description":"Luxury real estate advisory in Huntsville & North Alabama. Sellers, buyers, new construction, investors, and relocation.","areaServed":["Huntsville AL","Madison AL","Athens AL","Decatur AL","Owens Cross Roads AL","Meridianville AL","Hazel Green AL","Harvest AL"],"parentOrganization":{"@type":"Organization","name":"Capstone Realty","url":"https://www.choosecapstone.com/"},"employee":[{"@type":"RealEstateAgent","name":"Chrystal Justice","telephone":"+1-256-503-1924","email":"Chrystal@choosecapstone.com"},{"@type":"RealEstateAgent","name":"Patsy Jenkins","telephone":"+1-270-881-7622","email":"Patsy@choosecapstone.com"}],"slogan":"Exceptional Properties. Extraordinary Results."}
+</script>
 <style>
 :root{
   --black:#0a0a0a; --ink:#111113; --coal:#161618; --smoke:#1e1e21;
@@ -55,6 +58,8 @@ nav.solid{background:rgba(10,10,10,.92);backdrop-filter:blur(14px);box-shadow:0 
 .nav-links a:not(.nav-cta)::after{content:'';position:absolute;left:50%;right:50%;bottom:0;height:1px;background:linear-gradient(90deg,transparent,var(--gold-lt),transparent);transition:left .4s cubic-bezier(.2,.7,.3,1),right .4s cubic-bezier(.2,.7,.3,1)}
 .nav-links a:not(.nav-cta):hover{color:var(--gold-lt);opacity:1}
 .nav-links a:not(.nav-cta):hover::after{left:0;right:0}
+.nav-links a.active{color:var(--gold-lt)!important}
+.nav-links a.active::after{left:0;right:0;background:linear-gradient(90deg,var(--gold-dk),var(--gold-lt),var(--gold-dk));height:2px}
 .nav-cta{font-family:var(--grotesk);padding:.72rem 1.7rem;color:#151004!important;font-weight:700;letter-spacing:.14em;font-size:.85rem;text-transform:uppercase;background:linear-gradient(120deg,#8a6a2f 0%,#c6a35d 25%,#f0ddab 50%,#c6a35d 75%,#8a6a2f 100%);background-size:200% auto;border:1px solid rgba(240,221,171,.5);box-shadow:0 2px 18px rgba(198,163,93,.25),inset 0 1px 0 rgba(255,244,214,.55);transition:background-position .6s ease,box-shadow .4s,transform .3s;position:relative}
 .nav-cta:hover{background-position:right center;box-shadow:0 4px 28px rgba(198,163,93,.5),inset 0 1px 0 rgba(255,244,214,.7);transform:translateY(-1px)}
 .burger{display:none;background:none;border:none;cursor:pointer;z-index:110}
@@ -238,9 +243,9 @@ footer{border-top:1px solid var(--line);padding:3.5rem 0 2.5rem;background:var(-
 #prog{position:fixed;top:0;left:0;height:2px;width:0;background:linear-gradient(90deg,var(--gold-dk),var(--gold),var(--gold-lt));z-index:301;box-shadow:0 0 8px rgba(198,163,93,.55)}
 
 /* custom gold cursor */
-.cur-dot,.cur-ring{position:fixed;top:0;left:0;pointer-events:none;z-index:302;border-radius:50%;transform:translate(-50%,-50%);opacity:0;transition:opacity .3s}
+.cur-dot,.cur-ring{position:fixed;top:0;left:0;pointer-events:none;z-index:302;border-radius:50%;transform:translate(-50%,-50%);opacity:0;transition:opacity .3s;will-change:transform}
 .cur-dot{width:5px;height:5px;background:var(--gold-lt)}
-.cur-ring{width:34px;height:34px;border:1px solid rgba(198,163,93,.65);transition:opacity .3s,width .25s,height .25s,border-color .25s}
+.cur-ring{width:34px;height:34px;border:1px solid rgba(198,163,93,.65);transition:opacity .3s,width .25s,height .25s,border-color .25s;margin:0}
 body.cur-on .cur-dot,body.cur-on .cur-ring{opacity:1}
 body.cur-hover .cur-ring{width:56px;height:56px;border-color:var(--gold-lt)}
 @media(pointer:coarse){.cur-dot,.cur-ring{display:none}}
@@ -260,12 +265,12 @@ body.cur-hover .cur-ring{width:56px;height:56px;border-color:var(--gold-lt)}
 #lb-next{right:2rem;top:50%;transform:translateY(-50%)}
 .gal-grid figure{cursor:pointer}
 
-/* communities marquee */
-.marquee{overflow:hidden;padding:2.2rem 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--black)}
-.marquee-track{display:flex;white-space:nowrap;width:max-content;animation:mq 46s linear infinite}
-.marquee span{font-family:var(--serif);font-size:clamp(2.2rem,4.4vw,3.6rem);font-weight:500;padding:0 1.6rem;color:transparent;-webkit-text-stroke:1px rgba(198,163,93,.55);letter-spacing:.04em}
-.marquee span.fill{color:var(--gold);-webkit-text-stroke:0}
-.marquee i{font-style:normal;color:var(--gold);font-size:1.2rem;align-self:center}
+/* communities marquee — slim navy trust band above the footer */
+.marquee{overflow:hidden;padding:1rem 0;border-top:1px solid rgba(198,163,93,.35);border-bottom:1px solid rgba(198,163,93,.35);background:linear-gradient(135deg,var(--navy) 0%,var(--navy-lt) 50%,var(--navy) 100%)}
+.marquee-track{display:flex;white-space:nowrap;width:max-content;animation:mq 40s linear infinite;align-items:center}
+.marquee span{font-family:var(--serif);font-size:clamp(1.1rem,2vw,1.55rem);font-weight:600;padding:0 1.2rem;color:#c9d4e4;letter-spacing:.05em}
+.marquee span.fill{color:var(--gold-lt)}
+.marquee i{font-style:normal;color:var(--gold);font-size:.7rem;align-self:center}
 @keyframes mq{to{transform:translateX(-50%)}}
 .marquee:hover .marquee-track{animation-play-state:paused}
 
@@ -302,6 +307,11 @@ body.cur-hover .cur-ring{width:56px;height:56px;border-color:var(--gold-lt)}
 .consent{display:flex;gap:.7rem;align-items:flex-start;font-size:.78rem;color:var(--mist);line-height:1.5}
 .consent input{width:16px;height:16px;padding:0;margin-top:.2rem;accent-color:var(--gold);flex-shrink:0}
 .fine{font-size:.66rem;color:#6f6c66;line-height:1.7;margin-top:.3rem}
+
+/* back to top */
+#toTop{position:fixed;right:1.6rem;bottom:1.6rem;z-index:150;width:48px;height:48px;border-radius:50%;background:linear-gradient(135deg,var(--navy),var(--navy-lt));border:1px solid rgba(198,163,93,.5);color:var(--gold-lt);font-size:1.2rem;cursor:pointer;opacity:0;pointer-events:none;transition:opacity .4s,transform .3s;box-shadow:0 8px 30px rgba(0,0,0,.5)}
+#toTop.show{opacity:1;pointer-events:auto}
+#toTop:hover{transform:translateY(-3px);border-color:var(--gold)}
 
 /* gold page frame — echoes the framed logo */
 .page-frame{position:fixed;inset:12px;border:1px solid rgba(198,163,93,.22);z-index:96;pointer-events:none}
@@ -619,13 +629,6 @@ body::after{content:'';position:fixed;inset:0;z-index:95;pointer-events:none;opa
   </div>
 </section>
 
-<!-- COMMUNITIES MARQUEE -->
-<div class="marquee" aria-hidden="true">
-  <div class="marquee-track" id="mqTrack">
-    <span class="fill">Huntsville</span><i>✦</i><span>Madison</span><i>✦</i><span class="fill">Athens</span><i>✦</i><span>Decatur</span><i>✦</i><span class="fill">Owens Cross Roads</span><i>✦</i><span>Meridianville</span><i>✦</i><span class="fill">Hazel Green</span><i>✦</i><span>Harvest</span><i>✦</i>
-  </div>
-</div>
-
 <!-- HUNTSVILLE -->
 <section class="hsv" id="huntsville">
   <div class="wrap">
@@ -792,6 +795,16 @@ body::after{content:'';position:fixed;inset:0;z-index:95;pointer-events:none;opa
   <button class="lb-btn" id="lb-next" aria-label="Next">›</button>
 </div>
 
+<!-- COMMUNITIES MARQUEE — trust band above footer -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track" id="mqTrack">
+    <span class="fill">Huntsville</span><i>✦</i><span>Madison</span><i>✦</i><span class="fill">Athens</span><i>✦</i><span>Decatur</span><i>✦</i><span class="fill">Owens Cross Roads</span><i>✦</i><span>Meridianville</span><i>✦</i><span class="fill">Hazel Green</span><i>✦</i><span>Harvest</span><i>✦</i>
+  </div>
+</div>
+
+<!-- BACK TO TOP -->
+<button id="toTop" aria-label="Back to top">↑</button>
+
 <!-- FOOTER -->
 <footer>
   <div class="wrap">
@@ -869,13 +882,14 @@ addEventListener('scroll', () => {
   prog.style.width = (h.scrollTop / (h.scrollHeight - h.clientHeight) * 100) + '%';
 }, {passive:true});
 
-// custom gold cursor — locked 1:1 to the mouse
+// custom gold cursor — GPU transform, zero lag
 if (matchMedia('(pointer:fine)').matches){
   const dot = document.getElementById('curDot'), ring = document.getElementById('curRing');
   addEventListener('mousemove', e => {
     document.body.classList.add('cur-on');
-    dot.style.left = ring.style.left = e.clientX + 'px';
-    dot.style.top  = ring.style.top  = e.clientY + 'px';
+    const t = `translate3d(${e.clientX}px,${e.clientY}px,0) translate(-50%,-50%)`;
+    dot.style.transform = t;
+    ring.style.transform = t;
   }, {passive:true});
   document.addEventListener('mouseleave', () => document.body.classList.remove('cur-on'));
   document.querySelectorAll('a, button, .gal-grid figure').forEach(el => {
@@ -924,6 +938,22 @@ addEventListener('keydown', e => {
 // seamless marquee (duplicate track content)
 const mq = document.getElementById('mqTrack');
 mq.innerHTML += mq.innerHTML;
+
+// scroll-spy — highlight the section you're in
+const spyIds = ['sellers','buyers','new-construction','team','community'];
+const navAnchors = [...document.querySelectorAll('.nav-links a:not(.nav-cta)')];
+const spy = new IntersectionObserver(entries => {
+  entries.forEach(en => {
+    if (!en.isIntersecting) return;
+    navAnchors.forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#' + en.target.id));
+  });
+}, {rootMargin: '-35% 0px -55% 0px'});
+spyIds.forEach(id => { const el = document.getElementById(id); if (el) spy.observe(el); });
+
+// back to top
+const toTop = document.getElementById('toTop');
+addEventListener('scroll', () => toTop.classList.toggle('show', scrollY > innerHeight * 1.5), {passive:true});
+toTop.addEventListener('click', () => scrollTo({top:0, behavior:'smooth'}));
 
 // Get in Touch modal
 const gitModal = document.getElementById('gitModal');
