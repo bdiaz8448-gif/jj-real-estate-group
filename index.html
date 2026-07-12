@@ -45,7 +45,7 @@ section{padding:clamp(5rem,10vw,8.5rem) 0;position:relative}
 nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:1.1rem 4vw;display:flex;align-items:center;justify-content:space-between;transition:background .4s,box-shadow .4s,padding .4s}
 nav.solid{background:rgba(10,10,10,.92);backdrop-filter:blur(14px);box-shadow:0 1px 0 var(--line);padding:.7rem 4vw}
 .brand{display:flex;align-items:center;gap:.85rem}
-.brand-logo{height:46px;width:46px;object-fit:cover;border:1px solid rgba(198,163,93,.4);transition:box-shadow .4s}
+.brand-logo{height:60px;width:60px;object-fit:cover;border:1px solid rgba(198,163,93,.55);box-shadow:0 0 14px rgba(198,163,93,.25);transition:box-shadow .4s;filter:brightness(1.35) contrast(1.08)}
 .brand:hover .brand-logo{box-shadow:0 0 18px rgba(198,163,93,.45)}
 .brand-mark{font-family:var(--serif);font-size:1.55rem;color:var(--gold);letter-spacing:.05em}
 .brand-sub{font-size:.6rem;letter-spacing:.34em;text-transform:uppercase;color:var(--mist)}
@@ -65,18 +65,13 @@ nav.solid{background:rgba(10,10,10,.92);backdrop-filter:blur(14px);box-shadow:0 
 
 /* ---------- hero ---------- */
 header{height:100svh;min-height:640px;position:relative;display:flex;align-items:center;justify-content:center;text-align:center;overflow:hidden}
-.hero-bg{position:absolute;inset:-8%;background:url('assets/living-dusk.jpg') center/cover;will-change:transform;filter:brightness(.5) saturate(.9)}
-.hero-veil{position:absolute;inset:0;background:radial-gradient(ellipse at center,rgba(10,10,10,.15) 0%,rgba(10,10,10,.78) 100%),linear-gradient(180deg,rgba(10,10,10,.55),transparent 30%,transparent 60%,var(--black) 100%)}
-.hero-light{position:absolute;inset:-8%;background:url('assets/living-dusk.jpg') center/cover;filter:brightness(1.05) saturate(1.05);will-change:transform;pointer-events:none;opacity:0;transition:opacity .5s;
-  -webkit-mask-image:radial-gradient(circle var(--fr,290px) at var(--fx,50%) var(--fy,50%),rgba(0,0,0,.95) 0%,rgba(0,0,0,.5) 55%,transparent 100%);
-  mask-image:radial-gradient(circle var(--fr,290px) at var(--fx,50%) var(--fy,50%),rgba(0,0,0,.95) 0%,rgba(0,0,0,.5) 55%,transparent 100%)}
-header:hover .hero-light{opacity:1}
-@media(pointer:coarse){.hero-light{display:none}}
+.hero-bg{position:absolute;inset:-8%;background:url('assets/living-dusk.jpg') center/cover;will-change:transform;filter:brightness(1.02) saturate(1.05)}
+.hero-veil{position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,10,10,.62),rgba(10,10,10,.18) 30%,rgba(10,10,10,.12) 58%,var(--black) 100%)}
 .hero-in{position:relative;z-index:2;padding:0 6vw;max-width:960px}
 .hero-in .eyebrow{margin-bottom:2rem}
-h1{font-size:clamp(2.6rem,6.4vw,5.2rem);font-weight:500}
+h1{font-size:clamp(2.6rem,6.4vw,5.2rem);font-weight:500;text-shadow:0 2px 22px rgba(0,0,0,.85),0 1px 4px rgba(0,0,0,.9)}
 h1 em{font-style:italic;color:var(--gold-lt)}
-.hero-sub{margin:1.8rem auto 2.8rem;max-width:560px;color:#d8d4ca;font-size:1.05rem}
+.hero-sub{margin:1.8rem auto 2.8rem;max-width:560px;color:#f0ece2;font-size:1.05rem;text-shadow:0 1px 12px rgba(0,0,0,.9),0 1px 3px rgba(0,0,0,.95)}
 .btn{display:inline-block;font-size:.76rem;letter-spacing:.3em;text-transform:uppercase;padding:1.05rem 2.6rem;border:1px solid var(--gold);color:var(--gold);position:relative;overflow:hidden;transition:color .35s}
 .btn::before{content:'';position:absolute;inset:0;background:var(--gold);transform:scaleX(0);transform-origin:left;transition:transform .35s}
 .btn:hover{color:var(--black)}
@@ -212,9 +207,12 @@ textarea{resize:vertical;min-height:120px}
 footer{border-top:1px solid var(--line);padding:3.5rem 0 2.5rem;background:var(--ink)}
 .foot-top{display:flex;align-items:center;justify-content:space-between;gap:2rem;flex-wrap:wrap}
 .foot-logos{display:flex;align-items:center;gap:1.6rem}
-.foot-logos img{height:40px;width:auto;filter:invert(1) brightness(1.6);opacity:.75}
-.foot-logos img.cap{height:30px}
-.foot-logo{height:130px;width:130px;object-fit:cover;border:1px solid rgba(198,163,93,.35);filter:none!important;opacity:1!important}
+.foot-logos img{height:64px;width:auto;filter:invert(1) brightness(1.7);opacity:.9;transition:opacity .3s}
+.foot-logos img.cap{height:46px}
+.foot-logos a:hover img{opacity:1}
+.foot-logo{height:210px;width:210px;object-fit:cover;border:1px solid rgba(198,163,93,.4);filter:brightness(1.15)!important;opacity:1!important}
+.foot-credits{margin-top:1rem;font-size:.65rem;color:#55524d;line-height:1.8}
+.foot-credits a{color:#6f6c66;text-decoration:underline}
 .foot-note{margin-top:2.4rem;font-size:.75rem;color:#6f6c66;line-height:1.9}
 
 /* ---------- luxury signature touches ---------- */
@@ -222,7 +220,7 @@ footer{border-top:1px solid var(--line);padding:3.5rem 0 2.5rem;background:var(-
 #loader{position:fixed;inset:0;background:var(--black);z-index:300;display:flex;align-items:center;justify-content:center;transition:opacity .9s ease,visibility .9s}
 #loader.done{opacity:0;visibility:hidden}
 .loader-in{text-align:center}
-.loader-logo{width:min(300px,60vw);height:auto;margin:0 auto;display:block;animation:fadeUp 1.1s ease both;box-shadow:0 20px 70px rgba(198,163,93,.18)}
+.loader-logo{width:min(420px,74vw);height:auto;margin:0 auto;display:block;animation:fadeUp 1.1s ease both;box-shadow:0 20px 70px rgba(198,163,93,.22);filter:brightness(1.15)}
 .loader-line{display:block;width:0;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent);margin:1.1rem auto;animation:lineGrow 1.4s .2s ease forwards}
 .loader-sub{font-size:.6rem;letter-spacing:.4em;text-transform:uppercase;color:var(--mist);display:block;opacity:0;animation:fadeUp .9s .6s ease forwards}
 @keyframes lineGrow{to{width:220px}}
@@ -269,6 +267,40 @@ body.cur-hover .cur-ring{width:56px;height:56px;border-color:var(--gold-lt)}
 @keyframes mq{to{transform:translateX(-50%)}}
 .marquee:hover .marquee-track{animation-play-state:paused}
 
+/* ---------- Huntsville section ---------- */
+.hsv{background:var(--black)}
+.hsv-head{display:grid;grid-template-columns:1fr auto;gap:3rem;align-items:center;margin-bottom:3.4rem}
+.hsv h2{font-size:clamp(2.4rem,5.4vw,4.4rem)}
+.globe{width:190px;height:190px;flex-shrink:0}
+.globe circle,.globe ellipse,.globe path{fill:none;stroke:var(--gold);stroke-width:1;opacity:.75}
+.globe .glow{filter:drop-shadow(0 0 10px rgba(198,163,93,.45))}
+.hsv-grid{display:grid;grid-template-columns:1.5fr 1fr;gap:14px}
+.hsv-grid figure{position:relative;overflow:hidden;margin:0}
+.hsv-grid img{width:100%;height:100%;object-fit:cover;transition:transform 1.1s cubic-bezier(.2,.7,.3,1);filter:saturate(1.02)}
+.hsv-grid figure:hover img{transform:scale(1.05)}
+.hsv-grid figure:first-child{aspect-ratio:16/10}
+.hsv-grid figure:nth-child(2){aspect-ratio:auto}
+.hsv-cap{position:absolute;left:0;right:0;bottom:0;padding:1.1rem 1.4rem;background:linear-gradient(transparent,rgba(10,10,10,.9));font-size:.7rem;letter-spacing:.28em;text-transform:uppercase;color:var(--gold-lt)}
+.hsv-pano{margin-top:14px;position:relative;overflow:hidden}
+.hsv-pano img{width:100%;height:200px;object-fit:cover;filter:saturate(1.02)}
+.hsv-facts{display:grid;grid-template-columns:repeat(3,1fr);gap:1.6rem;margin-top:3.2rem}
+.hsv-facts .p-card b{font-size:1.3rem}
+
+/* ---------- Get in Touch modal ---------- */
+#gitModal{position:fixed;inset:0;z-index:260;background:rgba(6,6,6,.82);backdrop-filter:blur(12px);display:flex;align-items:center;justify-content:center;padding:4vw;opacity:0;pointer-events:none;transition:opacity .45s}
+#gitModal.open{opacity:1;pointer-events:auto}
+.git-box{background:linear-gradient(160deg,#141414,#0c0c0c);border:1px solid rgba(198,163,93,.4);box-shadow:0 40px 120px rgba(0,0,0,.7),0 0 60px rgba(198,163,93,.12);max-width:560px;width:100%;max-height:90svh;overflow-y:auto;padding:2.6rem 2.6rem 2.2rem;position:relative;transform:translateY(24px) scale(.98);transition:transform .45s cubic-bezier(.2,.7,.3,1)}
+#gitModal.open .git-box{transform:none}
+#git-close{position:absolute;top:1rem;right:1rem;background:none;border:1px solid var(--line);color:var(--gold);width:40px;height:40px;border-radius:50%;cursor:pointer;font-size:1rem;transition:background .3s,color .3s}
+#git-close:hover{background:var(--gold);color:var(--black)}
+.git-logo{width:130px;height:130px;object-fit:cover;margin:0 auto 1.2rem;display:block;border:1px solid rgba(198,163,93,.4);filter:brightness(1.2)}
+.git-box h3{font-size:2rem;text-align:center;color:var(--cream)}
+.git-box .git-sub{text-align:center;color:var(--mist);font-size:.9rem;margin:.5rem 0 1.6rem}
+.git-box form{display:grid;gap:.9rem}
+.consent{display:flex;gap:.7rem;align-items:flex-start;font-size:.78rem;color:var(--mist);line-height:1.5}
+.consent input{width:16px;height:16px;padding:0;margin-top:.2rem;accent-color:var(--gold);flex-shrink:0}
+.fine{font-size:.66rem;color:#6f6c66;line-height:1.7;margin-top:.3rem}
+
 /* gold page frame — echoes the framed logo */
 .page-frame{position:fixed;inset:12px;border:1px solid rgba(198,163,93,.22);z-index:96;pointer-events:none}
 @media(max-width:960px){.page-frame{display:none}}
@@ -293,6 +325,16 @@ body::after{content:'';position:fixed;inset:0;z-index:95;pointer-events:none;opa
   .j-step{display:flex;align-items:baseline;gap:1rem;text-align:left}
   .j-step i{margin:0}
   .promise-grid{grid-template-columns:1fr 1fr}
+  .hsv-head{grid-template-columns:1fr;gap:2rem}
+  .globe{width:130px;height:130px;margin:0 auto}
+  .hsv-grid{grid-template-columns:1fr}
+  .hsv-grid figure:nth-child(2){aspect-ratio:3/4}
+  .hsv-facts{grid-template-columns:1fr}
+  .hsv-pano img{height:150px}
+  .foot-logo{height:150px;width:150px}
+  .foot-logos img{height:48px}
+  .foot-logos img.cap{height:36px}
+  .git-box{padding:2rem 1.4rem}
   /* mobile: comparison table becomes elegant stacked cards */
   .diff-row{grid-template-columns:1fr}
   .diff-row:first-child{display:none}
@@ -340,7 +382,7 @@ body::after{content:'';position:fixed;inset:0;z-index:95;pointer-events:none;opa
     <a href="#new-construction">New Construction</a>
     <a href="#team">Advisors</a>
     <a href="#community">Community</a>
-    <a href="#contact" class="nav-cta">Private Consultation</a>
+    <a href="#" class="nav-cta open-git">Get in Touch</a>
   </div>
   <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
 </nav>
@@ -350,19 +392,17 @@ body::after{content:'';position:fixed;inset:0;z-index:95;pointer-events:none;opa
   <a href="#new-construction">New Construction</a>
   <a href="#team">Advisors</a>
   <a href="#community">Community</a>
-  <a href="#contact">Private Consultation</a>
+  <a href="#" class="open-git">Get in Touch</a>
 </div>
 
 <!-- HERO -->
 <header id="top">
   <div class="hero-bg" id="heroBg"></div>
   <div class="hero-veil"></div>
-  <div class="hero-light" id="heroLight"></div>
   <div class="hero-in">
-    <span class="eyebrow rv on">Luxury Real Estate Advisory · Huntsville &amp; North Alabama</span>
     <h1><span class="hl"><span>Exceptional Properties.</span></span><span class="hl"><span><em>Extraordinary Results.</em></span></span></h1>
     <p class="hero-sub rv on d2">Imagine walking into the next chapter of your life already knowing it was handled beautifully. That feeling — certainty, calm, quiet confidence — is what we deliver, before, during, and long after closing.</p>
-    <a href="#contact" class="btn rv on d3"><span>Begin Your Private Consultation</span></a>
+    <a href="#" class="btn solid rv on d3 open-git"><span>Get in Touch</span></a>
   </div>
   <div class="hero-scroll">Discover</div>
 </header>
@@ -578,6 +618,49 @@ body::after{content:'';position:fixed;inset:0;z-index:95;pointer-events:none;opa
   </div>
 </div>
 
+<!-- HUNTSVILLE -->
+<section class="hsv" id="huntsville">
+  <div class="wrap">
+    <div class="hsv-head rv">
+      <div>
+        <span class="eyebrow">Our Market</span>
+        <h2>Rooted in <em style="color:var(--gold-lt)">Rocket City.</em></h2>
+        <div class="gold-rule"></div>
+        <p class="lede">Huntsville isn't just where we work — it's where we live, give, and grow. One of America's fastest-rising cities, powered by aerospace, defense, and technology, with buyers arriving from every state. We turn that momentum into your advantage.</p>
+      </div>
+      <svg class="globe glow" viewBox="0 0 200 200" aria-hidden="true">
+        <circle cx="100" cy="100" r="88"/>
+        <ellipse cx="100" cy="100" rx="88" ry="30"/>
+        <ellipse cx="100" cy="62" rx="70" ry="20" opacity=".4"/>
+        <ellipse cx="100" cy="138" rx="70" ry="20" opacity=".4"/>
+        <ellipse cx="100" cy="100" rx="88" ry="88">
+          <animate attributeName="rx" values="88;2;88" dur="9s" repeatCount="indefinite"/>
+        </ellipse>
+        <ellipse cx="100" cy="100" rx="60" ry="88" opacity=".5">
+          <animate attributeName="rx" values="60;88;2;60" dur="9s" repeatCount="indefinite"/>
+        </ellipse>
+        <circle cx="128" cy="82" r="4" fill="#e3c98a" stroke="none">
+          <animate attributeName="opacity" values="1;.3;1" dur="2.4s" repeatCount="indefinite"/>
+        </circle>
+        <text x="140" y="78" fill="#e3c98a" font-size="11" font-family="Inter,sans-serif" letter-spacing="1">HSV</text>
+      </svg>
+    </div>
+    <div class="hsv-grid rv d1">
+      <figure><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Skyline_of_Huntsville.jpg/1600px-Skyline_of_Huntsville.jpg" alt="Downtown Huntsville at dusk from Big Spring Park" loading="lazy"><figcaption class="hsv-cap">Downtown · Big Spring Park</figcaption></figure>
+      <figure><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Saturn_V_Huntsville%40Night.jpg/960px-Saturn_V_Huntsville%40Night.jpg" alt="Saturn V rocket at night, U.S. Space & Rocket Center, Huntsville" loading="lazy"><figcaption class="hsv-cap">U.S. Space &amp; Rocket Center</figcaption></figure>
+    </div>
+    <div class="hsv-pano rv d2">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Huntsville%2C_Alabama_%282023%29.jpg/1920px-Huntsville%2C_Alabama_%282023%29.jpg" alt="Downtown Huntsville skyline panorama" loading="lazy">
+      <figcaption class="hsv-cap">A skyline that keeps rising — and so do its home values</figcaption>
+    </div>
+    <div class="hsv-facts">
+      <div class="p-card rv"><b>#1 Best Places to Live</b><p>Huntsville has topped national "best places to live" rankings — and the buyers keep coming.</p></div>
+      <div class="p-card rv d1"><b>Aerospace &amp; Tech Capital</b><p>Redstone Arsenal, NASA Marshall, and a booming tech corridor drive relentless relocation demand.</p></div>
+      <div class="p-card rv d2"><b>Your Local Advantage</b><p>We know which streets, builders, and school zones the momentum favors — before the market prices it in.</p></div>
+    </div>
+  </div>
+</section>
+
 <!-- COMMUNITY -->
 <section class="community" id="community">
   <div class="wrap">
@@ -649,10 +732,44 @@ body::after{content:'';position:fixed;inset:0;z-index:95;pointer-events:none;opa
         <option>Relocating</option>
       </select>
       <textarea name="message" placeholder="Tell us about your goals&hellip;"></textarea>
-      <button type="submit" class="btn solid"><span>Request My Private Consultation</span></button>
+      <label class="consent"><input type="checkbox" name="c_email" checked> Yes, I agree to receive emails from J&amp;J Real Estate Group.</label>
+      <label class="consent"><input type="checkbox" name="c_sms"> Yes, I agree to receive SMS text messages from J&amp;J Real Estate Group.</label>
+      <p class="fine">Consent: by submitting, you agree to be contacted by J&amp;J Real Estate Group at Capstone Realty via call, email, and text for real estate services. You may opt out at any time — reply "stop" to any text or use the unsubscribe link in emails. Message and data rates may apply. Message frequency may vary. All information is kept private and never sold.</p>
+      <button type="submit" class="btn solid"><span>Get in Touch</span></button>
     </form>
   </div>
 </section>
+
+<!-- GET IN TOUCH MODAL -->
+<div id="gitModal" role="dialog" aria-modal="true" aria-label="Get in Touch">
+  <div class="git-box">
+    <button id="git-close" aria-label="Close">✕</button>
+    <img class="git-logo" src="assets/logo-framed.jpg" alt="J&amp;J Real Estate Group">
+    <h3>Get in Touch</h3>
+    <p class="git-sub">Buying, selling, building, or relocating — tell us where you're headed. We'll handle the rest.</p>
+    <form id="gitForm">
+      <div class="f-row">
+        <input type="text" name="name" placeholder="Name" required>
+        <input type="tel" name="phone" placeholder="Phone">
+      </div>
+      <input type="email" name="email" placeholder="Email" required>
+      <select name="interest" required>
+        <option value="" disabled selected>Select a Topic</option>
+        <option>Buying</option>
+        <option>Selling</option>
+        <option>New Construction</option>
+        <option>Investing</option>
+        <option>Relocating</option>
+        <option>Other</option>
+      </select>
+      <textarea name="message" placeholder="Your Message"></textarea>
+      <label class="consent"><input type="checkbox" name="c_email" checked> Yes, I agree to receive emails from J&amp;J Real Estate Group.</label>
+      <label class="consent"><input type="checkbox" name="c_sms"> Yes, I agree to receive SMS text messages from J&amp;J Real Estate Group.</label>
+      <p class="fine">Consent: by submitting, you agree to be contacted by J&amp;J Real Estate Group at Capstone Realty via call, email, and text for real estate services. You may opt out at any time — reply "stop" to any text or use the unsubscribe link in emails. Message and data rates may apply. Message frequency may vary. All information is kept private and never sold.</p>
+      <button type="submit" class="btn solid"><span>Get in Touch</span></button>
+    </form>
+  </div>
+</div>
 
 <!-- LIGHTBOX -->
 <div id="lightbox" role="dialog" aria-label="Gallery viewer">
@@ -671,14 +788,15 @@ body::after{content:'';position:fixed;inset:0;z-index:95;pointer-events:none;opa
         <img class="foot-logo" src="assets/logo-framed.jpg" alt="J&amp;J Real Estate Group — Capstone Realty">
       </a>
       <div class="foot-logos">
-        <img class="cap" src="assets/capstone-logo.jpg" alt="Capstone Realty">
+        <a href="https://www.choosecapstone.com/" target="_blank" rel="noopener" title="Capstone Realty"><img class="cap" src="assets/capstone-logo.jpg" alt="Capstone Realty"></a>
         <img src="assets/realtor.png" alt="REALTOR®">
         <img src="assets/eho.png" alt="Equal Housing Opportunity">
       </div>
     </div>
-    <p class="foot-note">J&amp;J Real Estate Group · Capstone Realty · Huntsville &amp; North Alabama<br>
-    Chrystal Justice &amp; Patsy Jenkins, REALTORS®. Each office is independently owned and operated. All information deemed reliable but not guaranteed. Equal Housing Opportunity.<br>
+    <p class="foot-note">Luxury Real Estate Advisory · Huntsville &amp; North Alabama<br>
+    J&amp;J Real Estate Group at <a href="https://www.choosecapstone.com/" target="_blank" rel="noopener" style="color:var(--gold-lt)">Capstone Realty</a> · Chrystal Justice &amp; Patsy Jenkins, REALTORS®. Each office is independently owned and operated. All information deemed reliable but not guaranteed and should be independently verified. No financial or legal advice provided. J&amp;J Real Estate Group fully supports the principles of the Fair Housing Act and the Equal Opportunity Act. Equal Housing Opportunity.<br>
     © <span id="yr"></span> J&amp;J Real Estate Group. All rights reserved.</p>
+    <p class="foot-credits">Huntsville photography: <a href="https://commons.wikimedia.org/wiki/File:Skyline_of_Huntsville.jpg" target="_blank" rel="noopener">Bren.persing (CC BY-SA 4.0)</a> · <a href="https://commons.wikimedia.org/wiki/File:Huntsville,_Alabama_(2023).jpg" target="_blank" rel="noopener">WeaponizingArchitecture (CC BY-SA 4.0)</a> · <a href="https://commons.wikimedia.org/wiki/File:Saturn_V_Huntsville@Night.jpg" target="_blank" rel="noopener">Ostbayer 2000 (CC BY-SA 4.0)</a> via Wikimedia Commons</p>
   </div>
 </footer>
 
@@ -689,22 +807,10 @@ document.getElementById('yr').textContent = new Date().getFullYear();
 // nav solid on scroll + hero parallax
 const nav = document.getElementById('nav');
 const heroBg = document.getElementById('heroBg');
-const heroLight = document.getElementById('heroLight');
 addEventListener('scroll', () => {
   const y = scrollY;
   nav.classList.toggle('solid', y > 40);
-  if (y < innerHeight){
-    heroBg.style.transform = `translateY(${y * .25}px)`;
-    heroLight.style.transform = `translateY(${y * .25}px)`;
-  }
-}, {passive:true});
-
-// flashlight effect — spotlight locked 1:1 to the mouse, zero lag
-const hero = document.querySelector('header');
-hero.addEventListener('mousemove', e => {
-  const r = heroLight.getBoundingClientRect();
-  heroLight.style.setProperty('--fx', ((e.clientX - r.left) / r.width * 100) + '%');
-  heroLight.style.setProperty('--fy', ((e.clientY - r.top) / r.height * 100) + '%');
+  if (y < innerHeight) heroBg.style.transform = `translateY(${y * .25}px)`;
 }, {passive:true});
 
 // mobile menu
@@ -807,13 +913,27 @@ addEventListener('keydown', e => {
 const mq = document.getElementById('mqTrack');
 mq.innerHTML += mq.innerHTML;
 
-// contact form -> email
-document.getElementById('consultForm').addEventListener('submit', e => {
+// Get in Touch modal
+const gitModal = document.getElementById('gitModal');
+document.querySelectorAll('.open-git').forEach(el => el.addEventListener('click', e => {
+  e.preventDefault();
+  mmenu.classList.remove('open');
+  gitModal.classList.add('open');
+}));
+document.getElementById('git-close').addEventListener('click', () => gitModal.classList.remove('open'));
+gitModal.addEventListener('click', e => { if (e.target === gitModal) gitModal.classList.remove('open'); });
+addEventListener('keydown', e => { if (e.key === 'Escape') gitModal.classList.remove('open'); });
+
+// forms -> email
+function sendForm(e){
   e.preventDefault();
   const f = new FormData(e.target);
-  const body = `Name: ${f.get('name')}%0APhone: ${f.get('phone')}%0AEmail: ${f.get('email')}%0AInterested in: ${f.get('interest')}%0A%0A${encodeURIComponent(f.get('message')||'')}`;
-  location.href = `mailto:Chrystal@choosecapstone.com?cc=Patsy@choosecapstone.com&subject=Private Consultation Request — ${encodeURIComponent(f.get('name'))}&body=${body}`;
-});
+  const consents = `Email consent: ${f.get('c_email') ? 'YES' : 'NO'}%0ASMS consent: ${f.get('c_sms') ? 'YES' : 'NO'}`;
+  const body = `Name: ${f.get('name')}%0APhone: ${f.get('phone')||''}%0AEmail: ${f.get('email')}%0ATopic: ${f.get('interest')}%0A${consents}%0A%0A${encodeURIComponent(f.get('message')||'')}`;
+  location.href = `mailto:Chrystal@choosecapstone.com?cc=Patsy@choosecapstone.com&subject=Get in Touch — ${encodeURIComponent(f.get('name'))}&body=${body}`;
+}
+document.getElementById('consultForm').addEventListener('submit', sendForm);
+document.getElementById('gitForm').addEventListener('submit', sendForm);
 </script>
 </body>
 </html>
