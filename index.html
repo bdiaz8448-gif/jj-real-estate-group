@@ -1,0 +1,804 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>J&amp;J Real Estate Group | Chrystal Justice &amp; Patsy Jenkins — Luxury Real Estate Advisory, Huntsville &amp; North Alabama</title>
+<meta name="description" content="Exceptional Properties. Extraordinary Results. J&J Real Estate Group at Capstone Realty — a private, strategic, high-touch real estate experience for sellers, buyers, investors, and new-construction clients in Huntsville and North Alabama.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%230a0a0a'/%3E%3Ctext x='32' y='44' font-family='Georgia,serif' font-size='30' fill='%23c6a35d' text-anchor='middle'%3EJ%26%23038;J%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --black:#0a0a0a; --ink:#111113; --coal:#161618; --smoke:#1e1e21;
+  --gold:#c6a35d; --gold-lt:#e3c98a; --gold-dk:#9a7c3f;
+  --cream:#f5f1e8; --paper:#faf8f3; --mist:#a9a6a0; --line:rgba(198,163,93,.28);
+  --serif:'Cormorant Garamond',serif; --sans:'Inter',sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--black);color:var(--cream);font-family:var(--sans);font-weight:300;line-height:1.7;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+::selection{background:var(--gold);color:var(--black)}
+
+/* ---------- utilities ---------- */
+.wrap{max-width:1240px;margin:0 auto;padding:0 6vw}
+.eyebrow{font-family:var(--sans);font-size:.72rem;letter-spacing:.42em;text-transform:uppercase;color:var(--gold);margin-bottom:1.4rem;display:block}
+h1,h2,h3{font-family:var(--serif);font-weight:500;line-height:1.12;letter-spacing:.01em}
+h2{font-size:clamp(2.2rem,4.6vw,3.6rem);margin-bottom:1.2rem}
+h3{font-size:1.5rem;color:var(--gold-lt)}
+.lede{font-size:1.08rem;color:var(--mist);max-width:640px}
+section{padding:clamp(5rem,10vw,8.5rem) 0;position:relative}
+.gold-rule{width:64px;height:1px;background:linear-gradient(90deg,var(--gold),transparent);margin:1.6rem 0 2rem}
+.center .gold-rule{margin:1.6rem auto 2rem;background:linear-gradient(90deg,transparent,var(--gold),transparent)}
+.center{text-align:center}
+.center .lede{margin:0 auto}
+
+/* reveal animation */
+.rv{opacity:0;transform:translateY(34px);transition:opacity .9s cubic-bezier(.2,.7,.3,1),transform .9s cubic-bezier(.2,.7,.3,1)}
+.rv.on{opacity:1;transform:none}
+.rv.d1{transition-delay:.12s}.rv.d2{transition-delay:.24s}.rv.d3{transition-delay:.36s}.rv.d4{transition-delay:.48s}
+
+/* ---------- nav ---------- */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:1.1rem 4vw;display:flex;align-items:center;justify-content:space-between;transition:background .4s,box-shadow .4s,padding .4s}
+nav.solid{background:rgba(10,10,10,.92);backdrop-filter:blur(14px);box-shadow:0 1px 0 var(--line);padding:.7rem 4vw}
+.brand{display:flex;align-items:center;gap:.8rem}
+.brand-mark{font-family:var(--serif);font-size:1.55rem;color:var(--gold);letter-spacing:.05em}
+.brand-sub{font-size:.6rem;letter-spacing:.34em;text-transform:uppercase;color:var(--mist)}
+.nav-links{display:flex;gap:2.2rem;align-items:center}
+.nav-links a{font-size:.74rem;letter-spacing:.22em;text-transform:uppercase;color:var(--cream);opacity:.85;transition:color .3s,opacity .3s}
+.nav-links a:hover{color:var(--gold);opacity:1}
+.nav-cta{border:1px solid var(--gold);padding:.6rem 1.4rem;color:var(--gold)!important;transition:background .3s,color .3s}
+.nav-cta:hover{background:var(--gold);color:var(--black)!important}
+.burger{display:none;background:none;border:none;cursor:pointer;z-index:110}
+.burger span{display:block;width:26px;height:1.5px;background:var(--gold);margin:6px 0;transition:.35s}
+.mobile-menu{position:fixed;inset:0;background:rgba(8,8,8,.97);backdrop-filter:blur(10px);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2rem;z-index:105;opacity:0;pointer-events:none;transition:opacity .4s}
+.mobile-menu.open{opacity:1;pointer-events:auto}
+.mobile-menu a{font-family:var(--serif);font-size:1.7rem;color:var(--cream)}
+.mobile-menu a:hover{color:var(--gold)}
+
+/* ---------- hero ---------- */
+header{height:100svh;min-height:640px;position:relative;display:flex;align-items:center;justify-content:center;text-align:center;overflow:hidden}
+.hero-bg{position:absolute;inset:-8%;background:url('assets/living-dusk.jpg') center/cover;will-change:transform;filter:brightness(.5) saturate(.9)}
+.hero-veil{position:absolute;inset:0;background:radial-gradient(ellipse at center,rgba(10,10,10,.15) 0%,rgba(10,10,10,.78) 100%),linear-gradient(180deg,rgba(10,10,10,.55),transparent 30%,transparent 60%,var(--black) 100%)}
+.hero-light{position:absolute;inset:-8%;background:url('assets/living-dusk.jpg') center/cover;filter:brightness(1.05) saturate(1.05);will-change:transform;pointer-events:none;opacity:0;transition:opacity .5s;
+  -webkit-mask-image:radial-gradient(circle var(--fr,290px) at var(--fx,50%) var(--fy,50%),rgba(0,0,0,.95) 0%,rgba(0,0,0,.5) 55%,transparent 100%);
+  mask-image:radial-gradient(circle var(--fr,290px) at var(--fx,50%) var(--fy,50%),rgba(0,0,0,.95) 0%,rgba(0,0,0,.5) 55%,transparent 100%)}
+header:hover .hero-light{opacity:1}
+@media(pointer:coarse){.hero-light{display:none}}
+.hero-in{position:relative;z-index:2;padding:0 6vw;max-width:960px}
+.hero-in .eyebrow{margin-bottom:2rem}
+h1{font-size:clamp(2.6rem,6.4vw,5.2rem);font-weight:500}
+h1 em{font-style:italic;color:var(--gold-lt)}
+.hero-sub{margin:1.8rem auto 2.8rem;max-width:560px;color:#d8d4ca;font-size:1.05rem}
+.btn{display:inline-block;font-size:.76rem;letter-spacing:.3em;text-transform:uppercase;padding:1.05rem 2.6rem;border:1px solid var(--gold);color:var(--gold);position:relative;overflow:hidden;transition:color .35s}
+.btn::before{content:'';position:absolute;inset:0;background:var(--gold);transform:scaleX(0);transform-origin:left;transition:transform .35s}
+.btn:hover{color:var(--black)}
+.btn:hover::before{transform:scaleX(1)}
+.btn span{position:relative;z-index:1}
+.btn.solid{background:var(--gold);color:var(--black)}
+.btn.solid::before{background:var(--gold-lt)}
+.hero-scroll{position:absolute;bottom:2.2rem;left:50%;transform:translateX(-50%);z-index:2;font-size:.62rem;letter-spacing:.4em;text-transform:uppercase;color:var(--mist)}
+.hero-scroll::after{content:'';display:block;width:1px;height:44px;background:linear-gradient(var(--gold),transparent);margin:.8rem auto 0;animation:drip 2.2s infinite}
+@keyframes drip{0%{transform:scaleY(0);transform-origin:top}45%{transform:scaleY(1);transform-origin:top}55%{transform:scaleY(1);transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
+
+/* ---------- stats ---------- */
+.stats{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--ink)}
+.stats .wrap{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;padding-top:3.2rem;padding-bottom:3.2rem}
+.stat{text-align:center}
+.stat b{font-family:var(--serif);font-weight:500;font-size:2.7rem;color:var(--gold-lt);display:block}
+.stat span{font-size:.68rem;letter-spacing:.28em;text-transform:uppercase;color:var(--mist)}
+
+/* ---------- positioning ---------- */
+.positioning h2{font-size:clamp(2.4rem,5vw,4rem)}
+.positioning .wrap{display:grid;grid-template-columns:1.2fr .8fr;gap:5rem;align-items:center}
+.pillars{display:grid;gap:1.6rem}
+.pillar{border-left:1px solid var(--line);padding-left:1.6rem}
+.pillar b{font-family:var(--serif);font-size:1.25rem;font-weight:600;color:var(--gold-lt);letter-spacing:.02em}
+.pillar p{color:var(--mist);font-size:.95rem}
+
+/* ---------- team ---------- */
+.team{background:var(--ink)}
+.team-grid{display:grid;grid-template-columns:1fr 1fr;gap:3.4rem;margin-top:3.6rem}
+.agent{background:var(--coal);border:1px solid rgba(198,163,93,.14);transition:border-color .4s,transform .4s;overflow:hidden}
+.agent:hover{border-color:var(--gold);transform:translateY(-6px)}
+.agent-photo{position:relative;overflow:hidden;aspect-ratio:4/4.6}
+.agent-photo img{width:100%;height:100%;object-fit:cover;object-position:top;transition:transform .8s cubic-bezier(.2,.7,.3,1);filter:saturate(.92)}
+.agent:hover .agent-photo img{transform:scale(1.05)}
+.agent-photo::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(10,10,10,.85))}
+.agent-body{padding:2rem 2.2rem 2.4rem;margin-top:-4.4rem;position:relative;z-index:2}
+.agent-body h3{font-size:2rem;color:var(--cream)}
+.agent-role{font-size:.7rem;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);margin:.4rem 0 1rem}
+.agent-body p{color:var(--mist);font-size:.95rem;margin-bottom:1.4rem}
+.agent-contact{display:flex;flex-direction:column;gap:.35rem;font-size:.9rem}
+.agent-contact a{color:var(--gold-lt);transition:color .3s}
+.agent-contact a:hover{color:var(--gold)}
+
+/* ---------- difference table ---------- */
+.diff-table{margin-top:3.4rem;border:1px solid var(--line);overflow:hidden}
+.diff-row{display:grid;grid-template-columns:1.2fr 1fr 1fr;border-top:1px solid rgba(198,163,93,.14)}
+.diff-row:first-child{border-top:none;background:var(--smoke)}
+.diff-row>div{padding:1.25rem 1.6rem;font-size:.93rem}
+.diff-row>div:first-child{color:var(--cream);font-weight:400}
+.diff-head{font-size:.72rem!important;letter-spacing:.26em;text-transform:uppercase;color:var(--mist)!important;font-weight:500!important}
+.diff-jj{background:rgba(198,163,93,.07);color:var(--gold-lt);border-left:1px solid var(--line);border-right:1px solid var(--line)}
+.diff-row:first-child .diff-jj{color:var(--gold)!important}
+.diff-typ{color:var(--mist)}
+.check{color:var(--gold);margin-right:.5rem}
+.dash{color:#5c5a55;margin-right:.5rem}
+
+/* ---------- sellers / split sections ---------- */
+.split{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center}
+.split.flip>.split-img{order:2}
+.split-img{position:relative;overflow:hidden}
+.split-img img{transition:transform 1s cubic-bezier(.2,.7,.3,1)}
+.split-img:hover img{transform:scale(1.04)}
+.split-img::before{content:'';position:absolute;inset:0;border:1px solid var(--line);transform:translate(14px,14px);pointer-events:none;transition:transform .5s}
+.split-img:hover::before{transform:translate(8px,8px)}
+.list{display:grid;gap:.9rem;margin-top:1.8rem}
+.list li{list-style:none;display:flex;gap:1rem;color:#d3cfc5;font-size:.98rem;align-items:baseline}
+.list li::before{content:'—';color:var(--gold);flex-shrink:0}
+
+/* pricing steps */
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:1.6rem;margin-top:3.4rem}
+.step{background:var(--coal);border:1px solid rgba(198,163,93,.14);padding:2.4rem 2rem;transition:border-color .4s,transform .4s}
+.step:hover{border-color:var(--gold);transform:translateY(-6px)}
+.step i{font-family:var(--serif);font-style:normal;font-size:2.6rem;color:var(--gold);opacity:.55;display:block;margin-bottom:1rem}
+.step b{font-family:var(--serif);font-size:1.35rem;font-weight:600;color:var(--gold-lt);display:block;margin-bottom:.5rem}
+.step p{color:var(--mist);font-size:.92rem}
+
+/* ---------- gallery ---------- */
+.gallery{background:var(--ink)}
+.gal-grid{display:grid;grid-template-columns:repeat(3,1fr);grid-auto-rows:230px;gap:14px;margin-top:3.4rem}
+.gal-grid figure{overflow:hidden;position:relative;margin:0}
+.gal-grid img{width:100%;height:100%;object-fit:cover;transition:transform 1s cubic-bezier(.2,.7,.3,1),filter .6s;filter:saturate(.9)}
+.gal-grid figure:hover img{transform:scale(1.07);filter:saturate(1.05)}
+.gal-grid figure:nth-child(1){grid-row:span 2;grid-column:span 2}
+.gal-grid figure:nth-child(4){grid-row:span 2}
+.gal-cap{position:absolute;left:0;right:0;bottom:0;padding:1rem 1.3rem;background:linear-gradient(transparent,rgba(10,10,10,.85));font-size:.72rem;letter-spacing:.26em;text-transform:uppercase;color:var(--gold-lt);opacity:0;transform:translateY(8px);transition:.45s}
+.gal-grid figure:hover .gal-cap{opacity:1;transform:none}
+
+/* ---------- journey ---------- */
+.journey-line{display:grid;grid-template-columns:repeat(7,1fr);gap:0;margin-top:4rem;position:relative}
+.journey-line::before{content:'';position:absolute;top:9px;left:7%;right:7%;height:1px;background:linear-gradient(90deg,transparent,var(--gold),var(--gold),transparent);opacity:.5}
+.j-step{text-align:center;position:relative;padding:0 .4rem}
+.j-step i{display:block;width:19px;height:19px;border:1px solid var(--gold);border-radius:50%;margin:0 auto 1.1rem;background:var(--black);position:relative;z-index:1;transition:background .4s}
+.j-step:hover i{background:var(--gold)}
+.j-step b{font-family:var(--serif);font-size:1.06rem;font-weight:600;color:var(--gold-lt);display:block}
+.j-step span{font-size:.74rem;color:var(--mist)}
+
+/* ---------- community ---------- */
+.community{background:var(--ink)}
+.comm-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.6rem;margin-top:3.4rem}
+.comm-card{position:relative;overflow:hidden;aspect-ratio:4/3;border:1px solid rgba(198,163,93,.14)}
+.comm-card img{width:100%;height:100%;object-fit:cover;transition:transform .9s}
+.comm-card:hover img{transform:scale(1.06)}
+.comm-card figcaption{position:absolute;inset:auto 0 0 0;padding:1.1rem 1.4rem;background:linear-gradient(transparent,rgba(10,10,10,.92));font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;color:var(--cream)}
+.comm-card.logo-card{background:#fff;display:flex;align-items:center;justify-content:center;padding:2.5rem}
+.comm-card.logo-card img{object-fit:contain;width:70%;height:auto}
+
+/* ---------- testimonial ---------- */
+.quote-mark{font-family:var(--serif);font-size:7rem;line-height:.6;color:var(--gold);opacity:.5;display:block;margin-bottom:2rem}
+blockquote{font-family:var(--serif);font-size:clamp(1.5rem,2.8vw,2.15rem);font-style:italic;font-weight:400;line-height:1.5;max-width:880px;margin:0 auto;color:#e9e4d8}
+.attrib{margin-top:2.4rem;font-size:.74rem;letter-spacing:.3em;text-transform:uppercase;color:var(--gold)}
+.attrib small{display:block;letter-spacing:.18em;color:var(--mist);margin-top:.4rem;text-transform:none;font-size:.8rem}
+
+/* ---------- promise ---------- */
+.promise{background:linear-gradient(180deg,var(--black),var(--ink))}
+.promise-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:1.4rem;margin-top:3.4rem}
+.p-card{border-top:1px solid var(--line);padding-top:1.4rem}
+.p-card b{font-family:var(--serif);font-size:1.15rem;font-weight:600;color:var(--gold-lt);display:block;margin-bottom:.4rem}
+.p-card p{font-size:.85rem;color:var(--mist)}
+
+/* ---------- contact ---------- */
+.contact{background:var(--black)}
+.contact .wrap{display:grid;grid-template-columns:1fr 1fr;gap:5rem}
+.c-block{margin-bottom:2.2rem}
+.c-block b{font-family:var(--serif);font-size:1.5rem;font-weight:600;color:var(--gold-lt);display:block;margin-bottom:.3rem}
+.c-block a{display:block;color:#d3cfc5;font-size:1rem;transition:color .3s}
+.c-block a:hover{color:var(--gold)}
+form{display:grid;gap:1.1rem}
+.f-row{display:grid;grid-template-columns:1fr 1fr;gap:1.1rem}
+input,select,textarea{width:100%;background:var(--coal);border:1px solid rgba(198,163,93,.2);color:var(--cream);font-family:var(--sans);font-weight:300;font-size:.95rem;padding:1rem 1.2rem;outline:none;transition:border-color .3s;-webkit-appearance:none;border-radius:0}
+input:focus,select:focus,textarea:focus{border-color:var(--gold)}
+select{color:var(--mist)}
+textarea{resize:vertical;min-height:120px}
+::placeholder{color:#6f6c66}
+
+/* ---------- footer ---------- */
+footer{border-top:1px solid var(--line);padding:3.5rem 0 2.5rem;background:var(--ink)}
+.foot-top{display:flex;align-items:center;justify-content:space-between;gap:2rem;flex-wrap:wrap}
+.foot-logos{display:flex;align-items:center;gap:1.6rem}
+.foot-logos img{height:40px;width:auto;filter:invert(1) brightness(1.6);opacity:.75}
+.foot-logos img.cap{height:30px}
+.foot-note{margin-top:2.4rem;font-size:.75rem;color:#6f6c66;line-height:1.9}
+
+/* ---------- luxury signature touches ---------- */
+/* preloader */
+#loader{position:fixed;inset:0;background:var(--black);z-index:300;display:flex;align-items:center;justify-content:center;transition:opacity .9s ease,visibility .9s}
+#loader.done{opacity:0;visibility:hidden}
+.loader-in{text-align:center}
+.loader-mark{font-family:var(--serif);font-size:3.4rem;color:var(--gold);letter-spacing:.06em;display:block;animation:fadeUp 1s ease both}
+.loader-line{display:block;width:0;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent);margin:1.1rem auto;animation:lineGrow 1.4s .2s ease forwards}
+.loader-sub{font-size:.6rem;letter-spacing:.4em;text-transform:uppercase;color:var(--mist);display:block;opacity:0;animation:fadeUp .9s .6s ease forwards}
+@keyframes lineGrow{to{width:220px}}
+@keyframes fadeUp{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+
+/* cinematic headline reveal */
+.hl{display:block;overflow:hidden}
+.hl>span{display:block;transform:translateY(112%);animation:lineUp 1.15s cubic-bezier(.16,.7,.2,1) forwards}
+.hl:nth-child(2)>span{animation-delay:.22s}
+@keyframes lineUp{to{transform:none}}
+
+/* gold scroll progress */
+#prog{position:fixed;top:0;left:0;height:2px;width:0;background:linear-gradient(90deg,var(--gold-dk),var(--gold),var(--gold-lt));z-index:301;box-shadow:0 0 8px rgba(198,163,93,.55)}
+
+/* custom gold cursor */
+.cur-dot,.cur-ring{position:fixed;top:0;left:0;pointer-events:none;z-index:302;border-radius:50%;transform:translate(-50%,-50%);opacity:0;transition:opacity .3s}
+.cur-dot{width:5px;height:5px;background:var(--gold-lt)}
+.cur-ring{width:34px;height:34px;border:1px solid rgba(198,163,93,.65);transition:opacity .3s,width .25s,height .25s,border-color .25s}
+body.cur-on .cur-dot,body.cur-on .cur-ring{opacity:1}
+body.cur-hover .cur-ring{width:56px;height:56px;border-color:var(--gold-lt)}
+@media(pointer:coarse){.cur-dot,.cur-ring{display:none}}
+
+/* agent card 3D tilt */
+.agent{transform-style:preserve-3d;will-change:transform}
+
+/* gallery lightbox */
+#lightbox{position:fixed;inset:0;background:rgba(6,6,6,.96);backdrop-filter:blur(8px);z-index:250;display:flex;align-items:center;justify-content:center;flex-direction:column;opacity:0;pointer-events:none;transition:opacity .45s}
+#lightbox.open{opacity:1;pointer-events:auto}
+#lightbox img{max-width:88vw;max-height:78vh;object-fit:contain;border:1px solid var(--line);box-shadow:0 30px 80px rgba(0,0,0,.6)}
+#lb-cap{margin-top:1.2rem;font-size:.72rem;letter-spacing:.32em;text-transform:uppercase;color:var(--gold-lt)}
+.lb-btn{position:absolute;background:none;border:1px solid var(--line);color:var(--gold);width:52px;height:52px;border-radius:50%;font-size:1.2rem;cursor:pointer;transition:background .3s,color .3s;display:flex;align-items:center;justify-content:center}
+.lb-btn:hover{background:var(--gold);color:var(--black)}
+#lb-close{top:2rem;right:2rem}
+#lb-prev{left:2rem;top:50%;transform:translateY(-50%)}
+#lb-next{right:2rem;top:50%;transform:translateY(-50%)}
+.gal-grid figure{cursor:pointer}
+
+/* communities marquee */
+.marquee{overflow:hidden;padding:3.2rem 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--black)}
+.marquee-track{display:flex;white-space:nowrap;width:max-content;animation:mq 46s linear infinite}
+.marquee span{font-family:var(--serif);font-size:clamp(2.2rem,4.4vw,3.6rem);font-weight:500;padding:0 1.6rem;color:transparent;-webkit-text-stroke:1px rgba(198,163,93,.55);letter-spacing:.04em}
+.marquee span.fill{color:var(--gold);-webkit-text-stroke:0}
+.marquee i{font-style:normal;color:var(--gold);font-size:1.2rem;align-self:center}
+@keyframes mq{to{transform:translateX(-50%)}}
+.marquee:hover .marquee-track{animation-play-state:paused}
+
+/* cinematic film grain */
+body::after{content:'';position:fixed;inset:0;z-index:95;pointer-events:none;opacity:.05;mix-blend-mode:overlay;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+
+/* ---------- responsive ---------- */
+@media(max-width:960px){
+  .nav-links{display:none}
+  .burger{display:block}
+  .positioning .wrap,.split,.contact .wrap{grid-template-columns:1fr;gap:3rem}
+  .split.flip>.split-img{order:0}
+  .team-grid{grid-template-columns:1fr}
+  .steps,.comm-grid{grid-template-columns:1fr}
+  .stats .wrap{grid-template-columns:repeat(3,1fr);gap:1rem}
+  .stat b{font-size:1.9rem}
+  .gal-grid{grid-template-columns:1fr 1fr;grid-auto-rows:200px}
+  .gal-grid figure:nth-child(1){grid-column:span 2}
+  .journey-line{grid-template-columns:1fr;gap:1.4rem;text-align:left}
+  .journey-line::before{display:none}
+  .j-step{display:flex;align-items:baseline;gap:1rem;text-align:left}
+  .j-step i{margin:0}
+  .promise-grid{grid-template-columns:1fr 1fr}
+  .diff-row>div{padding:1rem .9rem;font-size:.84rem}
+  .f-row{grid-template-columns:1fr}
+}
+@media(prefers-reduced-motion:reduce){
+  .rv{opacity:1;transform:none;transition:none}
+  html{scroll-behavior:auto}
+}
+</style>
+</head>
+<body>
+
+<!-- PRELOADER -->
+<div id="loader">
+  <div class="loader-in">
+    <span class="loader-mark">J&amp;J</span>
+    <span class="loader-line"></span>
+    <span class="loader-sub">Exceptional Properties. Extraordinary Results.</span>
+  </div>
+</div>
+
+<!-- GOLD SCROLL PROGRESS -->
+<div id="prog"></div>
+
+<!-- CUSTOM CURSOR -->
+<div class="cur-dot" id="curDot"></div>
+<div class="cur-ring" id="curRing"></div>
+
+<!-- NAV -->
+<nav id="nav">
+  <a class="brand" href="#top">
+    <span class="brand-mark">J&amp;J</span>
+    <span class="brand-sub">Real Estate Group<br>Capstone Realty</span>
+  </a>
+  <div class="nav-links">
+    <a href="#sellers">Sellers</a>
+    <a href="#buyers">Buyers</a>
+    <a href="#new-construction">New Construction</a>
+    <a href="#team">Advisors</a>
+    <a href="#community">Community</a>
+    <a href="#contact" class="nav-cta">Private Consultation</a>
+  </div>
+  <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+</nav>
+<div class="mobile-menu" id="mmenu">
+  <a href="#sellers">Sellers</a>
+  <a href="#buyers">Buyers</a>
+  <a href="#new-construction">New Construction</a>
+  <a href="#team">Advisors</a>
+  <a href="#community">Community</a>
+  <a href="#contact">Private Consultation</a>
+</div>
+
+<!-- HERO -->
+<header id="top">
+  <div class="hero-bg" id="heroBg"></div>
+  <div class="hero-veil"></div>
+  <div class="hero-light" id="heroLight"></div>
+  <div class="hero-in">
+    <span class="eyebrow rv on">Luxury Real Estate Advisory · Huntsville &amp; North Alabama</span>
+    <h1><span class="hl"><span>Exceptional Properties.</span></span><span class="hl"><span><em>Extraordinary Results.</em></span></span></h1>
+    <p class="hero-sub rv on d2">Imagine walking into the next chapter of your life already knowing it was handled beautifully. That feeling — certainty, calm, quiet confidence — is what we deliver, before, during, and long after closing.</p>
+    <a href="#contact" class="btn rv on d3"><span>Begin Your Private Consultation</span></a>
+  </div>
+  <div class="hero-scroll">Discover</div>
+</header>
+
+<!-- STATS -->
+<div class="stats">
+  <div class="wrap">
+    <div class="stat rv"><b data-count="15" data-suffix="+">0</b><span>Years Combined Experience</span></div>
+    <div class="stat rv d1"><b data-count="2">0</b><span>Advisors, One Strategy</span></div>
+    <div class="stat rv d2"><b data-count="7">0</b><span>Step Client Journey</span></div>
+  </div>
+</div>
+
+<!-- POSITIONING -->
+<section class="positioning">
+  <div class="wrap">
+    <div class="rv">
+      <span class="eyebrow">The Positioning</span>
+      <h2>Real estate should feel <em style="color:var(--gold-lt)">private, strategic,</em> and beautifully controlled.</h2>
+      <div class="gold-rule"></div>
+      <p class="lede">You are not just hiring an agent. You are choosing the team you trust to protect value, reduce uncertainty, and create leverage — so every decision feels clear, and nothing is left to chance.</p>
+    </div>
+    <div class="pillars">
+      <div class="pillar rv d1"><b>Authority</b><p>through preparation — we walk in knowing more, so you never walk in wondering.</p></div>
+      <div class="pillar rv d2"><b>Desire</b><p>through presentation — buyers fall in love before they ever step inside.</p></div>
+      <div class="pillar rv d3"><b>Confidence</b><p>through communication — no confusion, no silence, no surprises.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- TEAM -->
+<section class="team" id="team">
+  <div class="wrap">
+    <div class="center rv">
+      <span class="eyebrow">Meet Your Advisors</span>
+      <h2>Two perspectives. One elevated experience.</h2>
+      <div class="gold-rule"></div>
+      <p class="lede">J&amp;J blends strategic pricing, buyer psychology, builder knowledge, and calm transaction leadership into one coordinated team that works for you — and only you.</p>
+    </div>
+    <div class="team-grid">
+      <div class="agent rv d1">
+        <div class="agent-photo"><img src="assets/chrystal.jpg" alt="Chrystal Justice — J&J Real Estate Group"></div>
+        <div class="agent-body">
+          <h3>Chrystal Justice</h3>
+          <div class="agent-role">Strategic · Analytical · Negotiation-Focused</div>
+          <p>Chrystal reads the market the way great negotiators read a room. She builds the pricing story, structures the leverage, and stays calm when the pressure peaks — so you keep the upper hand from list to close.</p>
+          <div class="agent-contact">
+            <a href="tel:+12565031924">256-503-1924</a>
+            <a href="mailto:Chrystal@choosecapstone.com">Chrystal@choosecapstone.com</a>
+          </div>
+        </div>
+      </div>
+      <div class="agent rv d2">
+        <div class="agent-photo"><img src="assets/patsy.jpg" alt="Patsy Jenkins — J&J Real Estate Group"></div>
+        <div class="agent-body">
+          <h3>Patsy Jenkins</h3>
+          <div class="agent-role">Patient · Detailed · Education-Focused</div>
+          <p>Patsy makes the complex feel simple. She walks you through every document, every deadline, and every decision with the patience of a teacher and the precision of a closer — so you always understand before you sign.</p>
+          <div class="agent-contact">
+            <a href="tel:+12708817622">270-881-7622</a>
+            <a href="mailto:Patsy@choosecapstone.com">Patsy@choosecapstone.com</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DIFFERENCE -->
+<section id="difference">
+  <div class="wrap">
+    <div class="center rv">
+      <span class="eyebrow">Why Clients Choose Us</span>
+      <h2>The J&amp;J Difference</h2>
+      <div class="gold-rule"></div>
+      <p class="lede">Most agents list a home. We position it. Most agents show houses. We build a strategy. See the difference for yourself.</p>
+    </div>
+    <div class="diff-table rv d1">
+      <div class="diff-row">
+        <div class="diff-head">What You Deserve</div>
+        <div class="diff-jj diff-head">J&amp;J Real Estate Group</div>
+        <div class="diff-typ diff-head">The Typical Experience</div>
+      </div>
+      <div class="diff-row"><div>Clarity</div><div class="diff-jj"><span class="check">✦</span>Clear decisions instead of overwhelm</div><div class="diff-typ"><span class="dash">—</span>Information dumps, decision fatigue</div></div>
+      <div class="diff-row"><div>Leverage</div><div class="diff-jj"><span class="check">✦</span>Smart pricing, positioning &amp; negotiation</div><div class="diff-typ"><span class="dash">—</span>List it and hope</div></div>
+      <div class="diff-row"><div>Trust</div><div class="diff-jj"><span class="check">✦</span>Weekly updates, calm execution</div><div class="diff-typ"><span class="dash">—</span>Silence until something goes wrong</div></div>
+      <div class="diff-row"><div>Experience</div><div class="diff-jj"><span class="check">✦</span>New construction, resale, investor &amp; relocation insight</div><div class="diff-typ"><span class="dash">—</span>One-size-fits-all approach</div></div>
+      <div class="diff-row"><div>Presentation</div><div class="diff-jj"><span class="check">✦</span>Editorial media that makes buyers stop scrolling</div><div class="diff-typ"><span class="dash">—</span>Phone photos and a yard sign</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- SELLERS -->
+<section class="team" id="sellers">
+  <div class="wrap">
+    <div class="split">
+      <div class="split-img rv"><img src="assets/hero-kitchen.jpg" alt="Luxury staged kitchen"></div>
+      <div class="rv d1">
+        <span class="eyebrow">For Sellers</span>
+        <h2>A listing is not placed. <em style="color:var(--gold-lt)">It is positioned.</em></h2>
+        <div class="gold-rule"></div>
+        <p class="lede">Buyers decide emotionally before they justify logically. We build a value narrative that makes your property easier to understand, easier to love, and harder to ignore — then we price it to create urgency without leaving money behind.</p>
+        <ul class="list">
+          <li>Precision pricing analysis</li>
+          <li>Staging and visual readiness</li>
+          <li>Professional media strategy</li>
+          <li>Buyer-targeted launch messaging</li>
+          <li>Weekly market response review</li>
+        </ul>
+      </div>
+    </div>
+    <div class="steps">
+      <div class="step rv"><i>01</i><b>Data</b><p>Comparable sales, neighborhood momentum, and market trends form the foundation of a price buyers believe.</p></div>
+      <div class="step rv d1"><i>02</i><b>Demand</b><p>Buyer psychology shapes the story — relocating professionals, move-up buyers, and investors each hear a message written for them.</p></div>
+      <div class="step rv d2"><i>03</i><b>Leverage</b><p>Offer strategy turns interest into competition. The outcome: a price story buyers understand and agents can defend.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="gallery" id="gallery">
+  <div class="wrap">
+    <div class="center rv">
+      <span class="eyebrow">Media &amp; Presentation</span>
+      <h2>Make the right buyer <em style="color:var(--gold-lt)">stop scrolling.</em></h2>
+      <div class="gold-rule"></div>
+      <p class="lede">Editorial-quality photography, drone video, cinematic walkthroughs, and 3D tours help buyers imagine the lifestyle — not just the square footage.</p>
+    </div>
+    <div class="gal-grid rv d1">
+      <figure><img src="assets/living-dusk.jpg" alt="Open living space at dusk"><figcaption class="gal-cap">Cinematic Walkthroughs</figcaption></figure>
+      <figure><img src="assets/modern-exterior.jpg" alt="Modern home exterior"><figcaption class="gal-cap">Drone &amp; Location Context</figcaption></figure>
+      <figure><img src="assets/loft-interior.jpg" alt="Loft interior"><figcaption class="gal-cap">Editorial Photography</figcaption></figure>
+      <figure><img src="assets/tall-living.jpg" alt="Double-height living room"><figcaption class="gal-cap">Staging &amp; Styling</figcaption></figure>
+      <figure><img src="assets/bright-living.jpg" alt="Bright living area"><figcaption class="gal-cap">3D &amp; Virtual Tours</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- BUYERS -->
+<section id="buyers">
+  <div class="wrap">
+    <div class="split flip">
+      <div class="split-img rv"><img src="assets/modern-exterior.jpg" alt="Modern architecture home"></div>
+      <div class="rv d1">
+        <span class="eyebrow">For Buyers</span>
+        <h2>A curated path to <em style="color:var(--gold-lt)">the right decision.</em></h2>
+        <div class="gold-rule"></div>
+        <p class="lede">The right home should feel inevitable — not exhausting. We help you see beyond finishes and evaluate value, location, builder reputation, future resale, and negotiation opportunity, so the home you love is also the home that loves you back.</p>
+        <ul class="list">
+          <li>Goals + lifestyle profile</li>
+          <li>Pre-approval + offer strategy</li>
+          <li>Curated search + private tours</li>
+          <li>Condition and value review</li>
+          <li>Negotiation + contract execution</li>
+          <li>Inspection, appraisal, closing</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NEW CONSTRUCTION + INVESTOR -->
+<section class="team" id="new-construction">
+  <div class="wrap">
+    <div class="center rv">
+      <span class="eyebrow">New Construction · Investors · Relocation</span>
+      <h2>Builder knowledge creates <em style="color:var(--gold-lt)">client leverage.</em></h2>
+      <div class="gold-rule"></div>
+      <p class="lede">Premium advisory is knowing what to ask before you know there is a question. Incentives, timelines, selections, and builder practices can quietly shift your outcome — unless someone on your side already knows the playbook.</p>
+    </div>
+    <div class="steps">
+      <div class="step rv"><b>New Construction Advantage</b><p>Lot, plan, and incentive strategy. Contract and upgrade guidance. Timeline and walkthrough coordination. Builder process clarity from start to finish.</p></div>
+      <div class="step rv d1"><b>Investor Advisory</b><p>A property should make sense on paper and in real life. We evaluate price, rent, resale, demand drivers, rentability, and exit strategy through an ROI lens.</p></div>
+      <div class="step rv d2"><b>Relocation Guidance</b><p>New city, zero guesswork. Jobs, schools, commutes, and community fit — mapped before you land, so your money lands in the right zip code.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- JOURNEY -->
+<section id="journey">
+  <div class="wrap">
+    <div class="center rv">
+      <span class="eyebrow">The Client Journey</span>
+      <h2>Simple on the surface. <em style="color:var(--gold-lt)">Strategic behind the scenes.</em></h2>
+      <div class="gold-rule"></div>
+      <p class="lede">You feel supported. The transaction stays moving. And when it's done, you'll know exactly why it went so smoothly.</p>
+    </div>
+    <div class="journey-line rv d1">
+      <div class="j-step"><i></i><b>Consult</b><span>We listen first</span></div>
+      <div class="j-step"><i></i><b>Strategy</b><span>Your custom plan</span></div>
+      <div class="j-step"><i></i><b>Launch / Search</b><span>Positioned to win</span></div>
+      <div class="j-step"><i></i><b>Negotiate</b><span>Leverage applied</span></div>
+      <div class="j-step"><i></i><b>Coordinate</b><span>Everyone aligned</span></div>
+      <div class="j-step"><i></i><b>Close</b><span>Calm to the finish</span></div>
+      <div class="j-step"><i></i><b>Stay Connected</b><span>Clients for life</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIAL -->
+<section class="team center" id="testimonial">
+  <div class="wrap rv">
+    <span class="quote-mark">&ldquo;</span>
+    <blockquote>Chrystal was truly a pleasure to work with. She was attentive, communicative, and made the entire process feel seamless&hellip; She's someone who clearly cares about the people she serves and takes pride in creating a great experience from start to finish. I'd absolutely recommend her.</blockquote>
+    <div class="attrib">Bri Bolling<small>Verified Google Review · First-Time Buyer Transaction</small></div>
+  </div>
+</section>
+
+<!-- COMMUNITIES MARQUEE -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track" id="mqTrack">
+    <span class="fill">Huntsville</span><i>✦</i><span>Madison</span><i>✦</i><span class="fill">Athens</span><i>✦</i><span>Decatur</span><i>✦</i><span class="fill">Owens Cross Roads</span><i>✦</i><span>Meridianville</span><i>✦</i><span class="fill">Hazel Green</span><i>✦</i><span>Harvest</span><i>✦</i>
+  </div>
+</div>
+
+<!-- COMMUNITY -->
+<section class="community" id="community">
+  <div class="wrap">
+    <div class="center rv">
+      <span class="eyebrow">Reputation &amp; Community</span>
+      <h2>We do business where we are <em style="color:var(--gold-lt)">also building trust.</em></h2>
+      <div class="gold-rule"></div>
+      <p class="lede">Community involvement is not a side note. It is evidence of consistency, visibility, and service beyond the transaction — because the neighborhoods we serve are the neighborhoods we love.</p>
+    </div>
+    <div class="comm-grid">
+      <figure class="comm-card rv"><img src="assets/backpack-drive.jpg" alt="Free 2 Teach backpack drive"><figcaption>Free 2 Teach · Backpack Drive</figcaption></figure>
+      <figure class="comm-card logo-card rv d1"><img src="assets/manna-house.jpg" alt="Manna House"></figure>
+      <figure class="comm-card logo-card rv d2"><img src="assets/food-bank.jpg" alt="Food Bank of North Alabama"></figure>
+    </div>
+  </div>
+</section>
+
+<!-- PROMISE -->
+<section class="promise" id="promise">
+  <div class="wrap">
+    <div class="center rv">
+      <span class="eyebrow">Our Communication Promise</span>
+      <h2>No confusion. No silence. <em style="color:var(--gold-lt)">No surprises.</em></h2>
+      <div class="gold-rule"></div>
+    </div>
+    <div class="promise-grid">
+      <div class="p-card rv"><b>Clear Expectations</b><p>You'll know what happens next — always.</p></div>
+      <div class="p-card rv d1"><b>Weekly Updates</b><p>Strategy reviews, not status guesses.</p></div>
+      <div class="p-card rv d2"><b>Fast Response</b><p>Direct answers, prompt follow-up.</p></div>
+      <div class="p-card rv d3"><b>Money-Smart Moves</b><p>Every decision framed around protecting your bottom line.</p></div>
+      <div class="p-card rv d4"><b>Calm Guidance</b><p>Steady hands during pressure points.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div class="rv">
+      <span class="eyebrow">Next Steps</span>
+      <h2>Let's build <em style="color:var(--gold-lt)">your strategy.</em></h2>
+      <div class="gold-rule"></div>
+      <p class="lede" style="margin-bottom:2.6rem">Whether you are selling, buying, relocating, investing, or exploring new construction — the first conversation is private, unhurried, and entirely about you.</p>
+      <div class="c-block">
+        <b>Chrystal Justice</b>
+        <a href="tel:+12565031924">256-503-1924</a>
+        <a href="mailto:Chrystal@choosecapstone.com">Chrystal@choosecapstone.com</a>
+      </div>
+      <div class="c-block">
+        <b>Patsy Jenkins</b>
+        <a href="tel:+12708817622">270-881-7622</a>
+        <a href="mailto:Patsy@choosecapstone.com">Patsy@choosecapstone.com</a>
+      </div>
+    </div>
+    <form class="rv d1" id="consultForm">
+      <div class="f-row">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="tel" name="phone" placeholder="Phone">
+      </div>
+      <input type="email" name="email" placeholder="Email Address" required>
+      <select name="interest" required>
+        <option value="" disabled selected>I'm interested in&hellip;</option>
+        <option>Selling a Property</option>
+        <option>Buying a Home</option>
+        <option>New Construction</option>
+        <option>Investing</option>
+        <option>Relocating</option>
+      </select>
+      <textarea name="message" placeholder="Tell us about your goals&hellip;"></textarea>
+      <button type="submit" class="btn solid"><span>Request My Private Consultation</span></button>
+    </form>
+  </div>
+</section>
+
+<!-- LIGHTBOX -->
+<div id="lightbox" role="dialog" aria-label="Gallery viewer">
+  <img id="lb-img" src="" alt="">
+  <div id="lb-cap"></div>
+  <button class="lb-btn" id="lb-close" aria-label="Close">✕</button>
+  <button class="lb-btn" id="lb-prev" aria-label="Previous">‹</button>
+  <button class="lb-btn" id="lb-next" aria-label="Next">›</button>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="foot-top">
+      <a class="brand" href="#top">
+        <span class="brand-mark">J&amp;J</span>
+        <span class="brand-sub">Real Estate Group<br>Exceptional Properties. Extraordinary Results.</span>
+      </a>
+      <div class="foot-logos">
+        <img class="cap" src="assets/capstone-logo.jpg" alt="Capstone Realty">
+        <img src="assets/realtor.png" alt="REALTOR®">
+        <img src="assets/eho.png" alt="Equal Housing Opportunity">
+      </div>
+    </div>
+    <p class="foot-note">J&amp;J Real Estate Group · Capstone Realty · Huntsville &amp; North Alabama<br>
+    Chrystal Justice &amp; Patsy Jenkins, REALTORS®. Each office is independently owned and operated. All information deemed reliable but not guaranteed. Equal Housing Opportunity.<br>
+    © <span id="yr"></span> J&amp;J Real Estate Group. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+// year
+document.getElementById('yr').textContent = new Date().getFullYear();
+
+// nav solid on scroll + hero parallax
+const nav = document.getElementById('nav');
+const heroBg = document.getElementById('heroBg');
+const heroLight = document.getElementById('heroLight');
+addEventListener('scroll', () => {
+  const y = scrollY;
+  nav.classList.toggle('solid', y > 40);
+  if (y < innerHeight){
+    heroBg.style.transform = `translateY(${y * .25}px)`;
+    heroLight.style.transform = `translateY(${y * .25}px)`;
+  }
+}, {passive:true});
+
+// flashlight effect — spotlight locked 1:1 to the mouse, zero lag
+const hero = document.querySelector('header');
+hero.addEventListener('mousemove', e => {
+  const r = heroLight.getBoundingClientRect();
+  heroLight.style.setProperty('--fx', ((e.clientX - r.left) / r.width * 100) + '%');
+  heroLight.style.setProperty('--fy', ((e.clientY - r.top) / r.height * 100) + '%');
+}, {passive:true});
+
+// mobile menu
+const burger = document.getElementById('burger');
+const mmenu = document.getElementById('mmenu');
+burger.addEventListener('click', () => mmenu.classList.toggle('open'));
+mmenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => mmenu.classList.remove('open')));
+
+// reveal on scroll
+const io = new IntersectionObserver(es => es.forEach(e => {
+  if (e.isIntersecting){ e.target.classList.add('on'); io.unobserve(e.target); }
+}), {threshold:.15});
+document.querySelectorAll('.rv:not(.on)').forEach(el => io.observe(el));
+
+// counters
+const cio = new IntersectionObserver(es => es.forEach(e => {
+  if (!e.isIntersecting) return;
+  const el = e.target, end = +el.dataset.count, suf = el.dataset.suffix || '';
+  let t0 = null;
+  const tick = ts => {
+    if (!t0) t0 = ts;
+    const p = Math.min((ts - t0) / 1400, 1);
+    el.textContent = Math.round(end * (1 - Math.pow(1 - p, 3))) + suf;
+    if (p < 1) requestAnimationFrame(tick);
+  };
+  requestAnimationFrame(tick);
+  cio.unobserve(el);
+}), {threshold:.6});
+document.querySelectorAll('[data-count]').forEach(el => cio.observe(el));
+
+// preloader
+addEventListener('load', () => setTimeout(() => {
+  const l = document.getElementById('loader');
+  l.classList.add('done');
+  setTimeout(() => l.remove(), 1000);
+}, 900));
+// safety: never trap the visitor if load stalls
+setTimeout(() => { const l = document.getElementById('loader'); if (l) { l.classList.add('done'); setTimeout(()=>l.remove(),1000);} }, 3500);
+
+// gold scroll progress
+const prog = document.getElementById('prog');
+addEventListener('scroll', () => {
+  const h = document.documentElement;
+  prog.style.width = (h.scrollTop / (h.scrollHeight - h.clientHeight) * 100) + '%';
+}, {passive:true});
+
+// custom gold cursor — locked 1:1 to the mouse
+if (matchMedia('(pointer:fine)').matches){
+  const dot = document.getElementById('curDot'), ring = document.getElementById('curRing');
+  addEventListener('mousemove', e => {
+    document.body.classList.add('cur-on');
+    dot.style.left = ring.style.left = e.clientX + 'px';
+    dot.style.top  = ring.style.top  = e.clientY + 'px';
+  }, {passive:true});
+  document.addEventListener('mouseleave', () => document.body.classList.remove('cur-on'));
+  document.querySelectorAll('a, button, .gal-grid figure').forEach(el => {
+    el.addEventListener('mouseenter', () => document.body.classList.add('cur-hover'));
+    el.addEventListener('mouseleave', () => document.body.classList.remove('cur-hover'));
+  });
+}
+
+// agent card 3D tilt
+if (matchMedia('(pointer:fine)').matches){
+  document.querySelectorAll('.agent').forEach(card => {
+    card.addEventListener('mousemove', e => {
+      const r = card.getBoundingClientRect();
+      const rx = ((e.clientY - r.top) / r.height - .5) * -5;
+      const ry = ((e.clientX - r.left) / r.width - .5) * 5;
+      card.style.transform = `perspective(900px) rotateX(${rx}deg) rotateY(${ry}deg) translateY(-6px)`;
+    });
+    card.addEventListener('mouseleave', () => card.style.transform = '');
+  });
+}
+
+// gallery lightbox
+const lb = document.getElementById('lightbox');
+const lbImg = document.getElementById('lb-img');
+const lbCap = document.getElementById('lb-cap');
+const figs = [...document.querySelectorAll('.gal-grid figure')];
+let lbIdx = 0;
+function lbShow(i){
+  lbIdx = (i + figs.length) % figs.length;
+  const im = figs[lbIdx].querySelector('img');
+  lbImg.src = im.src; lbImg.alt = im.alt;
+  lbCap.textContent = figs[lbIdx].querySelector('.gal-cap').textContent;
+}
+figs.forEach((f, i) => f.addEventListener('click', () => { lbShow(i); lb.classList.add('open'); }));
+document.getElementById('lb-close').addEventListener('click', () => lb.classList.remove('open'));
+document.getElementById('lb-prev').addEventListener('click', e => { e.stopPropagation(); lbShow(lbIdx-1); });
+document.getElementById('lb-next').addEventListener('click', e => { e.stopPropagation(); lbShow(lbIdx+1); });
+lb.addEventListener('click', e => { if (e.target === lb) lb.classList.remove('open'); });
+addEventListener('keydown', e => {
+  if (!lb.classList.contains('open')) return;
+  if (e.key === 'Escape') lb.classList.remove('open');
+  if (e.key === 'ArrowLeft') lbShow(lbIdx-1);
+  if (e.key === 'ArrowRight') lbShow(lbIdx+1);
+});
+
+// seamless marquee (duplicate track content)
+const mq = document.getElementById('mqTrack');
+mq.innerHTML += mq.innerHTML;
+
+// contact form -> email
+document.getElementById('consultForm').addEventListener('submit', e => {
+  e.preventDefault();
+  const f = new FormData(e.target);
+  const body = `Name: ${f.get('name')}%0APhone: ${f.get('phone')}%0AEmail: ${f.get('email')}%0AInterested in: ${f.get('interest')}%0A%0A${encodeURIComponent(f.get('message')||'')}`;
+  location.href = `mailto:Chrystal@choosecapstone.com?cc=Patsy@choosecapstone.com&subject=Private Consultation Request — ${encodeURIComponent(f.get('name'))}&body=${body}`;
+});
+</script>
+</body>
+</html>
