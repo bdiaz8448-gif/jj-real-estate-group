@@ -104,6 +104,45 @@ h3{font-size:var(--t-h3);font-weight:500}
 .tlink::after{content:'';position:absolute;left:0;bottom:0;width:100%;height:1px;background:currentColor;opacity:.4;transform:scaleX(0);transform-origin:right;transition:transform .5s var(--ease),opacity .3s}
 .tlink:hover::after{transform:scaleX(1);transform-origin:left;opacity:1}
 
+/* ============== GLOSSY LUXURY TABS ============== */
+.gtab{
+  position:relative;display:inline-flex;align-items:center;justify-content:center;
+  border-radius:999px;overflow:hidden;isolation:isolate;white-space:nowrap;cursor:pointer;
+  font-size:.7rem;font-weight:500;letter-spacing:.2em;text-transform:uppercase;
+  padding:.72rem 1.5rem;color:var(--white);
+  border:1px solid rgba(217,192,140,.3);
+  background:linear-gradient(180deg,rgba(255,255,255,.11) 0%,rgba(255,255,255,.04) 46%,rgba(255,255,255,.015) 100%);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.26),inset 0 -1px 1px rgba(0,0,0,.3),0 2px 12px rgba(0,0,0,.3);
+  backdrop-filter:blur(10px);
+  transition:color .4s var(--ease),border-color .45s,box-shadow .45s,transform .35s var(--ease);
+}
+.gtab>span{position:relative;z-index:2}
+.gtab::before{content:'';position:absolute;inset:0;z-index:0;opacity:0;transition:opacity .45s var(--ease);
+  background:linear-gradient(180deg,#f3e2b6 0%,#dcc292 34%,#c9a961 66%,#a8874a 100%)}
+.gtab::after{content:'';position:absolute;top:-20%;bottom:-20%;width:42%;left:-60%;z-index:1;pointer-events:none;opacity:0;
+  background:linear-gradient(100deg,transparent,rgba(255,255,255,.6),transparent);transform:skewX(-18deg)}
+.gtab:hover{color:#17130a;border-color:rgba(243,226,182,.9);transform:translateY(-1.5px);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.5),0 8px 26px rgba(201,169,97,.34),0 0 0 1px rgba(201,169,97,.16)}
+.gtab:hover::before{opacity:1}
+.gtab:hover::after{opacity:1;animation:sheen .9s var(--ease)}
+@keyframes sheen{from{left:-60%}to{left:120%}}
+.gtab.on{color:#17130a;border-color:rgba(243,226,182,.85);box-shadow:inset 0 1px 0 rgba(255,255,255,.45),0 6px 20px rgba(201,169,97,.28)}
+.gtab.on::before{opacity:1}
+
+/* always-gold primary */
+.gtab-solid{color:#17130a;border-color:rgba(255,244,214,.6);
+  background:linear-gradient(180deg,#f6e8c2 0%,#e0c795 30%,#c9a961 64%,#a3813f 100%);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.7),inset 0 -2px 5px rgba(0,0,0,.2),0 6px 22px rgba(201,169,97,.32)}
+.gtab-solid::before{background:linear-gradient(180deg,#fdf3d8 0%,#eed7a6 34%,#d6b673 68%,#b0904c 100%)}
+.gtab-solid:hover{color:#17130a;box-shadow:inset 0 1px 0 rgba(255,255,255,.85),0 10px 30px rgba(201,169,97,.48)}
+
+/* light-mode variant */
+.light .gtab{color:var(--navy);border-color:rgba(16,26,51,.2);
+  background:linear-gradient(180deg,rgba(255,255,255,.95) 0%,rgba(255,255,255,.7) 100%);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.9),0 2px 10px rgba(16,26,51,.08)}
+.light .gtab::before{background:linear-gradient(180deg,#f3e2b6,#c9a961)}
+.light .gtab:hover{color:#17130a;border-color:rgba(201,169,97,.9)}
+
 /* ============== PRELOADER ============== */
 #loader{position:fixed;inset:0;background:var(--ink);z-index:400;display:flex;align-items:center;justify-content:center;transition:opacity 1s var(--ease),visibility 1s}
 #loader.done{opacity:0;visibility:hidden}
@@ -115,26 +154,18 @@ h3{font-size:var(--t-h3);font-weight:500}
 nav{position:fixed;top:0;left:0;right:0;z-index:300;padding:1.7rem var(--gutter);display:flex;align-items:center;justify-content:space-between;transition:padding .45s var(--ease),background .45s,backdrop-filter .45s,box-shadow .45s}
 nav.shrunk{padding:.9rem var(--gutter);background:rgba(15,15,16,.9);backdrop-filter:blur(20px) saturate(1.2);box-shadow:0 1px 0 var(--dline)}
 nav.on-light.shrunk{background:rgba(244,242,237,.93);box-shadow:0 1px 0 var(--lline)}
-nav.on-light.shrunk .nav-links a:not(.nav-cta),nav.on-light.shrunk .brand span{color:var(--navy)}
-nav.on-light.shrunk .nav-cta{border-color:var(--navy);color:var(--navy)}
+nav.on-light.shrunk .brand span{color:var(--navy)}
 nav.on-light.shrunk .burger span{background:var(--navy)}
+nav.on-light.shrunk .gtab:not(.gtab-solid){color:var(--navy);border-color:rgba(16,26,51,.22);
+  background:linear-gradient(180deg,rgba(255,255,255,.9),rgba(255,255,255,.6));
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.95),0 2px 10px rgba(16,26,51,.07)}
+nav.on-light.shrunk .gtab:not(.gtab-solid):hover,nav.on-light.shrunk .gtab.on{color:#17130a;border-color:rgba(201,169,97,.9)}
 .brand{display:flex;align-items:center;gap:.95rem}
 .brand img{height:54px;width:54px;object-fit:cover;border:1px solid rgba(201,169,97,.35);filter:brightness(1.3);transition:height .45s var(--ease),width .45s var(--ease)}
 nav.shrunk .brand img{height:40px;width:40px}
 .brand span{font-size:var(--t-micro);letter-spacing:.3em;text-transform:uppercase;color:var(--white);opacity:.85;line-height:1.85;transition:color .4s}
-.nav-links{display:flex;align-items:center;gap:clamp(1rem,2.1vw,2.3rem)}
-.nav-links a:not(.nav-cta){font-size:.7rem;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:var(--white);opacity:.85;position:relative;padding:.5rem 0;transition:opacity .3s,color .4s}
-.nav-links a:not(.nav-cta)::after{content:'';position:absolute;left:0;bottom:0;width:100%;height:1px;background:currentColor;transform:scaleX(0);transform-origin:right;transition:transform .45s var(--ease)}
-.nav-links a:not(.nav-cta):hover{opacity:1}
-.nav-links a:not(.nav-cta):hover::after,.nav-links a.active::after{transform:scaleX(1);transform-origin:left}
-.nav-links a.active{opacity:1}
-.nav-cta{font-size:.7rem;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-lt);border:1px solid var(--gold);padding:.8rem 1.6rem;position:relative;overflow:hidden;transition:color .35s,border-color .4s}
-.nav-cta>span{position:relative;z-index:1}
-.nav-cta::before{content:'';position:absolute;inset:0;background:var(--gold);transform:translateY(101%);transition:transform .45s var(--ease)}
-.nav-cta:hover{color:var(--ink)}
-nav.on-light.shrunk .nav-cta::before{background:var(--navy)}
-nav.on-light.shrunk .nav-cta:hover{color:var(--paper)}
-.nav-cta:hover::before{transform:translateY(0)}
+.nav-links{display:flex;align-items:center;gap:clamp(.35rem,.7vw,.6rem)}
+.nav-links .gtab{font-size:.68rem;padding:.66rem 1.15rem}
 .burger{display:none;background:none;border:none;cursor:pointer;padding:.4rem;z-index:330}
 .burger span{display:block;width:25px;height:1px;background:var(--white);margin:7px 0;transition:.4s var(--ease)}
 .mm{position:fixed;inset:0;background:rgba(15,15,16,.985);backdrop-filter:blur(14px);z-index:310;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1.5rem;opacity:0;pointer-events:none;transition:opacity .45s var(--ease)}
@@ -158,9 +189,18 @@ h1 em{font-style:italic;color:var(--white)}
 .hero-cta{display:flex;align-items:center;justify-content:center;gap:2.4rem;flex-wrap:wrap}
 .hero-cta .btn{background:rgba(8,8,9,.42);backdrop-filter:blur(6px)}
 .hero-cta .tlink{color:#fff;text-shadow:0 2px 12px rgba(8,8,9,.9)}
-.cue{position:absolute;bottom:2rem;left:50%;transform:translateX(-50%);z-index:3;font-size:.58rem;letter-spacing:.4em;text-transform:uppercase;color:rgba(255,255,255,.6)}
-.cue::after{content:'';display:block;width:1px;height:44px;background:linear-gradient(rgba(255,255,255,.6),transparent);margin:.8rem auto 0;animation:cu 2.6s infinite}
-@keyframes cu{0%{transform:scaleY(0);transform-origin:top}45%{transform:scaleY(1);transform-origin:top}55%{transform:scaleY(1);transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
+.cue{position:absolute;bottom:1.9rem;left:50%;transform:translateX(-50%);z-index:4;display:flex;flex-direction:column;align-items:center;gap:.65rem;
+  padding:.7rem 1.5rem .8rem;border-radius:999px;border:1px solid rgba(217,192,140,.5);
+  background:linear-gradient(180deg,rgba(20,18,12,.62),rgba(20,18,12,.38));backdrop-filter:blur(10px);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.24),0 6px 22px rgba(0,0,0,.42);
+  font-size:.62rem;letter-spacing:.36em;text-transform:uppercase;color:#f0e2c0;font-weight:500;
+  transition:border-color .4s,box-shadow .4s,transform .35s var(--ease);animation:cueFloat 2.8s ease-in-out infinite}
+.cue:hover{border-color:rgba(243,226,182,.95);box-shadow:inset 0 1px 0 rgba(255,255,255,.4),0 10px 30px rgba(201,169,97,.35)}
+.cue i{display:block;width:9px;height:9px;border-right:1.5px solid #e6cf9a;border-bottom:1.5px solid #e6cf9a;transform:rotate(45deg);margin-top:-.15rem}
+@keyframes cueFloat{0%,100%{transform:translateX(-50%) translateY(0)}50%{transform:translateX(-50%) translateY(7px)}}
+.gtab-lg{padding:1.05rem 2.3rem;font-size:.74rem;letter-spacing:.22em}
+.hero-cta .gtab{box-shadow:inset 0 1px 0 rgba(255,255,255,.3),0 6px 24px rgba(0,0,0,.45)}
+.hero-cta .gtab-solid{box-shadow:inset 0 1px 0 rgba(255,255,255,.7),inset 0 -2px 5px rgba(0,0,0,.2),0 8px 28px rgba(201,169,97,.4)}
 
 /* ============== SEARCH (dark) ============== */
 .searchwrap{padding:clamp(2.6rem,4.5vw,4rem) 0 clamp(4rem,6vw,5rem)}
@@ -171,9 +211,8 @@ h1 em{font-style:italic;color:var(--white)}
 .gsearch button{flex-shrink:0;border:none;cursor:pointer;border-radius:100px;width:54px;height:54px;display:flex;align-items:center;justify-content:center;background:var(--navy);transition:background .3s,transform .3s var(--ease)}
 .gsearch button svg{stroke:var(--white);opacity:1}
 .gsearch button:hover{background:#1c2b52;transform:scale(1.04)}
-.stags{display:flex;justify-content:center;gap:1.8rem;flex-wrap:wrap;margin-top:1.7rem;font-size:.66rem;letter-spacing:.2em;text-transform:uppercase}
-.stags a{color:var(--white-2);transition:color .3s}
-.stags a:hover{color:var(--white)}
+.stags{display:flex;justify-content:center;gap:.7rem;flex-wrap:wrap;margin-top:1.6rem}
+.stags .gtab{font-size:.66rem;padding:.68rem 1.35rem}
 
 /* ============== SPACE SECTION + GLOBE ============== */
 .space{background:#06060a;color:var(--white);border-radius:var(--round) var(--round) 0 0;margin-top:calc(-1 * var(--round));position:relative;z-index:2;overflow:hidden}
@@ -412,12 +451,12 @@ body.chov .cring{width:48px;height:48px}
     <span>Real Estate Group<br>Capstone Realty</span>
   </a>
   <div class="nav-links">
-    <a href="#properties">Properties</a>
-    <a href="#market">Our Market</a>
-    <a href="#sell">Sell</a>
-    <a href="#buy">Buy</a>
-    <a href="#about">Advisors</a>
-    <a href="#" class="nav-cta open-gm"><span>Get in Touch</span></a>
+    <a href="#properties" class="gtab"><span>Properties</span></a>
+    <a href="#market" class="gtab"><span>Our Market</span></a>
+    <a href="#sell" class="gtab"><span>Sell</span></a>
+    <a href="#buy" class="gtab"><span>Buy</span></a>
+    <a href="#about" class="gtab"><span>Advisors</span></a>
+    <a href="#" class="gtab gtab-solid open-gm"><span>Get in Touch</span></a>
   </div>
   <button class="burger" id="burger" aria-label="Menu"><span></span><span></span></button>
 </nav>
@@ -439,11 +478,11 @@ body.chov .cring{width:48px;height:48px}
     <h1><span class="ln"><span>Exceptional Properties.</span></span><span class="ln"><span><em>Extraordinary Results.</em></span></span></h1>
     <p class="hero-sub">A private advisory for those who expect strategy, discretion, and results.</p>
     <div class="hero-cta">
-      <a href="#" class="btn open-gm"><span>Begin a Conversation</span></a>
-      <a href="#properties" class="tlink">View Properties</a>
+      <a href="#" class="gtab gtab-solid gtab-lg open-gm"><span>Begin a Conversation</span></a>
+      <a href="#properties" class="gtab gtab-lg"><span>View Properties</span></a>
     </div>
   </div>
-  <div class="cue">Scroll</div>
+  <a href="#properties" class="cue" aria-label="Scroll down"><span>Scroll</span><i></i></a>
 </header>
 
 <div class="searchwrap" id="properties">
@@ -454,10 +493,10 @@ body.chov .cring{width:48px;height:48px}
       <button type="submit" aria-label="Search"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke-width="1.9"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4.2-4.2"/></svg></button>
     </form>
     <div class="stags rv d1">
-      <a href="#" class="q-link" data-q="luxury">Luxury Homes</a>
-      <a href="#" class="q-link" data-q="new">New Construction</a>
-      <a href="#" class="q-link" data-q="open">Open Houses</a>
-      <a href="#" class="q-link" data-q="land">Land</a>
+      <a href="#" class="gtab q-link" data-q="luxury"><span>Luxury Homes</span></a>
+      <a href="#" class="gtab q-link" data-q="new"><span>New Construction</span></a>
+      <a href="#" class="gtab q-link" data-q="open"><span>Open Houses</span></a>
+      <a href="#" class="gtab q-link" data-q="land"><span>Land</span></a>
     </div>
   </div>
 </div>
@@ -832,7 +871,7 @@ document.querySelectorAll('[data-count]').forEach(el => cio.observe(el));
 const anchors = [...document.querySelectorAll('.nav-links a:not(.nav-cta)')];
 const spy = new IntersectionObserver(es => es.forEach(en => {
   if (!en.isIntersecting) return;
-  anchors.forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#' + en.target.id));
+  anchors.forEach(a => a.classList.toggle('on', a.getAttribute('href') === '#' + en.target.id));
 }), {rootMargin:'-40% 0px -55% 0px'});
 ['properties','market','sell','buy','about'].forEach(id => { const el = document.getElementById(id); if (el) spy.observe(el); });
 
@@ -892,12 +931,13 @@ document.getElementById('gf').addEventListener('submit', send);
 
   /* simplified continent outlines [lon,lat] */
   const LANDS = [
-    /* North America */
-    [[-168,65],[-162,70],[-150,70],[-135,69],[-125,70],[-112,69],[-100,68],[-90,69],[-82,73],[-72,68],[-64,60],[-56,53],[-60,47],[-66,45],[-70,42],[-74,39],[-76,35],[-81,31],[-80,25],[-84,26],[-88,30],[-94,29],[-97,26],[-101,22],[-106,21],[-110,24],[-114,28],[-117,32],[-122,37],[-124,44],[-131,54],[-140,60],[-150,60],[-158,56],[-165,60],[-168,65]],
-    /* Central America bridge */
-    [[-92,15],[-88,16],[-83,11],[-79,9],[-77,8],[-82,8],[-86,11],[-90,13],[-92,15]],
+    /* North America — Alaska, Canada, Hudson Bay, USA, Mexico, Central America */
+    [[-168,65.5],[-166,68.5],[-162,70.3],[-156,71.4],[-148,70.4],[-141,69.6],[-133,69.5],[-128,70.2],[-124,70],[-117,69.5],[-110,68.8],[-102,68.6],[-95,68.6],[-90,68.4],[-86,67.5],[-84,66],[-88,66.5],[-92,64],[-94,62],[-94,58.5],[-92,57],[-88,56],[-85,55],[-82,55],[-80,52],[-79,51],[-79,54],[-78,57],[-77,60],[-77,62],[-78,64],[-76,65],[-72,63],[-69,61],[-66,60],[-64,58],[-67,56],[-64,54],[-61,52],[-57,51],[-55,52],[-53,49],[-56,47],[-60,47],[-64,46],[-66,44],[-68,44],[-70,43],[-71,41],[-74,40.5],[-75.5,38],[-76,36.5],[-76,35],[-78,34],[-79,33],[-81,31.5],[-81,30],[-80,27],[-80,25.2],[-81.5,25],[-82.7,27.8],[-83,29.5],[-84.5,30],[-87,30.4],[-89.5,29],[-91,29.2],[-94,29.5],[-96,28.5],[-97,26.5],[-97.5,25],[-97,22],[-95,18.7],[-92,18.6],[-90.5,21],[-87,21.5],[-87.5,19],[-88.5,17.5],[-88,16],[-85,16],[-83.5,15],[-83,12.5],[-82,9],[-79,9],[-77.5,8.5],[-79,8],[-82,8.5],[-84,10],[-86,11.5],[-88,13],[-91,14],[-94,16],[-96,16],[-99,17],[-102,18],[-105,20],[-107,23],[-110,24],[-112,27],[-114,29],[-117,32.5],[-119,34],[-121,35],[-122,38],[-124,41],[-124,46],[-125,49],[-128,53],[-132,56],[-136,58],[-140,60],[-145,60],[-150,59],[-153,58],[-158,56],[-162,58],[-166,62],[-168,65.5]],
     /* South America */
-    [[-78,8],[-72,11],[-64,10],[-60,5],[-52,4],[-50,0],[-44,-2],[-38,-5],[-35,-8],[-39,-13],[-41,-22],[-48,-25],[-53,-34],[-58,-38],[-62,-40],[-65,-45],[-68,-50],[-70,-54],[-74,-52],[-75,-45],[-73,-37],[-71,-30],[-70,-20],[-75,-14],[-79,-6],[-81,-2],[-79,2],[-78,8]],
+    [[-77,8],[-75,11],[-71,12],[-68,11],[-64,10.5],[-61,10],[-60,8],[-58,7],[-55,6],[-51,4],[-50,0],[-48,-1],[-44,-2.5],[-41,-3],[-38,-5],[-35,-6],[-35,-8],[-37,-11],[-39,-13],[-39,-16],[-41,-22],[-44,-23],[-48,-25],[-49,-28],[-52,-32],[-54,-34],[-57,-35],[-57,-38],[-62,-39],[-63,-41],[-65,-43],[-66,-45],[-68,-47],[-68,-50],[-69,-52],[-71,-54],[-75,-53],[-74,-50],[-73,-46],[-74,-43],[-73,-40],[-73,-37],[-72,-33],[-71,-30],[-70,-25],[-70,-20],[-71,-17],[-75,-15],[-77,-12],[-79,-8],[-81,-6],[-80,-3],[-80,-1],[-78,1],[-77,4],[-77,8]],
+    /* Cuba + Hispaniola */
+    [[-84.9,22],[-81,23],[-78,22.5],[-75,20.2],[-77.5,19.9],[-81,19.9],[-84,21.9],[-84.9,22]],
+    [[-74.5,20],[-71,19.9],[-68.3,19],[-69,18],[-71.7,18.2],[-74.5,18.2],[-74.5,20]],
     /* Africa */
     [[-17,15],[-16,21],[-10,26],[0,32],[10,34],[20,32],[30,31],[33,28],[35,23],[38,18],[43,12],[48,8],[51,11],[48,3],[42,-2],[40,-8],[40,-15],[35,-20],[33,-26],[28,-31],[22,-34],[18,-34],[15,-27],[12,-18],[13,-10],[9,-1],[9,4],[3,6],[-5,5],[-10,7],[-14,11],[-17,15]],
     /* Eurasia */
@@ -952,6 +992,45 @@ document.getElementById('gf').addEventListener('submit', send);
   }
   tc.putImageData(im, 0, 0);
   const TEX = tc.getImageData(0, 0, TW, TH).data;
+
+  /* ---------- 1b. cloud layer ---------- */
+  const cl = document.createElement('canvas'); cl.width = TW; cl.height = TH;
+  const cc = cl.getContext('2d');
+  cc.fillStyle = '#000'; cc.fillRect(0, 0, TW, TH);
+  function puff(x, y, r, a){
+    const g = cc.createRadialGradient(x, y, 0, x, y, r);
+    g.addColorStop(0, `rgba(255,255,255,${a})`);
+    g.addColorStop(.45, `rgba(255,255,255,${a * .55})`);
+    g.addColorStop(1, 'rgba(255,255,255,0)');
+    cc.fillStyle = g; cc.beginPath(); cc.arc(x, y, r, 0, 6.3); cc.fill();
+  }
+  /* banded weather systems: ITCZ, mid-latitude storm tracks, polar */
+  const bands = [[.5,.035,.5],[.34,.04,.34],[.66,.04,.34],[.24,.045,.5],[.76,.045,.5]];
+  bands.forEach(([cy0, sp, amt]) => {
+    const n = Math.round(TW / 26);
+    for (let i = 0; i < n; i++){
+      const x = Math.random() * TW;
+      const y = (cy0 + (Math.random() - .5) * sp * 2) * TH;
+      puff(x, y, 12 + Math.random() * 30, amt * (.4 + Math.random() * .6));
+    }
+  });
+  /* a few spiral systems for that satellite look */
+  for (let s = 0; s < 5; s++){
+    const ox = Math.random() * TW, oy = (.22 + Math.random() * .56) * TH, dir = Math.random() < .5 ? 1 : -1;
+    for (let t = 0; t < 34; t++){
+      const ang = t * .42 * dir, rad = t * 1.9;
+      puff(ox + Math.cos(ang) * rad, oy + Math.sin(ang) * rad * .5, 8 + t * .34, .26);
+    }
+  }
+  cc.filter = 'blur(1.5px)'; cc.drawImage(cl, 0, 0); cc.filter = 'none';
+  const cimg = cc.getImageData(0, 0, TW, TH), CD = cimg.data;
+  /* threshold so only cloud cores survive — keeps oceans and land visible */
+  for (let i = 0; i < CD.length; i += 4){
+    let v = CD[i] / 255;
+    v = v < .3 ? 0 : (v - .3) / .7;
+    CD[i] = Math.min(255, v * v * 255 * 1.35);
+  }
+  const CLD = CD;
 
   /* ---------- 2. geometry ---------- */
   let rot = 1.5114;                     /* start centred on Huntsville */
@@ -1010,8 +1089,10 @@ document.getElementById('gf').addEventListener('submit', send);
 
   /* ---------- 3. render ---------- */
   const TAU = Math.PI * 2;
+  let cloudOff = 0;
   function draw(){
     ctx.clearRect(0, 0, S, S);
+    cloudOff = (cloudOff + 0.00004) % 1;
 
     /* atmospheric bloom behind the planet */
     const glow = ctx.createRadialGradient(cx, cy, R * .95, cx, cy, R * 1.3);
@@ -1025,16 +1106,36 @@ document.getElementById('gf').addEventListener('submit', send);
     for (let p = 0; p < n2; p++){
       const o = p << 2;
       if (!pOn[p]){ sD[o+3] = 0; continue; }
-      let lon = pLon[p] - rot;
+      const lon = pLon[p] - rot;
       let u = (lon / TAU + 0.5) % 1; if (u < 0) u += 1;
-      const t = (pRow[p] + (u * TW | 0)) << 2;
+      const row = pRow[p];
+      const t = (row + (u * TW | 0)) << 2;
+      /* clouds drift slightly faster than the surface */
+      let uc = (u + cloudOff) % 1;
+      const tcp = (row + (uc * TW | 0)) << 2;
+      const cloud = CLD[tcp] / 255;
+
       const lit = pLit[p];
-      const f = 0.14 + 0.96 * (lit > 0 ? lit : 0);
-      const rim = pRim[p] * 130;
-      const night = lit < -0.05 ? 1 : 0;
-      sD[o]   = Math.min(255, TEX[t] * f + rim * .48 + night * 6);
-      sD[o+1] = Math.min(255, TEX[t+1] * f + rim * .72 + night * 9);
-      sD[o+2] = Math.min(255, TEX[t+2] * f + rim * 1.0 + night * 18);
+      const day = lit > 0 ? lit : 0;
+      const f = 0.13 + 0.97 * day;
+      const rim = pRim[p] * 132;
+
+      let r = TEX[t], g = TEX[t+1], bl = TEX[t+2];
+      /* night-side civilisation glow on land */
+      if (lit < 0.06 && bl < g){
+        const nAmt = (0.06 - lit) * 1.5 * (0.35 + cloud * -0.3 + 0.5);
+        r += 116 * nAmt; g += 82 * nAmt; bl += 34 * nAmt;
+      }
+      /* composite clouds, lit by the same sun */
+      const ca = cloud * 0.8;
+      const cw = 232 * (0.16 + 0.98 * day);
+      r = r * (1 - ca) + cw * ca;
+      g = g * (1 - ca) + cw * ca;
+      bl = bl * (1 - ca) + (cw + 6) * ca;
+
+      sD[o]   = Math.min(255, r * f + rim * .46);
+      sD[o+1] = Math.min(255, g * f + rim * .72);
+      sD[o+2] = Math.min(255, bl * f + rim * 1.02);
       sD[o+3] = 255;
     }
     sx.putImageData(sImg, 0, 0);
