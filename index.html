@@ -3,495 +3,580 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>J&amp;J Real Estate Group | Chrystal Justice &amp; Patsy Jenkins — Luxury Real Estate Advisory, Huntsville &amp; North Alabama</title>
-<meta name="description" content="Exceptional Properties. Extraordinary Results. J&J Real Estate Group at Capstone Realty — a private, strategic, high-touch real estate experience for sellers, buyers, investors, and new-construction clients in Huntsville and North Alabama.">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%230a0a0a'/%3E%3Ctext x='32' y='44' font-family='Georgia,serif' font-size='30' fill='%23c6a35d' text-anchor='middle'%3EJ%26%23038;J%3C/text%3E%3C/svg%3E">
+<title>J&amp;J Real Estate Group | Chrystal Justice &amp; Patsy Jenkins — Huntsville &amp; North Alabama</title>
+<meta name="description" content="Exceptional Properties. Extraordinary Results. A private real estate advisory for sellers, buyers, investors, and new construction in Huntsville and North Alabama.">
+<meta property="og:title" content="J&J Real Estate Group — Exceptional Properties. Extraordinary Results.">
+<meta property="og:description" content="A private real estate advisory in Huntsville & North Alabama.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%2314130f'/%3E%3Ctext x='32' y='44' font-family='Georgia,serif' font-size='30' fill='%23d9c08c' text-anchor='middle'%3EJ%26%23038;J%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600;700&family=Archivo:wght@500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Inter:wght@200;300;400;500&display=swap" rel="stylesheet">
+
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"RealEstateAgent","name":"J&J Real Estate Group","alternateName":"J&J Real Estate Group at Capstone Realty","description":"Luxury real estate advisory in Huntsville & North Alabama. Sellers, buyers, new construction, investors, and relocation.","areaServed":["Huntsville AL","Madison AL","Athens AL","Decatur AL","Owens Cross Roads AL","Meridianville AL","Hazel Green AL","Harvest AL"],"parentOrganization":{"@type":"Organization","name":"Capstone Realty","url":"https://www.choosecapstone.com/"},"employee":[{"@type":"RealEstateAgent","name":"Chrystal Justice","telephone":"+1-256-503-1924","email":"Chrystal@choosecapstone.com"},{"@type":"RealEstateAgent","name":"Patsy Jenkins","telephone":"+1-270-881-7622","email":"Patsy@choosecapstone.com"}],"slogan":"Exceptional Properties. Extraordinary Results."}
+{"@context":"https://schema.org","@type":"RealEstateAgent","name":"J&J Real Estate Group","alternateName":"J&J Real Estate Group at Capstone Realty","description":"Private real estate advisory in Huntsville & North Alabama.","areaServed":["Huntsville AL","Madison AL","Athens AL","Decatur AL","Owens Cross Roads AL","Meridianville AL","Hazel Green AL","Harvest AL"],"parentOrganization":{"@type":"Organization","name":"Capstone Realty","url":"https://www.choosecapstone.com/"},"employee":[{"@type":"RealEstateAgent","name":"Chrystal Justice","telephone":"+1-256-503-1924","email":"Chrystal@choosecapstone.com"},{"@type":"RealEstateAgent","name":"Patsy Jenkins","telephone":"+1-270-881-7622","email":"Patsy@choosecapstone.com"}],"slogan":"Exceptional Properties. Extraordinary Results."}
 </script>
+
 <style>
+/* ============ TOKENS ============ */
 :root{
-  --black:#0a0a0a; --ink:#111113; --coal:#161618; --smoke:#1e1e21;
-  --gold:#c6a35d; --gold-lt:#e3c98a; --gold-dk:#9a7c3f;
-  --cream:#f5f1e8; --paper:#faf8f3; --mist:#a9a6a0; --line:rgba(198,163,93,.28);
-  --serif:'Cormorant Garamond',serif; --sans:'Inter',sans-serif; --grotesk:'Archivo',sans-serif;
-  --navy:#0d1522; --navy-lt:#122036;
+  /* never pure black, never pure white */
+  --char:#14130f;        /* rich charcoal */
+  --char-2:#1b1a15;      /* elevated charcoal */
+  --char-3:#232119;      /* card */
+  --ivory:#f4f1ea;       /* warm ivory */
+  --ivory-dim:#cdc7bb;
+  --mute:#95907f;
+  --champagne:#d9c08c;
+  --gold:#c9a961;
+  --bronze:#8c6f47;
+  --line:rgba(217,192,140,.22);
+  --line-2:rgba(217,192,140,.12);
+
+  --display:'Cormorant Garamond',Georgia,serif;
+  --body:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;
+
+  /* editorial scale */
+  --t-hero:clamp(2.9rem,5.9vw,5.4rem);
+  --t-h2:clamp(2.1rem,3.9vw,3.5rem);
+  --t-h3:clamp(1.5rem,2.2vw,2.1rem);
+  --t-body:clamp(1rem,1.05vw,1.12rem);
+  --t-micro:.66rem;
+
+  /* generous rhythm */
+  --gutter:clamp(1.6rem,6vw,7rem);
+  --sect:clamp(7rem,15vw,15rem);
+  --ease:cubic-bezier(.16,.7,.2,1);
 }
 *{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{background:var(--black);color:var(--cream);font-family:var(--sans);font-weight:300;line-height:1.7;overflow-x:hidden}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--char);color:var(--ivory);font-family:var(--body);font-weight:300;font-size:var(--t-body);line-height:1.75;overflow-x:hidden;-webkit-font-smoothing:antialiased}
 img{max-width:100%;display:block}
 a{color:inherit;text-decoration:none}
-::selection{background:var(--gold);color:var(--black)}
+::selection{background:var(--champagne);color:var(--char)}
 
-/* ---------- utilities ---------- */
-.wrap{max-width:1240px;margin:0 auto;padding:0 6vw}
-.eyebrow{font-family:var(--sans);font-size:.72rem;letter-spacing:.42em;text-transform:uppercase;color:var(--gold);margin-bottom:1.4rem;display:block}
-h1,h2,h3{font-family:var(--serif);font-weight:500;line-height:1.12;letter-spacing:.01em}
-h2{font-size:clamp(2.2rem,4.6vw,3.6rem);margin-bottom:1.2rem}
-h3{font-size:1.5rem;color:var(--gold-lt)}
-.lede{font-size:1.08rem;color:var(--mist);max-width:640px}
-section{padding:clamp(3rem,6vw,5.2rem) 0;position:relative}
-.gold-rule{width:64px;height:1px;background:linear-gradient(90deg,var(--gold),transparent);margin:1.6rem 0 2rem}
-.center .gold-rule{margin:1.6rem auto 2rem;background:linear-gradient(90deg,transparent,var(--gold),transparent)}
+/* ============ PRIMITIVES ============ */
+.wrap{max-width:1320px;margin:0 auto;padding:0 var(--gutter)}
+.narrow{max-width:900px}
+section{padding:var(--sect) 0;position:relative}
+h1,h2,h3,.dsp{font-family:var(--display);font-weight:400;line-height:1.06;letter-spacing:-.005em}
+h2{font-size:var(--t-h2)}
+h3{font-size:var(--t-h3);font-weight:500}
+em{font-style:italic;color:var(--champagne)}
+.eyebrow{display:block;font-size:var(--t-micro);letter-spacing:.44em;text-transform:uppercase;color:var(--bronze);margin-bottom:2.2rem;font-weight:400}
+.lede{font-size:1.06rem;color:var(--ivory-dim);max-width:56ch;font-weight:300}
+.rule{width:52px;height:1px;background:var(--gold);opacity:.6;margin:2.2rem 0}
 .center{text-align:center}
-.center .lede{margin:0 auto}
+.center .rule{margin:2.2rem auto}
+.center .lede{margin-left:auto;margin-right:auto}
+.stack{display:grid;gap:clamp(3rem,7vw,7rem)}
 
-/* reveal animation */
-.rv{opacity:0;transform:translateY(34px);transition:opacity .9s cubic-bezier(.2,.7,.3,1),transform .9s cubic-bezier(.2,.7,.3,1)}
+/* motion */
+.rv{opacity:0;transform:translateY(28px);transition:opacity 1.1s var(--ease),transform 1.1s var(--ease)}
 .rv.on{opacity:1;transform:none}
-.rv.d1{transition-delay:.12s}.rv.d2{transition-delay:.24s}.rv.d3{transition-delay:.36s}.rv.d4{transition-delay:.48s}
+.d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}.d4{transition-delay:.4s}
 
-/* ---------- nav ---------- */
-nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:1.1rem 4vw;display:flex;align-items:center;justify-content:space-between;transition:background .4s,box-shadow .4s,padding .4s}
-nav.solid{background:rgba(10,10,10,.92);backdrop-filter:blur(14px);box-shadow:0 1px 0 var(--line);padding:.7rem 4vw}
-.brand{display:flex;align-items:center;gap:.85rem}
-.brand-logo{height:60px;width:60px;object-fit:cover;border:1px solid rgba(198,163,93,.55);box-shadow:0 0 14px rgba(198,163,93,.25);transition:box-shadow .4s;filter:brightness(1.35) contrast(1.08)}
-.brand:hover .brand-logo{box-shadow:0 0 18px rgba(198,163,93,.45)}
-.brand-mark{font-family:var(--serif);font-size:1.55rem;color:var(--gold);letter-spacing:.05em}
-.brand-sub{font-size:.6rem;letter-spacing:.34em;text-transform:uppercase;color:var(--mist)}
-.nav-links{display:flex;gap:2.4rem;align-items:center}
-.nav-links a:not(.nav-cta){font-family:var(--grotesk);font-size:.92rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#fff;opacity:1;transition:color .35s,opacity .35s;position:relative;padding:.35rem 0}
-.nav-links a:not(.nav-cta)::after{content:'';position:absolute;left:50%;right:50%;bottom:0;height:1px;background:linear-gradient(90deg,transparent,var(--gold-lt),transparent);transition:left .4s cubic-bezier(.2,.7,.3,1),right .4s cubic-bezier(.2,.7,.3,1)}
-.nav-links a:not(.nav-cta):hover{color:var(--gold-lt);opacity:1}
-.nav-links a:not(.nav-cta):hover::after{left:0;right:0}
-.nav-links a.active{color:var(--gold-lt)!important}
-.nav-links a.active::after{left:0;right:0;background:linear-gradient(90deg,var(--gold-dk),var(--gold-lt),var(--gold-dk));height:2px}
-.nav-cta{font-family:var(--grotesk);padding:.72rem 1.7rem;color:#151004!important;font-weight:700;letter-spacing:.14em;font-size:.85rem;text-transform:uppercase;background:linear-gradient(120deg,#8a6a2f 0%,#c6a35d 25%,#f0ddab 50%,#c6a35d 75%,#8a6a2f 100%);background-size:200% auto;border:1px solid rgba(240,221,171,.5);box-shadow:0 2px 18px rgba(198,163,93,.25),inset 0 1px 0 rgba(255,244,214,.55);transition:background-position .6s ease,box-shadow .4s,transform .3s;position:relative}
-.nav-cta:hover{background-position:right center;box-shadow:0 4px 28px rgba(198,163,93,.5),inset 0 1px 0 rgba(255,244,214,.7);transform:translateY(-1px)}
-.burger{display:none;background:none;border:none;cursor:pointer;z-index:110}
-.burger span{display:block;width:26px;height:1.5px;background:var(--gold);margin:6px 0;transition:.35s}
-.mobile-menu{position:fixed;inset:0;background:rgba(8,8,8,.97);backdrop-filter:blur(10px);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2rem;z-index:105;opacity:0;pointer-events:none;transition:opacity .4s}
-.mobile-menu.open{opacity:1;pointer-events:auto}
-.mobile-menu a{font-family:var(--serif);font-size:1.7rem;color:var(--cream)}
-.mobile-menu a:hover{color:var(--gold)}
+/* buttons — black, gold border, fills gold */
+.btn{display:inline-flex;align-items:center;gap:.8rem;font-family:var(--body);font-size:.74rem;font-weight:400;letter-spacing:.26em;text-transform:uppercase;padding:1.25rem 2.8rem;border:1px solid var(--gold);color:var(--champagne);background:transparent;cursor:pointer;position:relative;overflow:hidden;transition:color .35s var(--ease),border-color .35s}
+.btn>span{position:relative;z-index:1}
+.btn::before{content:'';position:absolute;inset:0;background:var(--gold);transform:translateY(101%);transition:transform .45s var(--ease)}
+.btn:hover{color:var(--char);border-color:var(--gold)}
+.btn:hover::before{transform:translateY(0)}
+.btn-text{font-size:.72rem;letter-spacing:.26em;text-transform:uppercase;color:var(--ivory-dim);position:relative;padding-bottom:.5rem;transition:color .35s}
+.btn-text::after{content:'';position:absolute;left:0;bottom:0;width:100%;height:1px;background:var(--bronze);transform:scaleX(0);transform-origin:right;transition:transform .5s var(--ease),background .35s}
+.btn-text:hover{color:var(--champagne)}
+.btn-text:hover::after{transform:scaleX(1);transform-origin:left;background:var(--champagne)}
 
-/* ---------- hero ---------- */
-header{height:100svh;min-height:640px;position:relative;display:flex;align-items:center;justify-content:center;text-align:center;overflow:hidden}
-.hero-bg{position:absolute;inset:-8%;background:url('assets/living-dusk.jpg') center/cover;will-change:transform;filter:brightness(1.16) saturate(1.08)}
-.hero-veil{position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,10,10,.52),rgba(10,10,10,.1) 28%,rgba(10,10,10,.05) 62%,rgba(10,10,10,.42) 88%,rgba(10,10,10,.82) 100%)}
-.hero-in{position:relative;z-index:2;padding:0 6vw;max-width:960px}
-.hero-in .eyebrow{margin-bottom:2rem}
-h1{font-size:clamp(2.6rem,6.4vw,5.2rem);font-weight:500;text-shadow:0 2px 22px rgba(0,0,0,.85),0 1px 4px rgba(0,0,0,.9)}
-h1 em{font-style:italic;background:linear-gradient(105deg,#8a6a2f 0%,#c6a35d 20%,#f6e7bd 38%,#e3c98a 50%,#f6e7bd 62%,#c6a35d 80%,#8a6a2f 100%);background-size:220% auto;-webkit-background-clip:text;background-clip:text;color:transparent;text-shadow:none;filter:drop-shadow(0 2px 6px rgba(0,0,0,.75));animation:goldShine 5.5s linear infinite}
-@keyframes goldShine{to{background-position:220% center}}
-.hero-sub{margin:1.4rem auto 2rem;max-width:600px;color:#fff;font-weight:400;font-size:1.05rem;text-shadow:-1px 0 0 rgba(0,0,0,.9),1px 0 0 rgba(0,0,0,.9),0 -1px 0 rgba(0,0,0,.9),0 1px 0 rgba(0,0,0,.9),0 3px 14px rgba(0,0,0,.85)}
-/* hero property search */
-.hero-search{display:flex;max-width:680px;margin:0 auto;background:rgba(8,8,8,.62);backdrop-filter:blur(12px);border:1px solid rgba(198,163,93,.65);box-shadow:0 20px 60px rgba(0,0,0,.5),inset 0 1px 0 rgba(255,244,214,.15);overflow:hidden}
-.hero-search input{flex:1;background:transparent;border:none;color:var(--cream);font-family:var(--sans);font-size:1rem;padding:1.15rem 1.4rem;outline:none}
-.hero-search input::placeholder{color:#b5b0a4}
-.hero-search button{font-family:var(--grotesk);font-weight:700;font-size:.85rem;letter-spacing:.12em;text-transform:uppercase;border:none;cursor:pointer;padding:0 2rem;color:#151004;background:linear-gradient(120deg,#8a6a2f 0%,#c6a35d 25%,#f0ddab 50%,#c6a35d 75%,#8a6a2f 100%);background-size:200% auto;transition:background-position .6s}
-.hero-search button:hover{background-position:right center}
-.btn{display:inline-block;font-size:.76rem;letter-spacing:.3em;text-transform:uppercase;padding:1.05rem 2.6rem;border:1px solid var(--gold);color:var(--gold);position:relative;overflow:hidden;transition:color .35s}
-.btn::before{content:'';position:absolute;inset:0;background:var(--gold);transform:scaleX(0);transform-origin:left;transition:transform .35s}
-.btn:hover{color:var(--black)}
-.btn:hover::before{transform:scaleX(1)}
-.btn span{position:relative;z-index:1}
-.btn.solid{background:linear-gradient(120deg,#8a6a2f 0%,#c6a35d 25%,#f0ddab 50%,#c6a35d 75%,#8a6a2f 100%);background-size:200% auto;color:#151004;border-color:rgba(240,221,171,.5);font-weight:500;box-shadow:0 2px 18px rgba(198,163,93,.25),inset 0 1px 0 rgba(255,244,214,.55);transition:background-position .6s ease,box-shadow .4s,transform .3s}
-.btn.solid::before{display:none}
-.btn.solid:hover{background-position:right center;color:#151004;box-shadow:0 4px 28px rgba(198,163,93,.5);transform:translateY(-1px)}
-.hero-scroll{position:absolute;bottom:2.2rem;left:50%;transform:translateX(-50%);z-index:2;font-size:.62rem;letter-spacing:.4em;text-transform:uppercase;color:var(--mist)}
-.hero-scroll::after{content:'';display:block;width:1px;height:44px;background:linear-gradient(var(--gold),transparent);margin:.8rem auto 0;animation:drip 2.2s infinite}
-@keyframes drip{0%{transform:scaleY(0);transform-origin:top}45%{transform:scaleY(1);transform-origin:top}55%{transform:scaleY(1);transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
-
-/* ---------- stats ---------- */
-.stats{padding:2.2rem 6vw;display:flex;justify-content:center}
-.stats .wrap{display:grid;grid-template-columns:repeat(3,1fr);gap:0;max-width:880px;width:100%;margin:0;padding:1.7rem 1rem;background:linear-gradient(135deg,var(--navy) 0%,var(--navy-lt) 50%,var(--navy) 100%);border:1px solid rgba(198,163,93,.35);box-shadow:0 18px 60px rgba(13,21,34,.55),inset 0 1px 0 rgba(198,163,93,.18)}
-.stat{text-align:center;position:relative}
-.stat+.stat::before{content:'';position:absolute;left:0;top:18%;bottom:18%;width:1px;background:linear-gradient(180deg,transparent,rgba(198,163,93,.45),transparent)}
-.stat b{font-family:var(--serif);font-weight:600;font-size:2.1rem;color:var(--gold-lt);display:block;line-height:1.15}
-.stat span{font-size:.62rem;letter-spacing:.24em;text-transform:uppercase;color:#8fa3c0}
-
-/* ---------- positioning ---------- */
-.positioning h2{font-size:clamp(2.4rem,5vw,4rem)}
-.positioning .wrap{display:grid;grid-template-columns:1.2fr .8fr;gap:5rem;align-items:center}
-.pillars{display:grid;gap:1.6rem}
-.pillar{border-left:1px solid var(--line);padding-left:1.6rem}
-.pillar b{font-family:var(--serif);font-size:1.25rem;font-weight:600;color:var(--gold-lt);letter-spacing:.02em}
-.pillar p{color:var(--mist);font-size:.95rem}
-
-/* ---------- team ---------- */
-.team{background:var(--ink)}
-.team-grid{display:grid;grid-template-columns:1fr 1fr;gap:3.4rem;margin-top:2.4rem}
-.agent{background:var(--coal);border:1px solid rgba(198,163,93,.14);transition:border-color .4s,transform .4s;overflow:hidden}
-.agent:hover{border-color:var(--gold);transform:translateY(-6px)}
-.agent-photo{position:relative;overflow:hidden;aspect-ratio:4/4.6}
-.agent-photo img{width:100%;height:100%;object-fit:cover;object-position:top;transition:transform .8s cubic-bezier(.2,.7,.3,1);filter:saturate(.92)}
-.agent:hover .agent-photo img{transform:scale(1.05)}
-.agent-photo::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(10,10,10,.85))}
-.agent-body{padding:2rem 2.2rem 2.4rem;margin-top:-4.4rem;position:relative;z-index:2}
-.agent-body h3{font-size:2rem;color:var(--cream)}
-.agent-role{font-size:.7rem;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);margin:.4rem 0 1rem}
-.agent-body p{color:var(--mist);font-size:.95rem;margin-bottom:1.4rem}
-.agent-contact{display:flex;flex-direction:column;gap:.35rem;font-size:.9rem}
-.agent-contact a{color:var(--gold-lt);transition:color .3s}
-.agent-contact a:hover{color:var(--gold)}
-
-/* ---------- difference table ---------- */
-.diff-table{margin-top:2.4rem;border:1px solid var(--line);overflow:hidden}
-.diff-row{display:grid;grid-template-columns:1.2fr 1fr 1fr;border-top:1px solid rgba(198,163,93,.14)}
-.diff-row:first-child{border-top:none;background:var(--smoke)}
-.diff-row>div{padding:1.25rem 1.6rem;font-size:.93rem}
-.diff-row>div:first-child{color:var(--cream);font-weight:400}
-.diff-head{font-size:.72rem!important;letter-spacing:.26em;text-transform:uppercase;color:var(--mist)!important;font-weight:500!important}
-.diff-jj{background:rgba(198,163,93,.07);color:var(--gold-lt);border-left:1px solid var(--line);border-right:1px solid var(--line)}
-.diff-row:first-child .diff-jj{color:var(--gold)!important}
-.diff-typ{color:var(--mist)}
-.check{color:var(--gold);margin-right:.5rem}
-.dash{color:#5c5a55;margin-right:.5rem}
-
-/* ---------- sellers / split sections ---------- */
-.split{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center}
-.split.flip>.split-img{order:2}
-.split-img{position:relative;overflow:hidden}
-.split-img img{transition:transform 1s cubic-bezier(.2,.7,.3,1)}
-.split-img:hover img{transform:scale(1.04)}
-.split-img::before{content:'';position:absolute;inset:0;border:1px solid var(--line);transform:translate(14px,14px);pointer-events:none;transition:transform .5s}
-.split-img:hover::before{transform:translate(8px,8px)}
-.list{display:grid;gap:.9rem;margin-top:1.8rem}
-.list li{list-style:none;display:flex;gap:1rem;color:#d3cfc5;font-size:.98rem;align-items:baseline}
-.list li::before{content:'—';color:var(--gold);flex-shrink:0}
-
-/* pricing steps */
-.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:1.6rem;margin-top:2.4rem}
-.step{background:var(--coal);border:1px solid rgba(198,163,93,.14);padding:2.4rem 2rem;transition:border-color .4s,transform .4s}
-.step:hover{border-color:var(--gold);transform:translateY(-6px)}
-.step i{font-family:var(--serif);font-style:normal;font-size:2.6rem;color:var(--gold);opacity:.55;display:block;margin-bottom:1rem}
-.step b{font-family:var(--serif);font-size:1.35rem;font-weight:600;color:var(--gold-lt);display:block;margin-bottom:.5rem}
-.step p{color:var(--mist);font-size:.92rem}
-
-/* ---------- gallery ---------- */
-.gallery{background:var(--ink)}
-.gal-grid{display:grid;grid-template-columns:repeat(3,1fr);grid-auto-rows:230px;gap:14px;margin-top:2.4rem}
-.gal-grid figure{overflow:hidden;position:relative;margin:0}
-.gal-grid img{width:100%;height:100%;object-fit:cover;transition:transform 1s cubic-bezier(.2,.7,.3,1),filter .6s;filter:saturate(.9)}
-.gal-grid figure:hover img{transform:scale(1.07);filter:saturate(1.05)}
-.gal-grid figure:nth-child(1){grid-row:span 2;grid-column:span 2}
-.gal-grid figure:nth-child(4){grid-row:span 2}
-.gal-cap{position:absolute;left:0;right:0;bottom:0;padding:1rem 1.3rem;background:linear-gradient(transparent,rgba(10,10,10,.85));font-size:.72rem;letter-spacing:.26em;text-transform:uppercase;color:var(--gold-lt);opacity:0;transform:translateY(8px);transition:.45s}
-.gal-grid figure:hover .gal-cap{opacity:1;transform:none}
-
-/* ---------- journey ---------- */
-.journey-line{display:grid;grid-template-columns:repeat(7,1fr);gap:0;margin-top:2.6rem;position:relative}
-.journey-line::before{content:'';position:absolute;top:9px;left:7%;right:7%;height:1px;background:linear-gradient(90deg,transparent,var(--gold),var(--gold),transparent);opacity:.5}
-.j-step{text-align:center;position:relative;padding:0 .4rem}
-.j-step i{display:block;width:19px;height:19px;border:1px solid var(--gold);border-radius:50%;margin:0 auto 1.1rem;background:var(--black);position:relative;z-index:1;transition:background .4s}
-.j-step:hover i{background:var(--gold)}
-.j-step b{font-family:var(--serif);font-size:1.06rem;font-weight:600;color:var(--gold-lt);display:block}
-.j-step span{font-size:.74rem;color:var(--mist)}
-
-/* ---------- community ---------- */
-.community{background:var(--ink)}
-.causes{display:flex;align-items:center;justify-content:center;gap:2.2rem;flex-wrap:wrap;margin-top:2.2rem;padding:1.8rem 1rem;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-.causes span{font-family:var(--serif);font-size:1.35rem;color:var(--gold-lt);letter-spacing:.04em}
-.causes i{font-style:normal;color:var(--gold);font-size:.85rem;opacity:.8}
-
-/* ---------- testimonial ---------- */
-.quote-mark{font-family:var(--serif);font-size:7rem;line-height:.6;color:var(--gold);opacity:.5;display:block;margin-bottom:2rem}
-blockquote{font-family:var(--serif);font-size:clamp(1.5rem,2.8vw,2.15rem);font-style:italic;font-weight:400;line-height:1.5;max-width:880px;margin:0 auto;color:#e9e4d8}
-.attrib{margin-top:2.4rem;font-size:.74rem;letter-spacing:.3em;text-transform:uppercase;color:var(--gold)}
-.attrib small{display:block;letter-spacing:.18em;color:var(--mist);margin-top:.4rem;text-transform:none;font-size:.8rem}
-
-/* ---------- promise ---------- */
-.promise{background:linear-gradient(180deg,var(--black),var(--ink))}
-.promise-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:1.4rem;margin-top:2.4rem}
-.p-card{border-top:1px solid var(--line);padding-top:1.4rem}
-.p-card b{font-family:var(--serif);font-size:1.15rem;font-weight:600;color:var(--gold-lt);display:block;margin-bottom:.4rem}
-.p-card p{font-size:.85rem;color:var(--mist)}
-
-/* ---------- contact ---------- */
-.contact{background:var(--black)}
-.contact .wrap{display:grid;grid-template-columns:1fr 1fr;gap:5rem}
-.c-block{margin-bottom:2.2rem}
-.c-block b{font-family:var(--serif);font-size:1.5rem;font-weight:600;color:var(--gold-lt);display:block;margin-bottom:.3rem}
-.c-block a{display:block;color:#d3cfc5;font-size:1rem;transition:color .3s}
-.c-block a:hover{color:var(--gold)}
-form{display:grid;gap:1.1rem}
-.f-row{display:grid;grid-template-columns:1fr 1fr;gap:1.1rem}
-input,select,textarea{width:100%;background:var(--coal);border:1px solid rgba(198,163,93,.2);color:var(--cream);font-family:var(--sans);font-weight:300;font-size:.95rem;padding:1rem 1.2rem;outline:none;transition:border-color .3s;-webkit-appearance:none;border-radius:0}
-input:focus,select:focus,textarea:focus{border-color:var(--gold)}
-select{color:var(--mist)}
-textarea{resize:vertical;min-height:120px}
-::placeholder{color:#6f6c66}
-
-/* ---------- footer ---------- */
-footer{border-top:1px solid var(--line);padding:3.5rem 0 2.5rem;background:var(--ink)}
-.foot-top{display:flex;align-items:center;justify-content:space-between;gap:2rem;flex-wrap:wrap}
-.foot-logos{display:flex;align-items:center;gap:1.6rem}
-.foot-logos img{height:64px;width:auto;filter:invert(1) brightness(1.7);opacity:.9;transition:opacity .3s}
-.foot-logos img.cap{height:46px}
-.foot-logos a:hover img{opacity:1}
-.foot-logo{height:210px;width:210px;object-fit:cover;border:1px solid rgba(198,163,93,.4);filter:brightness(1.15)!important;opacity:1!important}
-.foot-credits{margin-top:1rem;font-size:.65rem;color:#55524d;line-height:1.8}
-.foot-credits a{color:#6f6c66;text-decoration:underline}
-.foot-note{margin-top:2.4rem;font-size:.75rem;color:#6f6c66;line-height:1.9}
-
-/* ---------- luxury signature touches ---------- */
-/* preloader */
-#loader{position:fixed;inset:0;background:var(--black);z-index:300;display:flex;align-items:center;justify-content:center;transition:opacity .9s ease,visibility .9s}
+/* ============ PRELOADER ============ */
+#loader{position:fixed;inset:0;background:var(--char);z-index:400;display:flex;align-items:center;justify-content:center;transition:opacity 1.1s var(--ease),visibility 1.1s}
 #loader.done{opacity:0;visibility:hidden}
-.loader-in{text-align:center}
-.loader-logo{width:min(420px,74vw);height:auto;margin:0 auto;display:block;animation:fadeUp 1.1s ease both;box-shadow:0 20px 70px rgba(198,163,93,.22);filter:brightness(1.15)}
-.loader-line{display:block;width:0;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent);margin:1.1rem auto;animation:lineGrow 1.4s .2s ease forwards}
-.loader-sub{font-size:.6rem;letter-spacing:.4em;text-transform:uppercase;color:var(--mist);display:block;opacity:0;animation:fadeUp .9s .6s ease forwards}
-@keyframes lineGrow{to{width:220px}}
-@keyframes fadeUp{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+#loader img{width:min(320px,60vw);animation:lfade 1.4s var(--ease) both}
+@keyframes lfade{from{opacity:0;transform:scale(.97)}to{opacity:1;transform:none}}
 
-/* cinematic headline reveal */
-.hl{display:block;overflow:hidden}
-.hl>span{display:block;transform:translateY(112%);animation:lineUp 1.15s cubic-bezier(.16,.7,.2,1) forwards}
-.hl:nth-child(2)>span{animation-delay:.22s}
-@keyframes lineUp{to{transform:none}}
+/* ============ NAV ============ */
+#prog{position:fixed;top:0;left:0;height:1px;width:0;background:var(--champagne);z-index:320}
+nav{position:fixed;top:0;left:0;right:0;z-index:300;padding:1.9rem var(--gutter);display:flex;align-items:center;justify-content:space-between;transition:padding .5s var(--ease),background .5s,backdrop-filter .5s,border-color .5s;border-bottom:1px solid transparent}
+nav.shrunk{padding:.95rem var(--gutter);background:rgba(20,19,15,.86);backdrop-filter:blur(18px) saturate(1.2);border-bottom-color:var(--line-2)}
+.brand{display:flex;align-items:center;gap:1rem}
+.brand img{height:56px;width:56px;object-fit:cover;border:1px solid var(--line);filter:brightness(1.3);transition:height .5s var(--ease),width .5s var(--ease)}
+nav.shrunk .brand img{height:42px;width:42px}
+.brand span{font-size:var(--t-micro);letter-spacing:.32em;text-transform:uppercase;color:var(--ivory-dim);line-height:1.9}
+.nav-links{display:flex;align-items:center;gap:clamp(1.2rem,2.4vw,2.6rem)}
+.nav-links a:not(.nav-cta){font-size:.7rem;font-weight:400;letter-spacing:.22em;text-transform:uppercase;color:var(--ivory);opacity:.82;position:relative;padding:.5rem 0;transition:opacity .35s,color .35s}
+.nav-links a:not(.nav-cta)::after{content:'';position:absolute;left:0;bottom:0;width:100%;height:1px;background:var(--champagne);transform:scaleX(0);transform-origin:right;transition:transform .5s var(--ease)}
+.nav-links a:not(.nav-cta):hover{opacity:1;color:var(--champagne)}
+.nav-links a:not(.nav-cta):hover::after,.nav-links a.active::after{transform:scaleX(1);transform-origin:left}
+.nav-links a.active{color:var(--champagne);opacity:1}
+.nav-cta{font-size:.7rem;letter-spacing:.22em;text-transform:uppercase;color:var(--champagne);border:1px solid var(--gold);padding:.85rem 1.7rem;position:relative;overflow:hidden;transition:color .35s}
+.nav-cta>span{position:relative;z-index:1}
+.nav-cta::before{content:'';position:absolute;inset:0;background:var(--gold);transform:translateY(101%);transition:transform .45s var(--ease)}
+.nav-cta:hover{color:var(--char)}
+.nav-cta:hover::before{transform:translateY(0)}
+.burger{display:none;background:none;border:none;cursor:pointer;padding:.4rem;z-index:330}
+.burger span{display:block;width:26px;height:1px;background:var(--champagne);margin:7px 0;transition:.4s var(--ease)}
+.mm{position:fixed;inset:0;background:rgba(20,19,15,.98);backdrop-filter:blur(14px);z-index:310;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1.6rem;opacity:0;pointer-events:none;transition:opacity .5s var(--ease)}
+.mm.open{opacity:1;pointer-events:auto}
+.mm a{font-family:var(--display);font-size:2rem;color:var(--ivory)}
+.mm a:hover{color:var(--champagne)}
 
-/* gold scroll progress */
-#prog{position:fixed;top:0;left:0;height:2px;width:0;background:linear-gradient(90deg,var(--gold-dk),var(--gold),var(--gold-lt));z-index:301;box-shadow:0 0 8px rgba(198,163,93,.55)}
+/* ============ HERO ============ */
+header{height:100svh;min-height:660px;position:relative;display:flex;align-items:center;justify-content:center;text-align:center;overflow:hidden;padding-bottom:7rem}
+.hero-img{position:absolute;inset:-6%;background:url('assets/living-dusk.jpg') center/cover;will-change:transform;transform:scale(1.05);animation:heroIn 2.6s var(--ease) forwards}
+@keyframes heroIn{to{transform:scale(1)}}
+/* layered cinematic grade */
+.grade-1{position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,19,15,.82) 0%,rgba(20,19,15,.42) 34%,rgba(20,19,15,.5) 62%,rgba(20,19,15,.95) 100%)}
+.grade-2{position:absolute;inset:0;background:radial-gradient(ellipse 90% 70% at 50% 45%,transparent 0%,rgba(20,19,15,.55) 100%)}
+.grade-3{position:absolute;inset:0;background:radial-gradient(ellipse 46% 34% at 50% 44%,rgba(20,19,15,.5) 0%,transparent 72%);backdrop-filter:blur(2px);-webkit-mask-image:radial-gradient(ellipse 46% 34% at 50% 44%,#000 0%,transparent 75%);mask-image:radial-gradient(ellipse 46% 34% at 50% 44%,#000 0%,transparent 75%)}
+.hero-in{position:relative;z-index:3;padding:0 var(--gutter);max-width:1080px}
+h1{font-size:var(--t-hero);font-weight:300;line-height:1.02}
+.ln{display:block;overflow:hidden}
+.ln>span{display:block;transform:translateY(110%);animation:lnUp 1.4s var(--ease) forwards}
+.ln:nth-of-type(2)>span{animation-delay:.16s}
+@keyframes lnUp{to{transform:none}}
+h1 em{background:linear-gradient(100deg,#8c6f47 0%,#c9a961 22%,#f2e3bd 42%,#d9c08c 55%,#f2e3bd 68%,#c9a961 82%,#8c6f47 100%);background-size:230% auto;-webkit-background-clip:text;background-clip:text;color:transparent;animation:shine 7s linear infinite}
+@keyframes shine{to{background-position:230% center}}
+.hero-sub{margin:2.4rem auto 3.4rem;max-width:40ch;font-size:1.02rem;font-weight:300;color:rgba(244,241,234,.92);letter-spacing:.01em}
+.hero-cta{display:flex;align-items:center;justify-content:center;gap:2.6rem;flex-wrap:wrap}
+.scroll-cue{position:absolute;bottom:2.6rem;left:50%;transform:translateX(-50%);z-index:3;font-size:.6rem;letter-spacing:.42em;text-transform:uppercase;color:var(--mute)}
+.scroll-cue::after{content:'';display:block;width:1px;height:52px;background:linear-gradient(var(--bronze),transparent);margin:1rem auto 0;animation:cue 2.6s infinite}
+@keyframes cue{0%{transform:scaleY(0);transform-origin:top}45%{transform:scaleY(1);transform-origin:top}55%{transform:scaleY(1);transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
 
-/* custom gold cursor */
-.cur-dot,.cur-ring{position:fixed;top:0;left:0;pointer-events:none;z-index:302;border-radius:50%;transform:translate(-50%,-50%);opacity:0;transition:opacity .3s;will-change:transform}
-.cur-dot{width:5px;height:5px;background:var(--gold-lt)}
-.cur-ring{width:34px;height:34px;border:1px solid rgba(198,163,93,.65);transition:opacity .3s,width .25s,height .25s,border-color .25s;margin:0}
-body.cur-on .cur-dot,body.cur-on .cur-ring{opacity:1}
-body.cur-hover .cur-ring{width:56px;height:56px;border-color:var(--gold-lt)}
-@media(pointer:coarse){.cur-dot,.cur-ring{display:none}}
+/* ============ GLASS SEARCH ============ */
+.search-band{padding:clamp(4rem,8vw,7rem) 0;background:var(--char-2);border-top:1px solid var(--line-2);border-bottom:1px solid var(--line-2)}
+.search-band .eyebrow{text-align:center;margin-bottom:1.6rem}
+.gsearch{display:flex;align-items:center;max-width:800px;margin:0 auto;background:rgba(244,241,234,.05);backdrop-filter:blur(20px);border:1px solid var(--line);border-radius:100px;padding:.5rem .5rem .5rem 2rem;transition:border-color .4s,box-shadow .4s,background .4s}
+.gsearch:focus-within{border-color:var(--gold);background:rgba(244,241,234,.08);box-shadow:0 0 0 6px rgba(201,169,97,.07),0 20px 60px rgba(0,0,0,.4)}
+.gsearch svg{flex-shrink:0;stroke:var(--bronze);opacity:.9}
+.gsearch input{flex:1;background:transparent;border:none;outline:none;color:var(--ivory);font-family:var(--body);font-weight:300;font-size:1rem;padding:1.15rem 1.2rem}
+.gsearch input::placeholder{color:var(--mute)}
+.gsearch button{flex-shrink:0;border:none;cursor:pointer;border-radius:100px;padding:1.1rem 2.4rem;background:var(--gold);color:var(--char);font-family:var(--body);font-size:.7rem;font-weight:500;letter-spacing:.22em;text-transform:uppercase;transition:background .35s,transform .35s var(--ease)}
+.gsearch button:hover{background:var(--champagne);transform:translateY(-1px)}
+.search-tags{display:flex;justify-content:center;gap:2rem;flex-wrap:wrap;margin-top:2rem;font-size:.68rem;letter-spacing:.2em;text-transform:uppercase}
+.search-tags a{color:var(--mute);transition:color .35s}
+.search-tags a:hover{color:var(--champagne)}
 
-/* agent card 3D tilt */
-.agent{transform-style:preserve-3d;will-change:transform}
+/* ============ EDITORIAL SPLIT ============ */
+.split{display:grid;grid-template-columns:1fr 1fr;gap:clamp(3rem,8vw,8rem);align-items:center}
+.split.wide-l{grid-template-columns:1.15fr .85fr}
+.split.flip .fig{order:2}
+.fig{position:relative;overflow:hidden}
+.fig img{width:100%;transition:transform 1.6s var(--ease);will-change:transform}
+.fig:hover img{transform:scale(1.05)}
+.fig-cap{margin-top:1.1rem;font-size:var(--t-micro);letter-spacing:.3em;text-transform:uppercase;color:var(--bronze)}
+.list{list-style:none;display:grid;gap:1.1rem;margin-top:2.6rem}
+.list li{display:flex;gap:1.4rem;align-items:baseline;color:var(--ivory-dim);font-size:.99rem}
+.list li::before{content:'';width:16px;height:1px;background:var(--bronze);flex-shrink:0;transform:translateY(-4px)}
 
-/* gallery lightbox */
-#lightbox{position:fixed;inset:0;background:rgba(6,6,6,.96);backdrop-filter:blur(8px);z-index:250;display:flex;align-items:center;justify-content:center;flex-direction:column;opacity:0;pointer-events:none;transition:opacity .45s}
-#lightbox.open{opacity:1;pointer-events:auto}
-#lightbox img{max-width:88vw;max-height:78vh;object-fit:contain;border:1px solid var(--line);box-shadow:0 30px 80px rgba(0,0,0,.6)}
-#lb-cap{margin-top:1.2rem;font-size:.72rem;letter-spacing:.32em;text-transform:uppercase;color:var(--gold-lt)}
-.lb-btn{position:absolute;background:none;border:1px solid var(--line);color:var(--gold);width:52px;height:52px;border-radius:50%;font-size:1.2rem;cursor:pointer;transition:background .3s,color .3s;display:flex;align-items:center;justify-content:center}
-.lb-btn:hover{background:var(--gold);color:var(--black)}
-#lb-close{top:2rem;right:2rem}
-#lb-prev{left:2rem;top:50%;transform:translateY(-50%)}
-#lb-next{right:2rem;top:50%;transform:translateY(-50%)}
-.gal-grid figure{cursor:pointer}
+/* ============ STATS ============ */
+.stats{background:var(--char-2);border-top:1px solid var(--line-2);border-bottom:1px solid var(--line-2);padding:clamp(4rem,9vw,7rem) 0}
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(2rem,4vw,4rem)}
+.stat{text-align:center;position:relative}
+.stat+.stat::before{content:'';position:absolute;left:calc(-1 * clamp(1rem,2vw,2rem));top:12%;bottom:12%;width:1px;background:var(--line-2)}
+.stat b{display:block;font-family:var(--display);font-weight:300;font-size:clamp(2.6rem,4.6vw,3.9rem);color:var(--champagne);line-height:1}
+.stat span{display:block;margin-top:1rem;font-size:var(--t-micro);letter-spacing:.28em;text-transform:uppercase;color:var(--mute)}
 
-/* communities marquee — slim navy trust band above the footer */
-.marquee{overflow:hidden;padding:1rem 0;border-top:1px solid rgba(198,163,93,.35);border-bottom:1px solid rgba(198,163,93,.35);background:linear-gradient(135deg,var(--navy) 0%,var(--navy-lt) 50%,var(--navy) 100%)}
-.marquee-track{display:flex;white-space:nowrap;width:max-content;animation:mq 40s linear infinite;align-items:center}
-.marquee span{font-family:var(--serif);font-size:clamp(1.1rem,2vw,1.55rem);font-weight:600;padding:0 1.2rem;color:#c9d4e4;letter-spacing:.05em}
-.marquee span.fill{color:var(--gold-lt)}
-.marquee i{font-style:normal;color:var(--gold);font-size:.7rem;align-self:center}
-@keyframes mq{to{transform:translateX(-50%)}}
-.marquee:hover .marquee-track{animation-play-state:paused}
+/* ============ CARDS ============ */
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(1.4rem,2.4vw,2.4rem)}
+.card{background:var(--char-3);border:1px solid var(--line-2);padding:clamp(2.4rem,3.4vw,3.4rem);transition:transform .5s var(--ease),border-color .5s,background .5s}
+.card:hover{transform:translateY(-3px);border-color:var(--line);background:#26241b}
+.card i{display:block;font-style:normal;font-family:var(--display);font-size:1.1rem;color:var(--bronze);margin-bottom:1.6rem;letter-spacing:.1em}
+.card h3{color:var(--ivory);margin-bottom:.9rem}
+.card p{color:var(--ivory-dim);font-size:.95rem}
 
-/* ---------- Huntsville section ---------- */
-.hsv{background:var(--black)}
-.hsv-head{display:grid;grid-template-columns:1fr auto;gap:3rem;align-items:center;margin-bottom:3.4rem}
-.hsv h2{font-size:clamp(2.4rem,5.4vw,4.4rem)}
-.globe{width:280px;height:280px;flex-shrink:0}
-.globe circle,.globe ellipse,.globe path{fill:none;stroke:var(--gold);stroke-width:1;opacity:.75}
-.globe .glow{filter:drop-shadow(0 0 10px rgba(198,163,93,.45))}
-.hsv-grid{display:grid;grid-template-columns:1.5fr 1fr;gap:14px}
-.hsv-grid figure{position:relative;overflow:hidden;margin:0}
-.hsv-grid img{width:100%;height:100%;object-fit:cover;transition:transform 1.1s cubic-bezier(.2,.7,.3,1);filter:saturate(1.02)}
-.hsv-grid figure:hover img{transform:scale(1.05)}
-.hsv-grid figure:first-child{aspect-ratio:16/10}
-.hsv-grid figure:nth-child(2){aspect-ratio:auto}
-.hsv-cap{position:absolute;left:0;right:0;bottom:0;padding:1.1rem 1.4rem;background:linear-gradient(transparent,rgba(10,10,10,.9));font-size:.7rem;letter-spacing:.28em;text-transform:uppercase;color:var(--gold-lt)}
-.hsv-pano{margin-top:14px;position:relative;overflow:hidden}
-.hsv-pano img{width:100%;height:200px;object-fit:cover;filter:saturate(1.02)}
-.hsv-facts{display:grid;grid-template-columns:repeat(3,1fr);gap:1.6rem;margin-top:3.2rem}
-.hsv-facts .p-card b{font-size:1.3rem}
+/* ============ ADVISORS ============ */
+.advisors{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,5vw,5rem)}
+.adv{transition:transform .5s var(--ease)}
+.adv:hover{transform:translateY(-3px)}
+.adv-photo{position:relative;overflow:hidden;aspect-ratio:4/4.5;background:var(--char-3)}
+.adv-photo img{width:100%;height:100%;object-fit:cover;object-position:top center;transition:transform 1.6s var(--ease);filter:grayscale(.15) contrast(1.02)}
+.adv:hover .adv-photo img{transform:scale(1.04);filter:grayscale(0)}
+.adv-body{padding-top:2rem}
+.adv-body h3{font-size:2rem;font-weight:400;color:var(--ivory)}
+.adv-role{margin:.7rem 0 1.4rem;font-size:var(--t-micro);letter-spacing:.28em;text-transform:uppercase;color:var(--bronze)}
+.adv-body p{color:var(--ivory-dim);font-size:.97rem;margin-bottom:1.8rem;max-width:42ch}
+.adv-links{display:flex;flex-direction:column;gap:.4rem;font-size:.92rem}
+.adv-links a{color:var(--champagne);opacity:.85;transition:opacity .3s}
+.adv-links a:hover{opacity:1}
 
-/* ---------- Get in Touch modal ---------- */
-#gitModal{position:fixed;inset:0;z-index:260;background:rgba(6,6,6,.82);backdrop-filter:blur(12px);display:flex;align-items:center;justify-content:center;padding:4vw;opacity:0;pointer-events:none;transition:opacity .45s}
-#gitModal.open{opacity:1;pointer-events:auto}
-.git-box{background:linear-gradient(160deg,#141414,#0c0c0c);border:1px solid rgba(198,163,93,.4);box-shadow:0 40px 120px rgba(0,0,0,.7),0 0 60px rgba(198,163,93,.12);max-width:560px;width:100%;max-height:90svh;overflow-y:auto;padding:2.6rem 2.6rem 2.2rem;position:relative;transform:translateY(24px) scale(.98);transition:transform .45s cubic-bezier(.2,.7,.3,1)}
-#gitModal.open .git-box{transform:none}
-#git-close{position:absolute;top:1rem;right:1rem;background:none;border:1px solid var(--line);color:var(--gold);width:40px;height:40px;border-radius:50%;cursor:pointer;font-size:1rem;transition:background .3s,color .3s}
-#git-close:hover{background:var(--gold);color:var(--black)}
-.git-logo{width:130px;height:130px;object-fit:cover;margin:0 auto 1.2rem;display:block;border:1px solid rgba(198,163,93,.4);filter:brightness(1.2)}
-.git-box h3{font-size:2rem;text-align:center;color:var(--cream)}
-.git-box .git-sub{text-align:center;color:var(--mist);font-size:.9rem;margin:.5rem 0 1.6rem}
-.git-box form{display:grid;gap:.9rem}
-.consent{display:flex;gap:.7rem;align-items:flex-start;font-size:.78rem;color:var(--mist);line-height:1.5}
-.consent input{width:16px;height:16px;padding:0;margin-top:.2rem;accent-color:var(--gold);flex-shrink:0}
-.fine{font-size:.66rem;color:#6f6c66;line-height:1.7;margin-top:.3rem}
+/* ============ COMPARISON ============ */
+.cmp{border-top:1px solid var(--line-2)}
+.cmp-row{display:grid;grid-template-columns:1fr 1.25fr 1fr;border-bottom:1px solid var(--line-2);transition:background .4s}
+.cmp-row:not(.head):hover{background:rgba(217,192,140,.03)}
+.cmp-row>div{padding:1.9rem 1.8rem;font-size:.96rem}
+.head>div{font-size:var(--t-micro)!important;letter-spacing:.3em;text-transform:uppercase;color:var(--mute);padding-top:0}
+.cmp-k{font-family:var(--display);font-size:1.35rem!important;color:var(--ivory)}
+.cmp-jj{color:var(--champagne);background:rgba(217,192,140,.04)}
+.head .cmp-jj{color:var(--bronze)!important}
+.cmp-o{color:var(--mute)}
 
-/* back to top */
-#toTop{position:fixed;right:1.6rem;bottom:1.6rem;z-index:150;width:48px;height:48px;border-radius:50%;background:linear-gradient(135deg,var(--navy),var(--navy-lt));border:1px solid rgba(198,163,93,.5);color:var(--gold-lt);font-size:1.2rem;cursor:pointer;opacity:0;pointer-events:none;transition:opacity .4s,transform .3s;box-shadow:0 8px 30px rgba(0,0,0,.5)}
+/* ============ JOURNEY ============ */
+.journey{display:grid;grid-template-columns:repeat(7,1fr);position:relative;margin-top:clamp(3rem,6vw,5rem)}
+.journey::before{content:'';position:absolute;top:6px;left:7%;right:7%;height:1px;background:var(--line-2)}
+.jstep{text-align:center;padding:0 .4rem;position:relative}
+.jstep i{display:block;width:13px;height:13px;border:1px solid var(--bronze);border-radius:50%;background:var(--char);margin:0 auto 1.4rem;position:relative;z-index:1;transition:background .4s,border-color .4s}
+.jstep:hover i{background:var(--champagne);border-color:var(--champagne)}
+.jstep b{display:block;font-family:var(--display);font-size:1.05rem;font-weight:500;color:var(--ivory)}
+.jstep span{font-size:.72rem;color:var(--mute)}
+
+/* ============ FULL-BLEED QUOTE ============ */
+.quote-sect{position:relative;padding:clamp(8rem,16vw,15rem) 0;overflow:hidden}
+.quote-bg{position:absolute;inset:0;background:url('assets/tall-living.jpg') center 30%/cover;filter:grayscale(.3)}
+.quote-veil{position:absolute;inset:0;background:linear-gradient(180deg,var(--char) 0%,rgba(20,19,15,.86) 22%,rgba(20,19,15,.86) 78%,var(--char) 100%)}
+.quote-sect .wrap{position:relative;z-index:2}
+blockquote{font-family:var(--display);font-size:clamp(1.7rem,3.4vw,3rem);font-weight:300;font-style:italic;line-height:1.42;max-width:22ch;color:var(--ivory);margin:0 auto;text-align:center}
+.qmeta{margin-top:3rem;text-align:center}
+.qstars{color:var(--champagne);letter-spacing:.5em;font-size:.9rem;margin-bottom:1.2rem}
+.qmeta b{display:block;font-size:var(--t-micro);letter-spacing:.3em;text-transform:uppercase;color:var(--champagne);font-weight:400}
+.qmeta small{display:block;margin-top:.7rem;font-size:.8rem;color:var(--mute)}
+
+/* ============ LIFESTYLE ============ */
+.life{display:grid;grid-template-columns:repeat(12,1fr);gap:clamp(1rem,1.6vw,1.6rem);margin-top:clamp(3rem,6vw,5rem)}
+.life figure{position:relative;overflow:hidden;margin:0}
+.life img{width:100%;height:100%;object-fit:cover;transition:transform 1.6s var(--ease)}
+.life figure:hover img{transform:scale(1.05)}
+.life .l1{grid-column:span 7;aspect-ratio:16/11}
+.life .l2{grid-column:span 5;aspect-ratio:4/5}
+.life .l3{grid-column:span 12;aspect-ratio:32/9}
+.life figcaption{position:absolute;left:0;right:0;bottom:0;padding:1.8rem;background:linear-gradient(transparent,rgba(20,19,15,.9));font-size:var(--t-micro);letter-spacing:.3em;text-transform:uppercase;color:var(--champagne)}
+.life-words{display:grid;grid-template-columns:repeat(4,1fr);gap:2rem;margin-top:clamp(3rem,5vw,4rem)}
+.lw{border-top:1px solid var(--line-2);padding-top:1.4rem}
+.lw b{display:block;font-family:var(--display);font-size:1.25rem;font-weight:500;color:var(--champagne);margin-bottom:.4rem}
+.lw p{font-size:.88rem;color:var(--mute)}
+
+/* ============ MARQUEE ============ */
+.mq{overflow:hidden;padding:1.5rem 0;border-top:1px solid var(--line-2);border-bottom:1px solid var(--line-2);background:var(--char-2)}
+.mq-track{display:flex;align-items:center;white-space:nowrap;width:max-content;animation:mqrun 52s linear infinite}
+.mq-track span{font-family:var(--display);font-size:clamp(1rem,1.5vw,1.35rem);font-weight:400;letter-spacing:.16em;text-transform:uppercase;padding:0 1.6rem;color:var(--ivory-dim)}
+.mq-track span.hi{color:var(--champagne)}
+.mq-track i{color:var(--bronze);font-size:.55rem;font-style:normal}
+@keyframes mqrun{to{transform:translateX(-50%)}}
+.mq:hover .mq-track{animation-play-state:paused}
+
+/* ============ CONTACT ============ */
+.contact{background:var(--char-2)}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(3rem,8vw,8rem)}
+.cblock{margin-bottom:2.6rem}
+.cblock b{display:block;font-family:var(--display);font-size:1.6rem;font-weight:400;color:var(--ivory);margin-bottom:.6rem}
+.cblock a{display:block;color:var(--ivory-dim);font-size:.98rem;transition:color .3s}
+.cblock a:hover{color:var(--champagne)}
+form{display:grid;gap:1.3rem}
+.frow{display:grid;grid-template-columns:1fr 1fr;gap:1.3rem}
+input,select,textarea{width:100%;background:transparent;border:none;border-bottom:1px solid var(--line-2);color:var(--ivory);font-family:var(--body);font-weight:300;font-size:.98rem;padding:1rem .2rem;outline:none;border-radius:0;-webkit-appearance:none;transition:border-color .4s}
+input:focus,select:focus,textarea:focus{border-bottom-color:var(--gold)}
+select{color:var(--mute)}
+select option{background:var(--char-2);color:var(--ivory)}
+textarea{resize:vertical;min-height:90px}
+::placeholder{color:var(--mute)}
+.consent{display:flex;gap:.9rem;align-items:flex-start;font-size:.78rem;color:var(--mute);line-height:1.6;cursor:pointer}
+.consent input{width:15px;height:15px;flex-shrink:0;margin-top:.25rem;padding:0;accent-color:var(--gold);border-bottom:none}
+.fine{font-size:.66rem;color:#6d6858;line-height:1.75}
+
+/* ============ MODAL ============ */
+#gm{position:fixed;inset:0;z-index:340;background:rgba(14,13,10,.86);backdrop-filter:blur(16px);display:flex;align-items:center;justify-content:center;padding:5vw var(--gutter);opacity:0;pointer-events:none;transition:opacity .5s var(--ease)}
+#gm.open{opacity:1;pointer-events:auto}
+.gm-box{background:var(--char-2);border:1px solid var(--line);max-width:540px;width:100%;max-height:88svh;overflow-y:auto;padding:clamp(2.4rem,4vw,3.4rem);position:relative;transform:translateY(28px);transition:transform .6s var(--ease);box-shadow:0 50px 140px rgba(0,0,0,.7)}
+#gm.open .gm-box{transform:none}
+#gm-x{position:absolute;top:1.2rem;right:1.2rem;width:38px;height:38px;background:none;border:1px solid var(--line-2);border-radius:50%;color:var(--champagne);cursor:pointer;font-size:.9rem;transition:border-color .3s,background .3s}
+#gm-x:hover{border-color:var(--gold);background:rgba(217,192,140,.08)}
+.gm-box .eyebrow{text-align:center;margin-bottom:1rem}
+.gm-box h3{font-size:2.2rem;font-weight:400;text-align:center;margin-bottom:.8rem}
+.gm-sub{text-align:center;color:var(--mute);font-size:.9rem;margin-bottom:2.4rem}
+
+/* ============ FOOTER ============ */
+footer{background:var(--char);padding:clamp(4rem,8vw,6rem) 0 3rem}
+.f-top{display:grid;grid-template-columns:auto 1fr auto;gap:3rem;align-items:center;padding-bottom:3rem;border-bottom:1px solid var(--line-2)}
+.f-logo{height:150px;width:150px;object-fit:cover;border:1px solid var(--line);filter:brightness(1.2)}
+.f-marks{display:flex;align-items:center;gap:2rem}
+.f-marks img{height:56px;width:auto;filter:invert(1) brightness(1.75);opacity:.7;transition:opacity .35s}
+.f-marks img.cap{height:40px}
+.f-marks a:hover img{opacity:1}
+.f-note{margin-top:2.6rem;font-size:.76rem;color:var(--mute);line-height:1.95;max-width:105ch}
+.f-note a{color:var(--champagne)}
+.f-credit{margin-top:1.4rem;font-size:.64rem;color:#5b5749;line-height:1.9}
+.f-credit a{color:#6d6858;text-decoration:underline}
+
+/* ============ MISC ============ */
+#toTop{position:fixed;right:1.8rem;bottom:1.8rem;z-index:200;width:46px;height:46px;border-radius:50%;background:var(--char-3);border:1px solid var(--line);color:var(--champagne);cursor:pointer;opacity:0;pointer-events:none;transition:opacity .4s,transform .35s var(--ease),border-color .35s}
 #toTop.show{opacity:1;pointer-events:auto}
 #toTop:hover{transform:translateY(-3px);border-color:var(--gold)}
+.cdot,.cring{position:fixed;top:0;left:0;pointer-events:none;z-index:350;border-radius:50%;opacity:0;transition:opacity .3s;will-change:transform}
+.cdot{width:4px;height:4px;background:var(--champagne)}
+.cring{width:32px;height:32px;border:1px solid rgba(217,192,140,.5);transition:opacity .3s,width .3s var(--ease),height .3s var(--ease)}
+body.con .cdot,body.con .cring{opacity:1}
+body.chov .cring{width:52px;height:52px;border-color:var(--champagne)}
+@media(pointer:coarse){.cdot,.cring{display:none}}
+body::after{content:'';position:fixed;inset:0;z-index:100;pointer-events:none;opacity:.035;mix-blend-mode:overlay;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
 
-/* gold page frame — echoes the framed logo */
-.page-frame{position:fixed;inset:12px;border:1px solid rgba(198,163,93,.22);z-index:96;pointer-events:none}
-@media(max-width:960px){.page-frame{display:none}}
-
-/* cinematic film grain */
-body::after{content:'';position:fixed;inset:0;z-index:95;pointer-events:none;opacity:.05;mix-blend-mode:overlay;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
-
-/* ---------- responsive ---------- */
-@media(max-width:960px){
+/* ============ RESPONSIVE ============ */
+@media(max-width:1024px){
   .nav-links{display:none}
   .burger{display:block}
-  .positioning .wrap,.split,.contact .wrap{grid-template-columns:1fr;gap:3rem}
-  .split.flip>.split-img{order:0}
-  .team-grid{grid-template-columns:1fr}
-  .steps,.comm-grid{grid-template-columns:1fr}
-  .stats{padding:1.6rem 4vw}
-  .stats .wrap{grid-template-columns:repeat(3,1fr);padding:1.2rem .4rem}
-  .stat b{font-size:1.45rem}
-  .stat span{font-size:.52rem;letter-spacing:.16em}
-  /* phone hero: bigger, bolder, easier to read */
-  h1{font-size:clamp(3rem,12vw,3.8rem);text-shadow:0 3px 26px rgba(0,0,0,.95),0 1px 5px #000}
-  .hero-sub{font-size:1.06rem;font-weight:400;color:#fff;text-shadow:0 2px 14px #000,0 1px 4px #000;max-width:92vw}
-  .hero-veil{background:linear-gradient(180deg,rgba(10,10,10,.7),rgba(10,10,10,.38) 30%,rgba(10,10,10,.3) 58%,var(--black) 100%)}
-  .gal-grid{grid-template-columns:1fr 1fr;grid-auto-rows:200px}
-  .gal-grid figure:nth-child(1){grid-column:span 2}
-  .journey-line{grid-template-columns:1fr;gap:1.4rem;text-align:left}
-  .journey-line::before{display:none}
-  .j-step{display:flex;align-items:baseline;gap:1rem;text-align:left}
-  .j-step i{margin:0}
-  .promise-grid{grid-template-columns:1fr 1fr}
-  /* phone: globe on top, then text, then rocket, then city photos */
-  .hsv-head{display:flex;flex-direction:column;gap:1.6rem}
-  .globe{width:230px;height:230px;margin:0 auto;order:-1}
-  .hsv-grid{display:flex;flex-direction:column}
-  .hsv-grid figure:nth-child(2){order:-1;aspect-ratio:3/4}
-  .hsv-facts{grid-template-columns:1fr}
-  .hsv-pano img{height:150px}
-  .foot-logo{height:150px;width:150px}
-  .foot-logos img{height:48px}
-  .foot-logos img.cap{height:36px}
-  .git-box{padding:2rem 1.4rem}
-  /* mobile: comparison table becomes elegant stacked cards */
-  .diff-row{grid-template-columns:1fr}
-  .diff-row:first-child{display:none}
-  .diff-row>div:first-child{font-family:var(--serif);font-size:1.25rem;color:var(--gold-lt);padding:1.3rem 1.2rem .4rem;border:none}
-  .diff-jj{border-left:none!important;border-right:none!important;background:rgba(198,163,93,.07)}
-  .diff-jj::before{content:'J&J Real Estate Group';display:block;font-size:.62rem;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);margin-bottom:.35rem}
-  .diff-typ::before{content:'The Typical Experience';display:block;font-size:.62rem;letter-spacing:.3em;text-transform:uppercase;color:#6f6c66;margin-bottom:.35rem}
-  .diff-row>div{padding:.9rem 1.2rem;font-size:.92rem}
-  .f-row{grid-template-columns:1fr}
+  .stats-grid{grid-template-columns:repeat(2,1fr);gap:3rem}
+  .stat:nth-child(3)::before{display:none}
+  .cards{grid-template-columns:1fr}
+  .life-words{grid-template-columns:1fr 1fr}
+}
+@media(max-width:860px){
+  .split,.split.wide-l,.advisors,.contact-grid{grid-template-columns:1fr}
+  .split.flip .fig{order:0}
+  .life .l1,.life .l2,.life .l3{grid-column:span 12}
+  .life .l1{aspect-ratio:16/10}.life .l2{aspect-ratio:1}.life .l3{aspect-ratio:16/9}
+  .journey{grid-template-columns:1fr;gap:1.5rem}
+  .journey::before{display:none}
+  .jstep{display:flex;align-items:baseline;gap:1.2rem;text-align:left}
+  .jstep i{margin:0}
+  .cmp-row{grid-template-columns:1fr}
+  .cmp-row.head{display:none}
+  .cmp-row>div{padding:.7rem 0}
+  .cmp-k{padding-top:1.8rem!important;font-size:1.5rem!important;color:var(--champagne)}
+  .cmp-jj{background:transparent}
+  .cmp-jj::before{content:'J&J';display:block;font-size:.58rem;letter-spacing:.3em;color:var(--bronze);margin-bottom:.3rem}
+  .cmp-o::before{content:'Elsewhere';display:block;font-size:.58rem;letter-spacing:.3em;color:#5b5749;margin-bottom:.3rem}
+  .cmp-o{padding-bottom:1.8rem!important}
+  .f-top{grid-template-columns:1fr;gap:2.4rem;text-align:center;justify-items:center}
+  .f-marks{justify-content:center;flex-wrap:wrap}
+  .gsearch{flex-wrap:wrap;border-radius:20px;padding:1rem}
+  .gsearch input{width:100%;flex:1 1 100%;padding:.6rem}
+  .gsearch button{width:100%;margin-top:.6rem}
+  .gsearch svg{display:none}
+  .frow{grid-template-columns:1fr}
+  .hero-sub{font-size:1.04rem;color:#fff}
+  .hero-cta{gap:1.6rem;flex-direction:column}
+}
+@media(max-width:560px){
+  .stats-grid{grid-template-columns:1fr 1fr;gap:2.4rem}
+  .stat::before{display:none!important}
+  .life-words{grid-template-columns:1fr}
+  .f-logo{height:120px;width:120px}
 }
 @media(prefers-reduced-motion:reduce){
-  .rv{opacity:1;transform:none;transition:none}
+  *{animation-duration:.01ms!important;transition-duration:.01ms!important}
+  .rv{opacity:1;transform:none}
   html{scroll-behavior:auto}
 }
 </style>
 </head>
 <body>
 
-<div class="page-frame" aria-hidden="true"></div>
-
-<!-- PRELOADER -->
-<div id="loader">
-  <div class="loader-in">
-    <img class="loader-logo" src="assets/logo-framed.jpg" alt="J&amp;J Real Estate Group">
-    <span class="loader-line"></span>
-  </div>
-</div>
-
-<!-- GOLD SCROLL PROGRESS -->
+<div id="loader"><img src="assets/logo-framed.jpg" alt="J&amp;J Real Estate Group"></div>
 <div id="prog"></div>
-
-<!-- CUSTOM CURSOR -->
-<div class="cur-dot" id="curDot"></div>
-<div class="cur-ring" id="curRing"></div>
+<div class="cdot" id="cdot"></div><div class="cring" id="cring"></div>
 
 <!-- NAV -->
 <nav id="nav">
   <a class="brand" href="#top">
-    <img class="brand-logo" src="assets/logo-framed.jpg" alt="J&amp;J Real Estate Group logo">
-    <span class="brand-sub">Real Estate Group<br>Capstone Realty</span>
+    <img src="assets/logo-framed.jpg" alt="J&amp;J Real Estate Group">
+    <span>Real Estate Group<br>Capstone Realty</span>
   </a>
   <div class="nav-links">
-    <a href="#sellers">Sellers</a>
-    <a href="#buyers">Buyers</a>
+    <a href="#properties">Properties</a>
+    <a href="#buy">Buy</a>
+    <a href="#sell">Sell</a>
     <a href="#new-construction">New Construction</a>
-    <a href="#team">Advisors</a>
-    <a href="#community">Community</a>
-    <a href="#" class="nav-cta open-git">Get in Touch</a>
+    <a href="#about">About</a>
+    <a href="#insights">Insights</a>
+    <a href="#" class="nav-cta open-gm"><span>Get in Touch</span></a>
   </div>
-  <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+  <button class="burger" id="burger" aria-label="Menu"><span></span><span></span></button>
 </nav>
-<div class="mobile-menu" id="mmenu">
-  <a href="#sellers">Sellers</a>
-  <a href="#buyers">Buyers</a>
+<div class="mm" id="mm">
+  <a href="#properties">Properties</a>
+  <a href="#buy">Buy</a>
+  <a href="#sell">Sell</a>
   <a href="#new-construction">New Construction</a>
-  <a href="#team">Advisors</a>
-  <a href="#community">Community</a>
-  <a href="#" class="open-git">Get in Touch</a>
+  <a href="#about">About</a>
+  <a href="#insights">Insights</a>
+  <a href="#" class="open-gm">Get in Touch</a>
 </div>
 
 <!-- HERO -->
 <header id="top">
-  <div class="hero-bg" id="heroBg"></div>
-  <div class="hero-veil"></div>
-  <div class="hero-in" style="transform:translateY(-5vh)">
-    <h1><span class="hl"><span>Exceptional Properties.</span></span><span class="hl"><span><em>Extraordinary Results.</em></span></span></h1>
-    <p class="hero-sub rv on d2">Imagine walking into the next chapter of your life already knowing it was handled beautifully. That feeling — certainty, calm, quiet confidence — is what we deliver, before, during, and long after closing.</p>
-    <form class="hero-search rv on d3" id="heroSearch" aria-label="Property search">
-      <input type="text" name="q" placeholder="Search homes — address, city, zip, neighborhood, MLS#" autocomplete="off">
-      <button type="submit">Search</button>
-    </form>
+  <div class="hero-img" id="heroImg"></div>
+  <div class="grade-1"></div><div class="grade-2"></div><div class="grade-3"></div>
+  <div class="hero-in">
+    <h1><span class="ln"><span>Exceptional Properties.</span></span><span class="ln"><span><em>Extraordinary Results.</em></span></span></h1>
+    <p class="hero-sub">A private advisory for those who expect strategy, discretion, and results.</p>
+    <div class="hero-cta">
+      <a href="#" class="btn open-gm"><span>Begin a Conversation</span></a>
+      <a href="#properties" class="btn-text">View Properties</a>
+    </div>
   </div>
-  <div class="hero-scroll">Discover</div>
+  <div class="scroll-cue">Scroll</div>
 </header>
 
-<!-- STATS -->
-<div class="stats">
+<!-- PROPERTY SEARCH -->
+<div class="search-band" id="properties">
   <div class="wrap">
-    <div class="stat rv"><b data-count="15" data-suffix="+">0</b><span>Years Combined Experience</span></div>
-    <div class="stat rv d1"><b data-count="2">0</b><span>Advisors, One Strategy</span></div>
-    <div class="stat rv d2"><b data-count="7">0</b><span>Step Client Journey</span></div>
+    <span class="eyebrow rv">Property Search · North Alabama</span>
+    <form class="gsearch rv d1" id="hs">
+      <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke-width="1.4"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4.2-4.2"/></svg>
+      <input type="text" name="q" placeholder="City, neighborhood, address, or MLS#" autocomplete="off">
+      <button type="submit">Search</button>
+    </form>
+    <div class="search-tags rv d2">
+      <a href="#" class="q-link" data-q="luxury">Luxury Homes</a>
+      <a href="#" class="q-link" data-q="new">New Construction</a>
+      <a href="#" class="q-link" data-q="open">Open Houses</a>
+      <a href="#" class="q-link" data-q="land">Land</a>
+    </div>
   </div>
 </div>
 
 <!-- POSITIONING -->
-<section class="positioning">
+<section>
+  <div class="wrap narrow center">
+    <span class="eyebrow rv">The Positioning</span>
+    <h2 class="rv d1">Real estate should feel <em>private, strategic,</em> and beautifully controlled.</h2>
+    <div class="rule rv d2"></div>
+    <p class="lede rv d3">You are not hiring an agent. You are choosing who protects your position.</p>
+  </div>
+</section>
+
+<!-- STATS -->
+<div class="stats">
   <div class="wrap">
-    <div class="rv">
-      <span class="eyebrow">The Positioning</span>
-      <h2>Real estate should feel <em style="color:var(--gold-lt)">private, strategic,</em> and beautifully controlled.</h2>
-      <div class="gold-rule"></div>
-      <p class="lede">You are not just hiring an agent. You are choosing the team you trust to protect value, reduce uncertainty, and create leverage — so every decision feels clear, and nothing is left to chance.</p>
+    <div class="stats-grid">
+      <div class="stat rv"><b data-count="15" data-suffix="+">0</b><span>Years Combined</span></div>
+      <div class="stat rv d1"><b data-count="2">0</b><span>Advisors, One Team</span></div>
+      <div class="stat rv d2"><b data-count="7">0</b><span>Step Client Journey</span></div>
+      <div class="stat rv d3"><b data-count="5" data-suffix="★">0</b><span>Client Experience</span></div>
     </div>
-    <div class="pillars">
-      <div class="pillar rv d1"><b>Authority</b><p>through preparation — we walk in knowing more, so you never walk in wondering.</p></div>
-      <div class="pillar rv d2"><b>Desire</b><p>through presentation — buyers fall in love before they ever step inside.</p></div>
-      <div class="pillar rv d3"><b>Confidence</b><p>through communication — no confusion, no silence, no surprises.</p></div>
+  </div>
+</div>
+
+<!-- SELL -->
+<section id="sell">
+  <div class="wrap">
+    <div class="split wide-l">
+      <div class="fig rv"><img src="assets/hero-kitchen.jpg" alt="Editorial kitchen" loading="lazy"><div class="fig-cap">Positioned, not listed</div></div>
+      <div class="rv d1">
+        <span class="eyebrow">For Sellers</span>
+        <h2>A listing is not placed. <em>It is positioned.</em></h2>
+        <div class="rule"></div>
+        <p class="lede">Buyers fall in love first. We make sure they fall in love with yours — then price it so the market has no argument.</p>
+        <ul class="list">
+          <li>Precision pricing architecture</li>
+          <li>Staging and visual readiness</li>
+          <li>Editorial media strategy</li>
+          <li>Buyer-targeted launch</li>
+          <li>Weekly market review</li>
+        </ul>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- TEAM -->
-<section class="team" id="team">
+<!-- PRICING TRIPTYCH -->
+<section>
   <div class="wrap">
-    <div class="center rv">
-      <span class="eyebrow">Meet Your Advisors</span>
-      <h2>Two perspectives. One elevated experience.</h2>
-      <div class="gold-rule"></div>
-      <p class="lede">J&amp;J blends strategic pricing, buyer psychology, builder knowledge, and calm transaction leadership into one coordinated team that works for you — and only you.</p>
+    <div class="center" style="margin-bottom:clamp(3rem,6vw,5rem)">
+      <span class="eyebrow rv">Pricing Architecture</span>
+      <h2 class="rv d1">Urgency, without leaving money behind.</h2>
     </div>
-    <div class="team-grid">
-      <div class="agent rv d1">
-        <div class="agent-photo"><img src="assets/chrystal.jpg" alt="Chrystal Justice — J&J Real Estate Group"></div>
-        <div class="agent-body">
+    <div class="cards">
+      <div class="card rv"><i>01</i><h3>Data</h3><p>Comparable sales and neighborhood momentum form a price the market believes.</p></div>
+      <div class="card rv d1"><i>02</i><h3>Demand</h3><p>Each buyer segment hears a message written for them — not for everyone.</p></div>
+      <div class="card rv d2"><i>03</i><h3>Leverage</h3><p>Interest becomes competition. Competition becomes your terms.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- BUY / CONCIERGE -->
+<section id="buy">
+  <div class="wrap">
+    <div class="split flip">
+      <div class="fig rv"><img src="assets/modern-exterior.jpg" alt="Modern architecture" loading="lazy"><div class="fig-cap">The Concierge Experience</div></div>
+      <div class="rv d1">
+        <span class="eyebrow">For Buyers</span>
+        <h2>The Concierge <em>Experience.</em></h2>
+        <div class="rule"></div>
+        <p class="lede">The right home should feel inevitable. We handle the search, the strategy, and everything between the offer and the keys.</p>
+        <ul class="list">
+          <li>Private, curated search</li>
+          <li>Offer strategy and positioning</li>
+          <li>Condition and value review</li>
+          <li>Negotiation and contract</li>
+          <li>Inspection through closing</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NEW CONSTRUCTION / INVESTOR / RELOCATION -->
+<section id="new-construction">
+  <div class="wrap">
+    <div class="center" style="margin-bottom:clamp(3rem,6vw,5rem)">
+      <span class="eyebrow rv">New Construction · Investment · Relocation</span>
+      <h2 class="rv d1">Knowing what to ask <em>before there is a question.</em></h2>
+    </div>
+    <div class="cards">
+      <div class="card rv"><h3>New Construction</h3><p>Lot, plan, and incentive strategy. Contract and upgrade guidance. Builder clarity from first walk to final walkthrough.</p></div>
+      <div class="card rv d1"><h3>Investment</h3><p>A property should make sense on paper and in real life. Price, rent, resale, and exit — evaluated before you commit.</p></div>
+      <div class="card rv d2"><h3>Relocation</h3><p>New city, zero guesswork. Commutes, schools, and community fit mapped before you land.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- QUOTE -->
+<section class="quote-sect" id="insights">
+  <div class="quote-bg"></div><div class="quote-veil"></div>
+  <div class="wrap">
+    <blockquote class="rv">Attentive, communicative, and seamless from start to finish.</blockquote>
+    <div class="qmeta rv d1">
+      <div class="qstars">★★★★★</div>
+      <b>Bri Bolling</b>
+      <small>Verified Google Review · First-Time Buyer, Huntsville</small>
+    </div>
+  </div>
+</section>
+
+<!-- THE J&J DIFFERENCE -->
+<section>
+  <div class="wrap">
+    <div class="center" style="margin-bottom:clamp(3rem,6vw,5rem)">
+      <span class="eyebrow rv">Why Clients Choose Us</span>
+      <h2 class="rv d1">The J&amp;J Difference</h2>
+    </div>
+    <div class="cmp rv d1">
+      <div class="cmp-row head"><div>What You Deserve</div><div class="cmp-jj">J&amp;J Real Estate Group</div><div class="cmp-o">Elsewhere</div></div>
+      <div class="cmp-row"><div class="cmp-k">Clarity</div><div class="cmp-jj">Clear decisions instead of overwhelm</div><div class="cmp-o">Information dumps</div></div>
+      <div class="cmp-row"><div class="cmp-k">Leverage</div><div class="cmp-jj">Pricing, positioning, negotiation</div><div class="cmp-o">List it and hope</div></div>
+      <div class="cmp-row"><div class="cmp-k">Trust</div><div class="cmp-jj">Weekly updates, calm execution</div><div class="cmp-o">Silence until something breaks</div></div>
+      <div class="cmp-row"><div class="cmp-k">Range</div><div class="cmp-jj">Resale, new build, investor, relocation</div><div class="cmp-o">One approach for everyone</div></div>
+      <div class="cmp-row"><div class="cmp-k">Presentation</div><div class="cmp-jj">Editorial media that stops the scroll</div><div class="cmp-o">Phone photos and a yard sign</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ADVISORS -->
+<section id="about">
+  <div class="wrap">
+    <div class="center" style="margin-bottom:clamp(3.5rem,7vw,6rem)">
+      <span class="eyebrow rv">The Advisors</span>
+      <h2 class="rv d1">Two perspectives. <em>One standard.</em></h2>
+    </div>
+    <div class="advisors">
+      <div class="adv rv">
+        <div class="adv-photo"><img src="assets/chrystal.jpg" alt="Chrystal Justice" loading="lazy"></div>
+        <div class="adv-body">
           <h3>Chrystal Justice</h3>
-          <div class="agent-role">Strategic · Analytical · Negotiation-Focused</div>
-          <p>Chrystal reads the market the way great negotiators read a room. She builds the pricing story, structures the leverage, and stays calm when the pressure peaks — so you keep the upper hand from list to close.</p>
-          <div class="agent-contact">
-            <a href="tel:+12565031924">256-503-1924</a>
+          <div class="adv-role">Strategy · Negotiation</div>
+          <p>Chrystal reads a market the way great negotiators read a room — and stays calm exactly when it matters most.</p>
+          <div class="adv-links">
+            <a href="tel:+12565031924">256.503.1924</a>
             <a href="mailto:Chrystal@choosecapstone.com">Chrystal@choosecapstone.com</a>
           </div>
         </div>
       </div>
-      <div class="agent rv d2">
-        <div class="agent-photo"><img src="assets/patsy.jpg" alt="Patsy Jenkins — J&J Real Estate Group"></div>
-        <div class="agent-body">
+      <div class="adv rv d1">
+        <div class="adv-photo"><img src="assets/patsy.jpg" alt="Patsy Jenkins" loading="lazy"></div>
+        <div class="adv-body">
           <h3>Patsy Jenkins</h3>
-          <div class="agent-role">Patient · Detailed · Education-Focused</div>
-          <p>Patsy makes the complex feel simple. She walks you through every document, every deadline, and every decision with the patience of a teacher and the precision of a closer — so you always understand before you sign.</p>
-          <div class="agent-contact">
-            <a href="tel:+12708817622">270-881-7622</a>
+          <div class="adv-role">Guidance · Detail</div>
+          <p>Patsy makes the complex feel simple, so you understand every decision long before you sign it.</p>
+          <div class="adv-links">
+            <a href="tel:+12708817622">270.881.7622</a>
             <a href="mailto:Patsy@choosecapstone.com">Patsy@choosecapstone.com</a>
           </div>
         </div>
@@ -500,499 +585,247 @@ body::after{content:'';position:fixed;inset:0;z-index:95;pointer-events:none;opa
   </div>
 </section>
 
-<!-- DIFFERENCE -->
-<section id="difference">
-  <div class="wrap">
-    <div class="center rv">
-      <span class="eyebrow">Why Clients Choose Us</span>
-      <h2>The J&amp;J Difference</h2>
-      <div class="gold-rule"></div>
-      <p class="lede">Most agents list a home. We position it. Most agents show houses. We build a strategy. See the difference for yourself.</p>
-    </div>
-    <div class="diff-table rv d1">
-      <div class="diff-row">
-        <div class="diff-head">What You Deserve</div>
-        <div class="diff-jj diff-head">J&amp;J Real Estate Group</div>
-        <div class="diff-typ diff-head">The Typical Experience</div>
-      </div>
-      <div class="diff-row"><div>Clarity</div><div class="diff-jj"><span class="check">✦</span>Clear decisions instead of overwhelm</div><div class="diff-typ"><span class="dash">—</span>Information dumps, decision fatigue</div></div>
-      <div class="diff-row"><div>Leverage</div><div class="diff-jj"><span class="check">✦</span>Smart pricing, positioning &amp; negotiation</div><div class="diff-typ"><span class="dash">—</span>List it and hope</div></div>
-      <div class="diff-row"><div>Trust</div><div class="diff-jj"><span class="check">✦</span>Weekly updates, calm execution</div><div class="diff-typ"><span class="dash">—</span>Silence until something goes wrong</div></div>
-      <div class="diff-row"><div>Experience</div><div class="diff-jj"><span class="check">✦</span>New construction, resale, investor &amp; relocation insight</div><div class="diff-typ"><span class="dash">—</span>One-size-fits-all approach</div></div>
-      <div class="diff-row"><div>Presentation</div><div class="diff-jj"><span class="check">✦</span>Editorial media that makes buyers stop scrolling</div><div class="diff-typ"><span class="dash">—</span>Phone photos and a yard sign</div></div>
-    </div>
-  </div>
-</section>
-
-<!-- SELLERS -->
-<section class="team" id="sellers">
-  <div class="wrap">
-    <div class="split">
-      <div class="split-img rv"><img src="assets/hero-kitchen.jpg" alt="Luxury staged kitchen"></div>
-      <div class="rv d1">
-        <span class="eyebrow">For Sellers</span>
-        <h2>A listing is not placed. <em style="color:var(--gold-lt)">It is positioned.</em></h2>
-        <div class="gold-rule"></div>
-        <p class="lede">Buyers decide emotionally before they justify logically. We build a value narrative that makes your property easier to understand, easier to love, and harder to ignore — then we price it to create urgency without leaving money behind.</p>
-        <ul class="list">
-          <li>Precision pricing analysis</li>
-          <li>Staging and visual readiness</li>
-          <li>Professional media strategy</li>
-          <li>Buyer-targeted launch messaging</li>
-          <li>Weekly market response review</li>
-        </ul>
-      </div>
-    </div>
-    <div class="steps">
-      <div class="step rv"><i>01</i><b>Data</b><p>Comparable sales, neighborhood momentum, and market trends form the foundation of a price buyers believe.</p></div>
-      <div class="step rv d1"><i>02</i><b>Demand</b><p>Buyer psychology shapes the story — relocating professionals, move-up buyers, and investors each hear a message written for them.</p></div>
-      <div class="step rv d2"><i>03</i><b>Leverage</b><p>Offer strategy turns interest into competition. The outcome: a price story buyers understand and agents can defend.</p></div>
-    </div>
-  </div>
-</section>
-
-<!-- GALLERY -->
-<section class="gallery" id="gallery">
-  <div class="wrap">
-    <div class="center rv">
-      <span class="eyebrow">Media &amp; Presentation</span>
-      <h2>Make the right buyer <em style="color:var(--gold-lt)">stop scrolling.</em></h2>
-      <div class="gold-rule"></div>
-      <p class="lede">Editorial-quality photography, drone video, cinematic walkthroughs, and 3D tours help buyers imagine the lifestyle — not just the square footage.</p>
-    </div>
-    <div class="gal-grid rv d1">
-      <figure><img src="assets/living-dusk.jpg" alt="Open living space at dusk"><figcaption class="gal-cap">Cinematic Walkthroughs</figcaption></figure>
-      <figure><img src="assets/modern-exterior.jpg" alt="Modern home exterior"><figcaption class="gal-cap">Drone &amp; Location Context</figcaption></figure>
-      <figure><img src="assets/loft-interior.jpg" alt="Loft interior"><figcaption class="gal-cap">Editorial Photography</figcaption></figure>
-      <figure><img src="assets/tall-living.jpg" alt="Double-height living room"><figcaption class="gal-cap">Staging &amp; Styling</figcaption></figure>
-      <figure><img src="assets/bright-living.jpg" alt="Bright living area"><figcaption class="gal-cap">3D &amp; Virtual Tours</figcaption></figure>
-    </div>
-  </div>
-</section>
-
-<!-- BUYERS -->
-<section id="buyers">
-  <div class="wrap">
-    <div class="split flip">
-      <div class="split-img rv"><img src="assets/modern-exterior.jpg" alt="Modern architecture home"></div>
-      <div class="rv d1">
-        <span class="eyebrow">For Buyers</span>
-        <h2>A curated path to <em style="color:var(--gold-lt)">the right decision.</em></h2>
-        <div class="gold-rule"></div>
-        <p class="lede">The right home should feel inevitable — not exhausting. We help you see beyond finishes and evaluate value, location, builder reputation, future resale, and negotiation opportunity, so the home you love is also the home that loves you back.</p>
-        <ul class="list">
-          <li>Goals + lifestyle profile</li>
-          <li>Pre-approval + offer strategy</li>
-          <li>Curated search + private tours</li>
-          <li>Condition and value review</li>
-          <li>Negotiation + contract execution</li>
-          <li>Inspection, appraisal, closing</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- NEW CONSTRUCTION + INVESTOR -->
-<section class="team" id="new-construction">
-  <div class="wrap">
-    <div class="center rv">
-      <span class="eyebrow">New Construction · Investors · Relocation</span>
-      <h2>Builder knowledge creates <em style="color:var(--gold-lt)">client leverage.</em></h2>
-      <div class="gold-rule"></div>
-      <p class="lede">Premium advisory is knowing what to ask before you know there is a question. Incentives, timelines, selections, and builder practices can quietly shift your outcome — unless someone on your side already knows the playbook.</p>
-    </div>
-    <div class="steps">
-      <div class="step rv"><b>New Construction Advantage</b><p>Lot, plan, and incentive strategy. Contract and upgrade guidance. Timeline and walkthrough coordination. Builder process clarity from start to finish.</p></div>
-      <div class="step rv d1"><b>Investor Advisory</b><p>A property should make sense on paper and in real life. We evaluate price, rent, resale, demand drivers, rentability, and exit strategy through an ROI lens.</p></div>
-      <div class="step rv d2"><b>Relocation Guidance</b><p>New city, zero guesswork. Jobs, schools, commutes, and community fit — mapped before you land, so your money lands in the right zip code.</p></div>
-    </div>
-  </div>
-</section>
-
 <!-- JOURNEY -->
-<section id="journey">
+<section>
   <div class="wrap">
-    <div class="center rv">
-      <span class="eyebrow">The Client Journey</span>
-      <h2>Simple on the surface. <em style="color:var(--gold-lt)">Strategic behind the scenes.</em></h2>
-      <div class="gold-rule"></div>
-      <p class="lede">You feel supported. The transaction stays moving. And when it's done, you'll know exactly why it went so smoothly.</p>
+    <div class="center">
+      <span class="eyebrow rv">The Client Journey</span>
+      <h2 class="rv d1">Simple on the surface. <em>Strategic beneath it.</em></h2>
     </div>
-    <div class="journey-line rv d1">
-      <div class="j-step"><i></i><b>Consult</b><span>We listen first</span></div>
-      <div class="j-step"><i></i><b>Strategy</b><span>Your custom plan</span></div>
-      <div class="j-step"><i></i><b>Launch / Search</b><span>Positioned to win</span></div>
-      <div class="j-step"><i></i><b>Negotiate</b><span>Leverage applied</span></div>
-      <div class="j-step"><i></i><b>Coordinate</b><span>Everyone aligned</span></div>
-      <div class="j-step"><i></i><b>Close</b><span>Calm to the finish</span></div>
-      <div class="j-step"><i></i><b>Stay Connected</b><span>Clients for life</span></div>
+    <div class="journey rv d2">
+      <div class="jstep"><i></i><b>Consult</b><span>We listen</span></div>
+      <div class="jstep"><i></i><b>Strategy</b><span>Your plan</span></div>
+      <div class="jstep"><i></i><b>Launch</b><span>Positioned</span></div>
+      <div class="jstep"><i></i><b>Negotiate</b><span>Leverage</span></div>
+      <div class="jstep"><i></i><b>Coordinate</b><span>Aligned</span></div>
+      <div class="jstep"><i></i><b>Close</b><span>Calm</span></div>
+      <div class="jstep"><i></i><b>Beyond</b><span>For life</span></div>
     </div>
   </div>
 </section>
 
-<!-- TESTIMONIAL -->
-<section class="team center" id="testimonial">
-  <div class="wrap rv">
-    <span class="quote-mark">&ldquo;</span>
-    <blockquote>Chrystal was truly a pleasure to work with. She was attentive, communicative, and made the entire process feel seamless&hellip; She's someone who clearly cares about the people she serves and takes pride in creating a great experience from start to finish. I'd absolutely recommend her.</blockquote>
-    <div class="attrib">Bri Bolling<small>Verified Google Review · First-Time Buyer Transaction</small></div>
-  </div>
-</section>
-
-<!-- HUNTSVILLE -->
-<section class="hsv" id="huntsville">
+<!-- LIFESTYLE / ROCKET CITY -->
+<section>
   <div class="wrap">
-    <div class="hsv-head rv">
-      <div>
-        <span class="eyebrow">Our Market</span>
-        <h2>Rooted in <em style="color:var(--gold-lt)">Rocket City.</em></h2>
-        <div class="gold-rule"></div>
-        <p class="lede">Huntsville isn't just where we work — it's where we live, give, and grow. One of America's fastest-rising cities, powered by aerospace, defense, and technology, with buyers arriving from every state. We turn that momentum into your advantage.</p>
+    <div class="split" style="align-items:end;margin-bottom:0">
+      <div class="rv">
+        <span class="eyebrow">The Life Here</span>
+        <h2>Rooted in <em>Rocket City.</em></h2>
       </div>
-      <svg class="globe glow" viewBox="0 0 200 200" aria-hidden="true">
-        <circle cx="100" cy="100" r="88"/>
-        <ellipse cx="100" cy="100" rx="88" ry="30"/>
-        <ellipse cx="100" cy="62" rx="70" ry="20" opacity=".4"/>
-        <ellipse cx="100" cy="138" rx="70" ry="20" opacity=".4"/>
-        <ellipse cx="100" cy="100" rx="88" ry="88">
-          <animate attributeName="rx" values="88;2;88" dur="9s" repeatCount="indefinite"/>
-        </ellipse>
-        <ellipse cx="100" cy="100" rx="60" ry="88" opacity=".5">
-          <animate attributeName="rx" values="60;88;2;60" dur="9s" repeatCount="indefinite"/>
-        </ellipse>
-        <circle cx="128" cy="82" r="6" fill="#ffd97a" stroke="none">
-          <animate attributeName="opacity" values="1;.1;1" dur="1.3s" repeatCount="indefinite"/>
-        </circle>
-        <circle cx="128" cy="82" r="11" fill="none" stroke="#ffd97a" stroke-width="1">
-          <animate attributeName="r" values="7;15" dur="1.3s" repeatCount="indefinite"/>
-          <animate attributeName="opacity" values=".8;0" dur="1.3s" repeatCount="indefinite"/>
-        </circle>
-        <text x="144" y="78" fill="#ffd97a" font-size="15" font-weight="700" font-family="Archivo,Inter,sans-serif" letter-spacing="1.5">HSV</text>
-      </svg>
+      <p class="lede rv d1">One of America's fastest-rising cities — aerospace, defense, and technology drawing buyers from every state. We turn that momentum into your advantage.</p>
     </div>
-    <div class="hsv-grid rv d1">
-      <figure><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Skyline_of_Huntsville.jpg/1920px-Skyline_of_Huntsville.jpg" alt="Downtown Huntsville at dusk from Big Spring Park" loading="lazy"><figcaption class="hsv-cap">Downtown · Big Spring Park</figcaption></figure>
-      <figure><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Saturn_V_Huntsville%40Night.jpg/960px-Saturn_V_Huntsville%40Night.jpg" alt="Saturn V rocket at night, U.S. Space & Rocket Center, Huntsville" loading="lazy"><figcaption class="hsv-cap">U.S. Space &amp; Rocket Center</figcaption></figure>
+    <div class="life">
+      <figure class="l1 rv"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Skyline_of_Huntsville.jpg/1920px-Skyline_of_Huntsville.jpg" alt="Downtown Huntsville at dusk" loading="lazy"><figcaption>Downtown · Big Spring Park</figcaption></figure>
+      <figure class="l2 rv d1"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Saturn_V_Huntsville%40Night.jpg/960px-Saturn_V_Huntsville%40Night.jpg" alt="Saturn V at night" loading="lazy"><figcaption>U.S. Space &amp; Rocket Center</figcaption></figure>
+      <figure class="l3 rv d2"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Huntsville%2C_Alabama_%282023%29.jpg/1920px-Huntsville%2C_Alabama_%282023%29.jpg" alt="Huntsville skyline panorama" loading="lazy"><figcaption>A skyline that keeps rising</figcaption></figure>
     </div>
-    <div class="hsv-pano rv d2">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Huntsville%2C_Alabama_%282023%29.jpg/1920px-Huntsville%2C_Alabama_%282023%29.jpg" alt="Downtown Huntsville skyline panorama" loading="lazy">
-      <figcaption class="hsv-cap">A skyline that keeps rising — and so do its home values</figcaption>
-    </div>
-    <div class="hsv-facts">
-      <div class="p-card rv"><b>#1 Best Places to Live</b><p>Huntsville has topped national "best places to live" rankings — and the buyers keep coming.</p></div>
-      <div class="p-card rv d1"><b>Aerospace &amp; Tech Capital</b><p>Redstone Arsenal, NASA Marshall, and a booming tech corridor drive relentless relocation demand.</p></div>
-      <div class="p-card rv d2"><b>Your Local Advantage</b><p>We know which streets, builders, and school zones the momentum favors — before the market prices it in.</p></div>
+    <div class="life-words">
+      <div class="lw rv"><b>Downtown</b><p>Chef-driven restaurants, galleries, and the Sunday morning walk to Big Spring.</p></div>
+      <div class="lw rv d1"><b>The Outdoors</b><p>Monte Sano trails, Hampton Cove golf, and the Tennessee River twenty minutes out.</p></div>
+      <div class="lw rv d2"><b>The Schools</b><p>Madison, Hampton Cove, and the districts families quietly move for.</p></div>
+      <div class="lw rv d3"><b>The Work</b><p>Redstone, NASA Marshall, and a tech corridor that keeps drawing talent in.</p></div>
     </div>
   </div>
 </section>
 
 <!-- COMMUNITY -->
-<section class="community" id="community">
-  <div class="wrap">
-    <div class="center rv">
-      <span class="eyebrow">Reputation &amp; Community</span>
-      <h2>We do business where we are <em style="color:var(--gold-lt)">also building trust.</em></h2>
-      <div class="gold-rule"></div>
-      <p class="lede">Community involvement is not a side note. It is evidence of consistency, visibility, and service beyond the transaction — because the neighborhoods we serve are the neighborhoods we love.</p>
-    </div>
-    <div class="causes rv d1">
-      <span>Local Food Drives</span>
-      <i>✦</i>
-      <span>Backpack &amp; School Programs</span>
-      <i>✦</i>
-      <span>Community Partnerships</span>
-    </div>
+<section>
+  <div class="wrap narrow center">
+    <span class="eyebrow rv">Reputation</span>
+    <h2 class="rv d1">We do business where we are <em>also building trust.</em></h2>
+    <div class="rule rv d2"></div>
+    <p class="lede rv d3">Local food drives. Backpack and school programs. Service that continues after the transaction closes.</p>
   </div>
 </section>
 
-<!-- PROMISE -->
-<section class="promise" id="promise">
-  <div class="wrap">
-    <div class="center rv">
-      <span class="eyebrow">Our Communication Promise</span>
-      <h2>No confusion. No silence. <em style="color:var(--gold-lt)">No surprises.</em></h2>
-      <div class="gold-rule"></div>
-    </div>
-    <div class="promise-grid">
-      <div class="p-card rv"><b>Clear Expectations</b><p>You'll know what happens next — always.</p></div>
-      <div class="p-card rv d1"><b>Weekly Updates</b><p>Strategy reviews, not status guesses.</p></div>
-      <div class="p-card rv d2"><b>Fast Response</b><p>Direct answers, prompt follow-up.</p></div>
-      <div class="p-card rv d3"><b>Money-Smart Moves</b><p>Every decision framed around protecting your bottom line.</p></div>
-      <div class="p-card rv d4"><b>Calm Guidance</b><p>Steady hands during pressure points.</p></div>
-    </div>
+<!-- MARQUEE -->
+<div class="mq" aria-hidden="true">
+  <div class="mq-track" id="mqt">
+    <span class="hi">Huntsville</span><i>✦</i><span>Madison</span><i>✦</i><span class="hi">Athens</span><i>✦</i><span>Decatur</span><i>✦</i><span class="hi">Hampton Cove</span><i>✦</i><span>Owens Cross Roads</span><i>✦</i><span class="hi">Meridianville</span><i>✦</i><span>Hazel Green</span><i>✦</i><span class="hi">Harvest</span><i>✦</i><span>Monrovia</span><i>✦</i>
   </div>
-</section>
+</div>
 
 <!-- CONTACT -->
-<section class="contact" id="contact">
+<section class="contact">
   <div class="wrap">
-    <div class="rv">
-      <span class="eyebrow">Next Steps</span>
-      <h2>Let's build <em style="color:var(--gold-lt)">your strategy.</em></h2>
-      <div class="gold-rule"></div>
-      <p class="lede" style="margin-bottom:2.6rem">Whether you are selling, buying, relocating, investing, or exploring new construction — the first conversation is private, unhurried, and entirely about you.</p>
-      <div class="c-block">
-        <b>Chrystal Justice</b>
-        <a href="tel:+12565031924">256-503-1924</a>
-        <a href="mailto:Chrystal@choosecapstone.com">Chrystal@choosecapstone.com</a>
+    <div class="contact-grid">
+      <div class="rv">
+        <span class="eyebrow">Begin</span>
+        <h2>Let's build <em>your strategy.</em></h2>
+        <div class="rule"></div>
+        <p class="lede" style="margin-bottom:3.4rem">Selling, buying, building, or relocating — the first conversation is private and entirely about you.</p>
+        <div class="cblock">
+          <b>Chrystal Justice</b>
+          <a href="tel:+12565031924">256.503.1924</a>
+          <a href="mailto:Chrystal@choosecapstone.com">Chrystal@choosecapstone.com</a>
+        </div>
+        <div class="cblock">
+          <b>Patsy Jenkins</b>
+          <a href="tel:+12708817622">270.881.7622</a>
+          <a href="mailto:Patsy@choosecapstone.com">Patsy@choosecapstone.com</a>
+        </div>
       </div>
-      <div class="c-block">
-        <b>Patsy Jenkins</b>
-        <a href="tel:+12708817622">270-881-7622</a>
-        <a href="mailto:Patsy@choosecapstone.com">Patsy@choosecapstone.com</a>
-      </div>
+      <form class="rv d1" id="cf">
+        <div class="frow">
+          <input type="text" name="name" placeholder="Name" required>
+          <input type="tel" name="phone" placeholder="Phone">
+        </div>
+        <input type="email" name="email" placeholder="Email" required>
+        <select name="interest" required>
+          <option value="" disabled selected>How can we help?</option>
+          <option>Selling</option><option>Buying</option><option>New Construction</option><option>Investing</option><option>Relocating</option><option>Other</option>
+        </select>
+        <textarea name="message" placeholder="Tell us about your goals"></textarea>
+        <label class="consent"><input type="checkbox" name="c_email" checked> I agree to receive emails from J&amp;J Real Estate Group.</label>
+        <label class="consent"><input type="checkbox" name="c_sms"> I agree to receive SMS text messages from J&amp;J Real Estate Group.</label>
+        <p class="fine">By submitting, you agree to be contacted by J&amp;J Real Estate Group at Capstone Realty via call, email, and text regarding real estate services. Opt out at any time — reply "stop" to any text or use the unsubscribe link in emails. Message and data rates may apply. Your information is never sold.</p>
+        <button type="submit" class="btn" style="justify-content:center"><span>Send</span></button>
+      </form>
     </div>
-    <form class="rv d1" id="consultForm">
-      <div class="f-row">
-        <input type="text" name="name" placeholder="Your Name" required>
-        <input type="tel" name="phone" placeholder="Phone">
-      </div>
-      <input type="email" name="email" placeholder="Email Address" required>
-      <select name="interest" required>
-        <option value="" disabled selected>I'm interested in&hellip;</option>
-        <option>Selling a Property</option>
-        <option>Buying a Home</option>
-        <option>New Construction</option>
-        <option>Investing</option>
-        <option>Relocating</option>
-      </select>
-      <textarea name="message" placeholder="Tell us about your goals&hellip;"></textarea>
-      <label class="consent"><input type="checkbox" name="c_email" checked> Yes, I agree to receive emails from J&amp;J Real Estate Group.</label>
-      <label class="consent"><input type="checkbox" name="c_sms"> Yes, I agree to receive SMS text messages from J&amp;J Real Estate Group.</label>
-      <p class="fine">Consent: by submitting, you agree to be contacted by J&amp;J Real Estate Group at Capstone Realty via call, email, and text for real estate services. You may opt out at any time — reply "stop" to any text or use the unsubscribe link in emails. Message and data rates may apply. Message frequency may vary. All information is kept private and never sold.</p>
-      <button type="submit" class="btn solid"><span>Get in Touch</span></button>
-    </form>
   </div>
 </section>
 
-<!-- GET IN TOUCH MODAL -->
-<div id="gitModal" role="dialog" aria-modal="true" aria-label="Get in Touch">
-  <div class="git-box">
-    <button id="git-close" aria-label="Close">✕</button>
-    <img class="git-logo" src="assets/logo-framed.jpg" alt="J&amp;J Real Estate Group">
+<!-- MODAL -->
+<div id="gm" role="dialog" aria-modal="true" aria-label="Get in Touch">
+  <div class="gm-box">
+    <button id="gm-x" aria-label="Close">✕</button>
+    <span class="eyebrow">J&amp;J Real Estate Group</span>
     <h3>Get in Touch</h3>
-    <p class="git-sub">Buying, selling, building, or relocating — tell us where you're headed. We'll handle the rest.</p>
-    <form id="gitForm">
-      <div class="f-row">
+    <p class="gm-sub">Tell us where you're headed. We'll handle the rest.</p>
+    <form id="gf">
+      <div class="frow">
         <input type="text" name="name" placeholder="Name" required>
         <input type="tel" name="phone" placeholder="Phone">
       </div>
       <input type="email" name="email" placeholder="Email" required>
       <select name="interest" required>
-        <option value="" disabled selected>Select a Topic</option>
-        <option>Buying</option>
-        <option>Selling</option>
-        <option>New Construction</option>
-        <option>Investing</option>
-        <option>Relocating</option>
-        <option>Other</option>
+        <option value="" disabled selected>How can we help?</option>
+        <option>Selling</option><option>Buying</option><option>New Construction</option><option>Investing</option><option>Relocating</option><option>Other</option>
       </select>
-      <textarea name="message" placeholder="Your Message"></textarea>
-      <label class="consent"><input type="checkbox" name="c_email" checked> Yes, I agree to receive emails from J&amp;J Real Estate Group.</label>
-      <label class="consent"><input type="checkbox" name="c_sms"> Yes, I agree to receive SMS text messages from J&amp;J Real Estate Group.</label>
-      <p class="fine">Consent: by submitting, you agree to be contacted by J&amp;J Real Estate Group at Capstone Realty via call, email, and text for real estate services. You may opt out at any time — reply "stop" to any text or use the unsubscribe link in emails. Message and data rates may apply. Message frequency may vary. All information is kept private and never sold.</p>
-      <button type="submit" class="btn solid"><span>Get in Touch</span></button>
+      <textarea name="message" placeholder="Your message"></textarea>
+      <label class="consent"><input type="checkbox" name="c_email" checked> I agree to receive emails from J&amp;J Real Estate Group.</label>
+      <label class="consent"><input type="checkbox" name="c_sms"> I agree to receive SMS text messages from J&amp;J Real Estate Group.</label>
+      <p class="fine">By submitting, you agree to be contacted via call, email, and text regarding real estate services. Opt out any time. Message and data rates may apply.</p>
+      <button type="submit" class="btn" style="justify-content:center"><span>Send</span></button>
     </form>
   </div>
 </div>
 
-<!-- LIGHTBOX -->
-<div id="lightbox" role="dialog" aria-label="Gallery viewer">
-  <img id="lb-img" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="">
-  <div id="lb-cap"></div>
-  <button class="lb-btn" id="lb-close" aria-label="Close">✕</button>
-  <button class="lb-btn" id="lb-prev" aria-label="Previous">‹</button>
-  <button class="lb-btn" id="lb-next" aria-label="Next">›</button>
-</div>
-
-<!-- COMMUNITIES MARQUEE — trust band above footer -->
-<div class="marquee" aria-hidden="true">
-  <div class="marquee-track" id="mqTrack">
-    <span class="fill">Huntsville</span><i>✦</i><span>Madison</span><i>✦</i><span class="fill">Athens</span><i>✦</i><span>Decatur</span><i>✦</i><span class="fill">Owens Cross Roads</span><i>✦</i><span>Meridianville</span><i>✦</i><span class="fill">Hazel Green</span><i>✦</i><span>Harvest</span><i>✦</i>
-  </div>
-</div>
-
-<!-- BACK TO TOP -->
 <button id="toTop" aria-label="Back to top">↑</button>
 
 <!-- FOOTER -->
 <footer>
   <div class="wrap">
-    <div class="foot-top">
-      <a class="brand" href="#top">
-        <img class="foot-logo" src="assets/logo-framed.jpg" alt="J&amp;J Real Estate Group — Capstone Realty">
-      </a>
-      <div class="foot-logos">
+    <div class="f-top">
+      <a href="#top"><img class="f-logo" src="assets/logo-framed.jpg" alt="J&amp;J Real Estate Group"></a>
+      <div></div>
+      <div class="f-marks">
         <a href="https://www.choosecapstone.com/" target="_blank" rel="noopener" title="Capstone Realty"><img class="cap" src="assets/capstone-logo.jpg" alt="Capstone Realty"></a>
         <img src="assets/realtor.png" alt="REALTOR®">
         <img src="assets/eho.png" alt="Equal Housing Opportunity">
       </div>
     </div>
-    <p class="foot-note">Luxury Real Estate Advisory · Huntsville &amp; North Alabama<br>
-    J&amp;J Real Estate Group at <a href="https://www.choosecapstone.com/" target="_blank" rel="noopener" style="color:var(--gold-lt)">Capstone Realty</a> · Chrystal Justice &amp; Patsy Jenkins, REALTORS®. Each office is independently owned and operated. All information deemed reliable but not guaranteed and should be independently verified. No financial or legal advice provided. J&amp;J Real Estate Group fully supports the principles of the Fair Housing Act and the Equal Opportunity Act. Equal Housing Opportunity.<br>
+    <p class="f-note">Luxury Real Estate Advisory · Huntsville &amp; North Alabama<br>
+    J&amp;J Real Estate Group at <a href="https://www.choosecapstone.com/" target="_blank" rel="noopener">Capstone Realty</a> · Chrystal Justice &amp; Patsy Jenkins, REALTORS®. Each office is independently owned and operated. All information deemed reliable but not guaranteed and should be independently verified. No financial or legal advice provided. J&amp;J Real Estate Group fully supports the principles of the Fair Housing Act and the Equal Opportunity Act. Equal Housing Opportunity.<br>
     © <span id="yr"></span> J&amp;J Real Estate Group. All rights reserved.</p>
-    <p class="foot-credits">Huntsville photography: <a href="https://commons.wikimedia.org/wiki/File:Skyline_of_Huntsville.jpg" target="_blank" rel="noopener">Bren.persing (CC BY-SA 4.0)</a> · <a href="https://commons.wikimedia.org/wiki/File:Huntsville,_Alabama_(2023).jpg" target="_blank" rel="noopener">WeaponizingArchitecture (CC BY-SA 4.0)</a> · <a href="https://commons.wikimedia.org/wiki/File:Saturn_V_Huntsville@Night.jpg" target="_blank" rel="noopener">Ostbayer 2000 (CC BY-SA 4.0)</a> via Wikimedia Commons</p>
+    <p class="f-credit">Huntsville photography: <a href="https://commons.wikimedia.org/wiki/File:Skyline_of_Huntsville.jpg" target="_blank" rel="noopener">Bren.persing</a> · <a href="https://commons.wikimedia.org/wiki/File:Huntsville,_Alabama_(2023).jpg" target="_blank" rel="noopener">WeaponizingArchitecture</a> · <a href="https://commons.wikimedia.org/wiki/File:Saturn_V_Huntsville@Night.jpg" target="_blank" rel="noopener">Ostbayer 2000</a> — CC BY-SA 4.0 via Wikimedia Commons</p>
   </div>
 </footer>
 
 <script>
-// year
 document.getElementById('yr').textContent = new Date().getFullYear();
 
-// nav solid on scroll + hero parallax
-const nav = document.getElementById('nav');
-const heroBg = document.getElementById('heroBg');
+/* preloader */
+const done = () => { const l = document.getElementById('loader'); if (l && !l.classList.contains('done')) { l.classList.add('done'); setTimeout(()=>l.remove(), 1200); } };
+addEventListener('load', () => setTimeout(done, 700));
+setTimeout(done, 3200);
+
+/* nav shrink + progress + parallax */
+const nav = document.getElementById('nav'), prog = document.getElementById('prog'), heroImg = document.getElementById('heroImg'), toTop = document.getElementById('toTop');
+const doc = document.documentElement;
 addEventListener('scroll', () => {
   const y = scrollY;
-  nav.classList.toggle('solid', y > 40);
-  if (y < innerHeight) heroBg.style.transform = `translateY(${y * .25}px)`;
+  nav.classList.toggle('shrunk', y > 60);
+  prog.style.width = (y / (doc.scrollHeight - doc.clientHeight) * 100) + '%';
+  if (y < innerHeight) heroImg.style.transform = `translateY(${y * .22}px) scale(1)`;
+  toTop.classList.toggle('show', y > innerHeight * 1.4);
 }, {passive:true});
+toTop.addEventListener('click', () => scrollTo({top:0, behavior:'smooth'}));
 
-// mobile menu
-const burger = document.getElementById('burger');
-const mmenu = document.getElementById('mmenu');
-burger.addEventListener('click', () => mmenu.classList.toggle('open'));
-mmenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => mmenu.classList.remove('open')));
+/* mobile menu */
+const burger = document.getElementById('burger'), mm = document.getElementById('mm');
+burger.addEventListener('click', () => mm.classList.toggle('open'));
+mm.querySelectorAll('a').forEach(a => a.addEventListener('click', () => mm.classList.remove('open')));
 
-// reveal on scroll
-const io = new IntersectionObserver(es => es.forEach(e => {
-  if (e.isIntersecting){ e.target.classList.add('on'); io.unobserve(e.target); }
-}), {threshold:.15});
-document.querySelectorAll('.rv:not(.on)').forEach(el => io.observe(el));
+/* reveal */
+const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('on'); io.unobserve(e.target); } }), {threshold:.12, rootMargin:'0px 0px -8% 0px'});
+document.querySelectorAll('.rv').forEach(el => io.observe(el));
 
-// counters
+/* counters */
 const cio = new IntersectionObserver(es => es.forEach(e => {
   if (!e.isIntersecting) return;
   const el = e.target, end = +el.dataset.count, suf = el.dataset.suffix || '';
   let t0 = null;
-  const tick = ts => {
-    if (!t0) t0 = ts;
-    const p = Math.min((ts - t0) / 1400, 1);
+  const tick = ts => { if (!t0) t0 = ts; const p = Math.min((ts - t0) / 1600, 1);
     el.textContent = Math.round(end * (1 - Math.pow(1 - p, 3))) + suf;
-    if (p < 1) requestAnimationFrame(tick);
-  };
-  requestAnimationFrame(tick);
-  cio.unobserve(el);
+    if (p < 1) requestAnimationFrame(tick); };
+  requestAnimationFrame(tick); cio.unobserve(el);
 }), {threshold:.6});
 document.querySelectorAll('[data-count]').forEach(el => cio.observe(el));
 
-// hero search -> Chrystal's live MLS search on Capstone
-document.getElementById('heroSearch').addEventListener('submit', e => {
-  e.preventDefault();
-  window.open('https://chrystaljustice.choosecapstone.com/property-search-map/sale/active/comingsoon/type-Condo!Townhouse;Lots!Land;Single%20Family/dsort-n/lat-34.182238999999996-34.816624000000004/lon-_87.29115-_85.841114', '_blank');
-});
+/* scroll-spy */
+const anchors = [...document.querySelectorAll('.nav-links a:not(.nav-cta)')];
+const spy = new IntersectionObserver(es => es.forEach(en => {
+  if (!en.isIntersecting) return;
+  anchors.forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#' + en.target.id));
+}), {rootMargin:'-40% 0px -55% 0px'});
+['properties','buy','sell','new-construction','about','insights'].forEach(id => { const el = document.getElementById(id); if (el) spy.observe(el); });
 
-// preloader
-addEventListener('load', () => setTimeout(() => {
-  const l = document.getElementById('loader');
-  l.classList.add('done');
-  setTimeout(() => l.remove(), 1000);
-}, 900));
-// safety: never trap the visitor if load stalls
-setTimeout(() => { const l = document.getElementById('loader'); if (l) { l.classList.add('done'); setTimeout(()=>l.remove(),1000);} }, 3500);
-
-// gold scroll progress
-const prog = document.getElementById('prog');
-addEventListener('scroll', () => {
-  const h = document.documentElement;
-  prog.style.width = (h.scrollTop / (h.scrollHeight - h.clientHeight) * 100) + '%';
-}, {passive:true});
-
-// custom gold cursor — GPU transform, zero lag
+/* cursor */
 if (matchMedia('(pointer:fine)').matches){
-  const dot = document.getElementById('curDot'), ring = document.getElementById('curRing');
+  const d = document.getElementById('cdot'), r = document.getElementById('cring');
   addEventListener('mousemove', e => {
-    document.body.classList.add('cur-on');
+    document.body.classList.add('con');
     const t = `translate3d(${e.clientX}px,${e.clientY}px,0) translate(-50%,-50%)`;
-    dot.style.transform = t;
-    ring.style.transform = t;
+    d.style.transform = t; r.style.transform = t;
   }, {passive:true});
-  document.addEventListener('mouseleave', () => document.body.classList.remove('cur-on'));
-  document.querySelectorAll('a, button, .gal-grid figure').forEach(el => {
-    el.addEventListener('mouseenter', () => document.body.classList.add('cur-hover'));
-    el.addEventListener('mouseleave', () => document.body.classList.remove('cur-hover'));
+  document.addEventListener('mouseleave', () => document.body.classList.remove('con'));
+  document.querySelectorAll('a,button,input,select,textarea,.fig,.life figure').forEach(el => {
+    el.addEventListener('mouseenter', () => document.body.classList.add('chov'));
+    el.addEventListener('mouseleave', () => document.body.classList.remove('chov'));
   });
 }
 
-// agent card 3D tilt
-if (matchMedia('(pointer:fine)').matches){
-  document.querySelectorAll('.agent').forEach(card => {
-    card.addEventListener('mousemove', e => {
-      const r = card.getBoundingClientRect();
-      const rx = ((e.clientY - r.top) / r.height - .5) * -5;
-      const ry = ((e.clientX - r.left) / r.width - .5) * 5;
-      card.style.transform = `perspective(900px) rotateX(${rx}deg) rotateY(${ry}deg) translateY(-6px)`;
-    });
-    card.addEventListener('mouseleave', () => card.style.transform = '');
-  });
-}
+/* marquee loop */
+const mqt = document.getElementById('mqt'); mqt.innerHTML += mqt.innerHTML;
 
-// gallery lightbox
-const lb = document.getElementById('lightbox');
-const lbImg = document.getElementById('lb-img');
-const lbCap = document.getElementById('lb-cap');
-const figs = [...document.querySelectorAll('.gal-grid figure')];
-let lbIdx = 0;
-function lbShow(i){
-  lbIdx = (i + figs.length) % figs.length;
-  const im = figs[lbIdx].querySelector('img');
-  lbImg.src = im.src; lbImg.alt = im.alt;
-  lbCap.textContent = figs[lbIdx].querySelector('.gal-cap').textContent;
-}
-figs.forEach((f, i) => f.addEventListener('click', () => { lbShow(i); lb.classList.add('open'); }));
-document.getElementById('lb-close').addEventListener('click', () => lb.classList.remove('open'));
-document.getElementById('lb-prev').addEventListener('click', e => { e.stopPropagation(); lbShow(lbIdx-1); });
-document.getElementById('lb-next').addEventListener('click', e => { e.stopPropagation(); lbShow(lbIdx+1); });
-lb.addEventListener('click', e => { if (e.target === lb) lb.classList.remove('open'); });
-addEventListener('keydown', e => {
-  if (!lb.classList.contains('open')) return;
-  if (e.key === 'Escape') lb.classList.remove('open');
-  if (e.key === 'ArrowLeft') lbShow(lbIdx-1);
-  if (e.key === 'ArrowRight') lbShow(lbIdx+1);
-});
+/* modal */
+const gm = document.getElementById('gm');
+document.querySelectorAll('.open-gm').forEach(el => el.addEventListener('click', e => { e.preventDefault(); mm.classList.remove('open'); gm.classList.add('open'); }));
+document.getElementById('gm-x').addEventListener('click', () => gm.classList.remove('open'));
+gm.addEventListener('click', e => { if (e.target === gm) gm.classList.remove('open'); });
+addEventListener('keydown', e => { if (e.key === 'Escape') gm.classList.remove('open'); });
 
-// seamless marquee (duplicate track content)
-const mq = document.getElementById('mqTrack');
-mq.innerHTML += mq.innerHTML;
+/* MLS search */
+const MLS = {
+  base:'https://chrystaljustice.choosecapstone.com/property-search-map/sale/active/comingsoon/type-Condo!Townhouse;Lots!Land;Single%20Family/dsort-n/lat-34.182238999999996-34.816624000000004/lon-_87.29115-_85.841114',
+  luxury:'https://chrystaljustice.choosecapstone.com/luxury',
+  new:'https://chrystaljustice.choosecapstone.com/newconstruction',
+  open:'https://chrystaljustice.choosecapstone.com/property-search-map/sale/openhomes/dsort-p/lat-34.37329055212673-34.964098250147714/lon-_87.15195756755739-_85.99829311443239',
+  land:'https://chrystaljustice.choosecapstone.com/property-search-map/sale/status-active;coming%20soon/type-Lots!Land/dsort-n/lat-34.182238999999996-34.816624000000004/lon-_87.29115-_85.841114'
+};
+document.getElementById('hs').addEventListener('submit', e => { e.preventDefault(); open(MLS.base, '_blank'); });
+document.querySelectorAll('.q-link').forEach(a => a.addEventListener('click', e => { e.preventDefault(); open(MLS[a.dataset.q] || MLS.base, '_blank'); }));
 
-// scroll-spy — highlight the section you're in
-const spyIds = ['sellers','buyers','new-construction','team','community'];
-const navAnchors = [...document.querySelectorAll('.nav-links a:not(.nav-cta)')];
-const spy = new IntersectionObserver(entries => {
-  entries.forEach(en => {
-    if (!en.isIntersecting) return;
-    navAnchors.forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#' + en.target.id));
-  });
-}, {rootMargin: '-35% 0px -55% 0px'});
-spyIds.forEach(id => { const el = document.getElementById(id); if (el) spy.observe(el); });
-
-// back to top
-const toTop = document.getElementById('toTop');
-addEventListener('scroll', () => toTop.classList.toggle('show', scrollY > innerHeight * 1.5), {passive:true});
-toTop.addEventListener('click', () => scrollTo({top:0, behavior:'smooth'}));
-
-// Get in Touch modal
-const gitModal = document.getElementById('gitModal');
-document.querySelectorAll('.open-git').forEach(el => el.addEventListener('click', e => {
-  e.preventDefault();
-  mmenu.classList.remove('open');
-  gitModal.classList.add('open');
-}));
-document.getElementById('git-close').addEventListener('click', () => gitModal.classList.remove('open'));
-gitModal.addEventListener('click', e => { if (e.target === gitModal) gitModal.classList.remove('open'); });
-addEventListener('keydown', e => { if (e.key === 'Escape') gitModal.classList.remove('open'); });
-
-// forms -> email
-function sendForm(e){
+/* forms */
+function send(e){
   e.preventDefault();
   const f = new FormData(e.target);
-  const consents = `Email consent: ${f.get('c_email') ? 'YES' : 'NO'}%0ASMS consent: ${f.get('c_sms') ? 'YES' : 'NO'}`;
-  const body = `Name: ${f.get('name')}%0APhone: ${f.get('phone')||''}%0AEmail: ${f.get('email')}%0ATopic: ${f.get('interest')}%0A${consents}%0A%0A${encodeURIComponent(f.get('message')||'')}`;
-  location.href = `mailto:Chrystal@choosecapstone.com?cc=Patsy@choosecapstone.com&subject=Get in Touch — ${encodeURIComponent(f.get('name'))}&body=${body}`;
+  const body = `Name: ${f.get('name')}%0APhone: ${f.get('phone')||''}%0AEmail: ${f.get('email')}%0AInterest: ${f.get('interest')}%0AEmail consent: ${f.get('c_email')?'YES':'NO'}%0ASMS consent: ${f.get('c_sms')?'YES':'NO'}%0A%0A${encodeURIComponent(f.get('message')||'')}`;
+  location.href = `mailto:Chrystal@choosecapstone.com?cc=Patsy@choosecapstone.com&subject=Inquiry — ${encodeURIComponent(f.get('name'))}&body=${body}`;
 }
-document.getElementById('consultForm').addEventListener('submit', sendForm);
-document.getElementById('gitForm').addEventListener('submit', sendForm);
+document.getElementById('cf').addEventListener('submit', send);
+document.getElementById('gf').addEventListener('submit', send);
 </script>
 </body>
 </html>
