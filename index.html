@@ -43,7 +43,7 @@
   --t-micro:.64rem;
 
   --gutter:clamp(1.5rem,5vw,5rem);
-  --sect:clamp(3.6rem,6vw,5.8rem);
+  --sect:clamp(2.6rem,4.4vw,4.2rem);
   --ease:cubic-bezier(.16,.7,.2,1);
   --round:38px;
 }
@@ -331,10 +331,11 @@ blockquote{font-family:var(--display);font-size:clamp(1.6rem,3.2vw,2.8rem);font-
 .lw p{font-size:.86rem;color:var(--navy-2)}
 
 /* marquee */
-.mq{overflow:hidden;padding:1.3rem 0;background:var(--navy)}
-.mq-track{display:flex;align-items:center;white-space:nowrap;width:max-content;animation:mqr 55s linear infinite}
-.mq-track span{font-family:var(--display);font-size:clamp(1rem,1.4vw,1.3rem);letter-spacing:.16em;text-transform:uppercase;padding:0 1.5rem;color:rgba(255,255,255,.9)}
-.mq-track i{color:rgba(255,255,255,.35);font-size:.5rem;font-style:normal}
+.mq{overflow:hidden;padding:1.25rem 0;background:linear-gradient(180deg,#faf7f0 0%,#f1ecdf 50%,#e9e2d0 100%);border-top:1px solid rgba(201,169,97,.5);border-bottom:1px solid rgba(201,169,97,.5);box-shadow:inset 0 1px 0 rgba(255,255,255,.9),inset 0 -8px 24px rgba(201,169,97,.12)}
+.mq-track{display:flex;align-items:center;white-space:nowrap;width:max-content;animation:mqr 50s linear infinite}
+.mq-track span{font-family:var(--display);font-size:clamp(1rem,1.4vw,1.3rem);font-weight:600;letter-spacing:.16em;text-transform:uppercase;padding:0 1.5rem;
+  background:linear-gradient(180deg,#a8874a 0%,#c9a961 45%,#8c6f47 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.mq-track i{color:#c9a961;font-size:.5rem;font-style:normal}
 @keyframes mqr{to{transform:translateX(-50%)}}
 .mq:hover .mq-track{animation-play-state:paused}
 
@@ -352,8 +353,13 @@ select{color:var(--white-2)}
 select option{background:var(--ink-2);color:var(--white)}
 textarea{resize:vertical;min-height:84px}
 ::placeholder{color:var(--white-2)}
-.consent{display:flex;gap:.8rem;align-items:flex-start;font-size:.76rem;color:var(--white-2);line-height:1.6;cursor:pointer}
-.consent input{width:15px;height:15px;flex-shrink:0;margin-top:.22rem;padding:0;accent-color:var(--gold);border-bottom:none}
+.consent{display:flex;gap:.85rem;align-items:flex-start;font-size:.78rem;color:var(--white-2);line-height:1.6;cursor:pointer}
+.consent input{appearance:none;-webkit-appearance:none;width:20px;height:20px;flex-shrink:0;margin-top:.14rem;padding:0;cursor:pointer;border-radius:5px;
+  border:1.5px solid var(--gold);background:linear-gradient(180deg,rgba(255,255,255,.14),rgba(255,255,255,.04));
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.25),0 0 8px rgba(201,169,97,.25);position:relative;transition:background .3s,box-shadow .3s}
+.consent input:hover{box-shadow:inset 0 1px 0 rgba(255,255,255,.3),0 0 14px rgba(201,169,97,.5)}
+.consent input:checked{background:linear-gradient(180deg,#f0dcae,#c9a961)}
+.consent input:checked::after{content:'';position:absolute;left:6px;top:2.5px;width:5px;height:10px;border-right:2.2px solid #17130a;border-bottom:2.2px solid #17130a;transform:rotate(45deg)}
 .fine{font-size:.65rem;color:#6f6d68;line-height:1.75}
 
 /* modal */
@@ -504,7 +510,7 @@ body.chov .cring{width:48px;height:48px}
 
 <!-- ============ SPACE: OUR MARKET + GLOBE ============ -->
 <div class="dark space">
-<section id="market">
+<section id="market" style="padding-bottom:1.2rem">
   <div class="wrap">
     <div class="split" style="align-items:center">
       <div class="globe-stage rv">
@@ -734,7 +740,7 @@ body.chov .cring{width:48px;height:48px}
 
 <div class="mq" aria-hidden="true">
   <div class="mq-track" id="mqt">
-    <span>Huntsville</span><i>✦</i><span>Madison</span><i>✦</i><span>Athens</span><i>✦</i><span>Decatur</span><i>✦</i><span>Hampton Cove</span><i>✦</i><span>Owens Cross Roads</span><i>✦</i><span>Meridianville</span><i>✦</i><span>Hazel Green</span><i>✦</i><span>Harvest</span><i>✦</i><span>Monrovia</span><i>✦</i>
+    <span>Huntsville</span><i>✦</i><span>Madison</span><i>✦</i><span>Athens</span><i>✦</i><span>Decatur</span><i>✦</i><span>Hampton Cove</span><i>✦</i><span>Owens Cross Roads</span><i>✦</i><span>New Market</span><i>✦</i><span>Harvest</span><i>✦</i>
   </div>
 </div>
 
@@ -771,7 +777,7 @@ body.chov .cring{width:48px;height:48px}
         <label class="consent"><input type="checkbox" name="c_email" checked> I agree to receive emails from J&amp;J Real Estate Group.</label>
         <label class="consent"><input type="checkbox" name="c_sms"> I agree to receive SMS text messages from J&amp;J Real Estate Group.</label>
         <p class="fine">By submitting, you agree to be contacted by J&amp;J Real Estate Group at Capstone Realty via call, email, and text regarding real estate services. Opt out at any time — reply "stop" to any text or use the unsubscribe link in emails. Message and data rates may apply. Your information is never sold.</p>
-        <button type="submit" class="btn"><span>Send</span></button>
+        <button type="submit" class="gtab gtab-solid gtab-lg" style="width:100%"><span>Send</span></button>
       </form>
     </div>
   </div>
@@ -799,7 +805,7 @@ body.chov .cring{width:48px;height:48px}
       <label class="consent"><input type="checkbox" name="c_email" checked> I agree to receive emails from J&amp;J Real Estate Group.</label>
       <label class="consent"><input type="checkbox" name="c_sms"> I agree to receive SMS text messages from J&amp;J Real Estate Group.</label>
       <p class="fine">By submitting, you agree to be contacted via call, email, and text regarding real estate services. Opt out any time. Message and data rates may apply.</p>
-      <button type="submit" class="btn"><span>Send</span></button>
+      <button type="submit" class="gtab gtab-solid gtab-lg" style="width:100%"><span>Send</span></button>
     </form>
   </div>
 </div>
