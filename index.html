@@ -819,7 +819,7 @@ body.chov .cring{width:48px;height:48px}
     <p class="f-note">Luxury Real Estate Advisory · Huntsville &amp; North Alabama<br>
     J&amp;J Real Estate Group at <a href="https://www.choosecapstone.com/" target="_blank" rel="noopener">Capstone Realty</a> · Chrystal Justice &amp; Patsy Jenkins, REALTORS®. Each office is independently owned and operated. All information deemed reliable but not guaranteed and should be independently verified. No financial or legal advice provided. J&amp;J Real Estate Group fully supports the principles of the Fair Housing Act and the Equal Opportunity Act. Equal Housing Opportunity.<br>
     © <span id="yr"></span> J&amp;J Real Estate Group. All rights reserved.</p>
-    <p class="f-credit">Huntsville photography: <a href="https://commons.wikimedia.org/wiki/File:Skyline_of_Huntsville.jpg" target="_blank" rel="noopener">Bren.persing</a> · <a href="https://commons.wikimedia.org/wiki/File:Huntsville,_Alabama_(2023).jpg" target="_blank" rel="noopener">WeaponizingArchitecture</a> · <a href="https://commons.wikimedia.org/wiki/File:Saturn_V_Huntsville@Night.jpg" target="_blank" rel="noopener">Ostbayer 2000</a> — CC BY-SA 4.0 via Wikimedia Commons</p>
+    <p class="f-credit">Huntsville photography: <a href="https://commons.wikimedia.org/wiki/File:Skyline_of_Huntsville.jpg" target="_blank" rel="noopener">Bren.persing</a> · <a href="https://commons.wikimedia.org/wiki/File:Huntsville,_Alabama_(2023).jpg" target="_blank" rel="noopener">WeaponizingArchitecture</a> · <a href="https://commons.wikimedia.org/wiki/File:Saturn_V_Huntsville@Night.jpg" target="_blank" rel="noopener">Ostbayer 2000</a> — CC BY-SA 4.0 via Wikimedia Commons · Earth imagery: NASA (public domain)</p>
   </div>
 </footer>
 
@@ -991,7 +991,28 @@ document.getElementById('gf').addEventListener('submit', send);
     D[i] += n; D[i+1] += n; D[i+2] += n;
   }
   tc.putImageData(im, 0, 0);
-  const TEX = tc.getImageData(0, 0, TW, TH).data;
+  let TEX = tc.getImageData(0, 0, TW, TH).data;
+
+  /* upgrade to real NASA Blue Marble satellite imagery when it loads */
+  const nasa = new Image();
+  nasa.crossOrigin = 'anonymous';
+  nasa.onload = () => {
+    try {
+      tc.clearRect(0, 0, TW, TH);
+      tc.drawImage(nasa, 0, 0, TW, TH);
+      /* gentle saturation + brightness lift for the dark-space setting */
+      const d2 = tc.getImageData(0, 0, TW, TH), D2 = d2.data;
+      for (let i = 0; i < D2.length; i += 4){
+        const r = D2[i], g = D2[i+1], b2 = D2[i+2];
+        const avg = (r + g + b2) / 3;
+        D2[i]   = Math.min(255, (r + (r - avg) * .25) * 1.12);
+        D2[i+1] = Math.min(255, (g + (g - avg) * .25) * 1.12);
+        D2[i+2] = Math.min(255, (b2 + (b2 - avg) * .25) * 1.12);
+      }
+      TEX = D2;
+    } catch(e) { /* keep procedural fallback */ }
+  };
+  nasa.src = 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Blue_Marble_Next_Generation_%2B_topography_%2B_bathymetry.jpg/1280px-Blue_Marble_Next_Generation_%2B_topography_%2B_bathymetry.jpg';
 
   /* ---------- 1b. cloud layer ---------- */
   const cl = document.createElement('canvas'); cl.width = TW; cl.height = TH;
