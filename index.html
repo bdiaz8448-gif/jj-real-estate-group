@@ -175,10 +175,29 @@ h1 em{font-style:italic;color:var(--white)}
 .stags a{color:var(--white-2);transition:color .3s}
 .stags a:hover{color:var(--white)}
 
-/* ============== GLOBE ============== */
-.globe-block{text-align:center;margin:0 auto clamp(2rem,3.5vw,3rem)}
-#globe{display:block;margin:0 auto;width:min(440px,84vw);height:min(440px,84vw)}
-.globe-cap{font-size:var(--t-micro);letter-spacing:.34em;text-transform:uppercase;color:var(--navy);opacity:.5;margin-top:.4rem}
+/* ============== SPACE SECTION + GLOBE ============== */
+.space{background:#06060a;color:var(--white);border-radius:var(--round) var(--round) 0 0;margin-top:calc(-1 * var(--round));position:relative;z-index:2;overflow:hidden}
+.space::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 70% 55% at 22% 42%,rgba(58,96,158,.16) 0%,transparent 62%),radial-gradient(ellipse 50% 40% at 80% 78%,rgba(201,169,97,.07) 0%,transparent 60%);pointer-events:none}
+.space .wrap{position:relative;z-index:1}
+.space .eyebrow{color:var(--gold)}
+.space .lede{color:var(--white-2)}
+.space .rule{background:var(--gold);opacity:.7}
+.space .stat b{color:var(--white)}
+.space .stat span{color:var(--white-2);opacity:1}
+.space .stat+.stat::before{background:rgba(255,255,255,.13)}
+.space .lw{border-top-color:rgba(255,255,255,.13)}
+.space .lw b{color:var(--white)}
+.space .lw p{color:var(--white-2)}
+
+.globe-stage{position:relative;display:flex;align-items:center;justify-content:center;min-height:min(500px,86vw)}
+#stars{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+#globe{position:relative;display:block;width:min(480px,86vw);height:min(480px,86vw)}
+.globe-cap{position:absolute;left:50%;bottom:-.2rem;transform:translateX(-50%);white-space:nowrap;font-size:clamp(.8rem,1.1vw,.98rem);letter-spacing:.3em;text-transform:uppercase;color:var(--white);opacity:.92;font-weight:500}
+
+.facts{display:grid;gap:0;margin-top:1.9rem;border-top:1px solid rgba(255,255,255,.13)}
+.fact{display:grid;grid-template-columns:auto 1fr;gap:1.4rem;align-items:baseline;padding:.95rem 0;border-bottom:1px solid rgba(255,255,255,.13)}
+.fact b{font-family:var(--display);font-size:1.15rem;font-weight:500;color:var(--white);white-space:nowrap}
+.fact span{font-size:.88rem;color:var(--white-2)}
 
 /* ============== GRIDS ============== */
 .split{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2.2rem,4.5vw,4.5rem);align-items:center}
@@ -444,22 +463,34 @@ body.chov .cring{width:48px;height:48px}
 </div>
 </div>
 
-<!-- ============ LIGHT: OUR MARKET + GLOBE ============ -->
-<div class="light">
+<!-- ============ SPACE: OUR MARKET + GLOBE ============ -->
+<div class="dark space">
 <section id="market">
   <div class="wrap">
-    <div class="center" style="margin-bottom:clamp(1.6rem,3vw,2.4rem)">
-      <span class="eyebrow rv">Our Market</span>
-      <h2 class="rv d1">Rooted in <em>Rocket City.</em></h2>
-      <div class="rule rv d1"></div>
-      <p class="lede rv d2">One of America's fastest-rising cities — aerospace, defense, and technology drawing buyers from every state. We turn that momentum into your advantage.</p>
+    <div class="split" style="align-items:center">
+      <div class="globe-stage rv">
+        <canvas id="stars" aria-hidden="true"></canvas>
+        <canvas id="globe" aria-label="Rotating globe marking Huntsville, Alabama"></canvas>
+        <div class="globe-cap">Huntsville, Alabama</div>
+      </div>
+      <div class="rv d1">
+        <span class="eyebrow">Our Market</span>
+        <h2>Rooted in <em>Rocket City.</em></h2>
+        <div class="rule"></div>
+        <p class="lede">One of America's fastest-rising cities — aerospace, defense, and technology drawing buyers from every state. We turn that momentum into your advantage.</p>
+        <div class="facts">
+          <div class="fact"><b>Aerospace &amp; Defense</b><span>Redstone Arsenal and NASA Marshall anchor the economy.</span></div>
+          <div class="fact"><b>Nationally Ranked</b><span>Repeatedly named among America's best places to live.</span></div>
+          <div class="fact"><b>Relocation Magnet</b><span>Buyers arriving from every state, every month.</span></div>
+          <div class="fact"><b>Ten Communities</b><span>Huntsville and Madison out to Athens, Decatur, and Harvest.</span></div>
+        </div>
+      </div>
     </div>
+  </div>
+</section>
 
-    <div class="globe-block rv d1">
-      <canvas id="globe" width="880" height="880" aria-label="Rotating globe marking Huntsville, Alabama"></canvas>
-      <div class="globe-cap">Huntsville, Alabama · 34.73° N, 86.59° W</div>
-    </div>
-
+<section style="padding-top:0">
+  <div class="wrap">
     <div class="life">
       <figure class="l2 rv"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Saturn_V_Huntsville%40Night.jpg/960px-Saturn_V_Huntsville%40Night.jpg" alt="Saturn V rocket at night" loading="lazy"><figcaption>U.S. Space &amp; Rocket Center</figcaption></figure>
       <figure class="l1 rv d1"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Skyline_of_Huntsville.jpg/1920px-Skyline_of_Huntsville.jpg" alt="Downtown Huntsville at dusk" loading="lazy"><figcaption>Downtown · Big Spring Park</figcaption></figure>
@@ -488,8 +519,8 @@ body.chov .cring{width:48px;height:48px}
 </section>
 </div>
 
-<!-- ============ DARK: POSITIONING ============ -->
-<div class="dark">
+<!-- ============ LIGHT: POSITIONING ============ -->
+<div class="light">
 <section>
   <div class="wrap narrow center">
     <span class="eyebrow rv">The Positioning</span>
@@ -510,8 +541,8 @@ body.chov .cring{width:48px;height:48px}
 </section>
 </div>
 
-<!-- ============ LIGHT: SELL + BUY ============ -->
-<div class="light">
+<!-- ============ DARK: SELL + BUY ============ -->
+<div class="dark">
 <section id="sell">
   <div class="wrap">
     <div class="split wide-l">
@@ -555,8 +586,8 @@ body.chov .cring{width:48px;height:48px}
 </section>
 </div>
 
-<!-- ============ DARK: NEW CONSTRUCTION + QUOTE ============ -->
-<div class="dark">
+<!-- ============ LIGHT: NEW CONSTRUCTION ============ -->
+<div class="light">
 <section id="new-construction">
   <div class="wrap">
     <div class="center" style="margin-bottom:clamp(1.8rem,3vw,2.6rem)">
@@ -570,7 +601,10 @@ body.chov .cring{width:48px;height:48px}
     </div>
   </div>
 </section>
+</div>
 
+<!-- ============ DARK: QUOTE ============ -->
+<div class="dark">
 <section class="quote-sect">
   <div class="quote-bg"></div><div class="quote-veil"></div>
   <div class="wrap">
@@ -848,12 +882,12 @@ function send(e){
 document.getElementById('cf').addEventListener('submit', send);
 document.getElementById('gf').addEventListener('submit', send);
 
-/* ===================== THE GLOBE ===================== */
+/* ===================== THE EARTH ===================== */
 (function(){
   const cv = document.getElementById('globe');
   if (!cv) return;
   const ctx = cv.getContext('2d');
-  const NAVY = '#101a33', GOLD = '#c9a961', LAND = 'rgba(16,26,51,.9)', GRID = 'rgba(16,26,51,.16)';
+  const GOLD = '#c9a961';
   const HSV = {lat:34.73, lon:-86.59};
 
   /* simplified continent outlines [lon,lat] */
@@ -882,79 +916,148 @@ document.getElementById('gf').addEventListener('submit', send);
     [[173,-35],[178,-38],[177,-41],[172,-43],[168,-46],[166,-45],[170,-42],[172,-38],[173,-35]]
   ];
 
-  let rot = 1.5114;            /* start centred on Huntsville */
+  /* ---------- 1. paint an equirectangular Earth texture, once ---------- */
+  const TW = 1024, TH = 512;
+  const tex = document.createElement('canvas'); tex.width = TW; tex.height = TH;
+  const tc = tex.getContext('2d');
+
+  const oc = tc.createLinearGradient(0, 0, 0, TH);
+  oc.addColorStop(0,'#0a1e33'); oc.addColorStop(.16,'#0d3357'); oc.addColorStop(.34,'#12507f');
+  oc.addColorStop(.5,'#15608f'); oc.addColorStop(.66,'#12507f'); oc.addColorStop(.84,'#0d3357'); oc.addColorStop(1,'#0a1e33');
+  tc.fillStyle = oc; tc.fillRect(0, 0, TW, TH);
+
+  const lc = tc.createLinearGradient(0, 0, 0, TH);
+  lc.addColorStop(0,'#e9eff2'); lc.addColorStop(.085,'#cfdadd'); lc.addColorStop(.13,'#4f6b4a');
+  lc.addColorStop(.22,'#47693f'); lc.addColorStop(.30,'#527040'); lc.addColorStop(.355,'#9c8a5c');
+  lc.addColorStop(.40,'#8f8352'); lc.addColorStop(.455,'#3d6b36'); lc.addColorStop(.5,'#33652f');
+  lc.addColorStop(.56,'#3f6d34'); lc.addColorStop(.645,'#93815a'); lc.addColorStop(.70,'#5f7548');
+  lc.addColorStop(.80,'#516d44'); lc.addColorStop(.90,'#cbd8dc'); lc.addColorStop(1,'#eef4f6');
+
+  const P = (lon, lat) => [ (lon + 180) / 360 * TW, (90 - lat) / 180 * TH ];
+  tc.fillStyle = lc; tc.strokeStyle = 'rgba(255,255,255,.16)'; tc.lineWidth = 1.4; tc.lineJoin = 'round';
+  LANDS.forEach(poly => {
+    tc.beginPath();
+    poly.forEach((pt, i) => { const q = P(pt[0], pt[1]); i ? tc.lineTo(q[0], q[1]) : tc.moveTo(q[0], q[1]); });
+    tc.closePath(); tc.fill(); tc.stroke();
+  });
+  /* polar ice */
+  tc.fillStyle = '#eef4f6';
+  tc.fillRect(0, 0, TW, TH * .045);
+  tc.fillRect(0, TH * .945, TW, TH * .055);
+  /* organic mottling */
+  const im = tc.getImageData(0, 0, TW, TH), D = im.data;
+  for (let i = 0; i < D.length; i += 4){
+    const n = (Math.random() - .5) * 11;
+    D[i] += n; D[i+1] += n; D[i+2] += n;
+  }
+  tc.putImageData(im, 0, 0);
+  const TEX = tc.getImageData(0, 0, TW, TH).data;
+
+  /* ---------- 2. geometry ---------- */
+  let rot = 1.5114;                     /* start centred on Huntsville */
+  const TILT = 0.36, cosT = Math.cos(TILT), sinT = Math.sin(TILT);
   let dpr = Math.min(devicePixelRatio || 1, 2);
   let S = 0, R = 0, cx = 0, cy = 0;
 
+  /* raster sphere: precompute per-pixel lat row, base longitude and shading */
+  let N = 0, sph = document.createElement('canvas'), sx = sph.getContext('2d'), sImg = null, sD = null;
+  let pRow = null, pLon = null, pLit = null, pRim = null, pOn = null;
+
+  const LX = -0.46, LY = 0.46, LZ = 0.76;   /* light from upper-left, toward viewer */
+
+  function buildRaster(){
+    N = Math.max(180, Math.min(340, Math.round(S * 0.8)));
+    sph.width = N; sph.height = N;
+    sImg = sx.createImageData(N, N); sD = sImg.data;
+    const n2 = N * N;
+    pRow = new Int32Array(n2); pLon = new Float32Array(n2);
+    pLit = new Float32Array(n2); pRim = new Float32Array(n2); pOn = new Uint8Array(n2);
+    for (let j = 0; j < N; j++){
+      for (let i = 0; i < N; i++){
+        const p = j * N + i;
+        const nx = (i + .5) / N * 2 - 1, ny = (j + .5) / N * 2 - 1;
+        const r2 = nx * nx + ny * ny;
+        if (r2 > 1){ pOn[p] = 0; continue; }
+        pOn[p] = 1;
+        const nz = Math.sqrt(1 - r2), Ny = -ny;
+        const y = Ny * cosT + nz * sinT;
+        const z = -Ny * sinT + nz * cosT;
+        const lat = Math.asin(Math.max(-1, Math.min(1, y)));
+        pLon[p] = Math.atan2(nx, z);
+        let row = Math.floor((0.5 - lat / Math.PI) * TH);
+        pRow[p] = Math.max(0, Math.min(TH - 1, row)) * TW;
+        pLit[p] = nx * LX + Ny * LY + nz * LZ;
+        pRim[p] = Math.pow(1 - nz, 3.2);
+      }
+    }
+  }
+
   function resize(){
     const box = cv.getBoundingClientRect();
-    S = box.width;
+    S = box.width || 400;
     cv.width = S * dpr; cv.height = S * dpr;
     ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
     R = S * 0.40; cx = S / 2; cy = S / 2;
+    buildRaster();
   }
   new ResizeObserver(resize).observe(cv); resize();
 
-  /* orthographic projection with tilt */
-  const TILT = 0.36;
   function proj(lat, lon){
     const p = lat * Math.PI / 180, l = (lon * Math.PI / 180) + rot;
-    let x = Math.cos(p) * Math.sin(l);
-    let y = Math.sin(p);
-    let z = Math.cos(p) * Math.cos(l);
-    const yy = y * Math.cos(TILT) - z * Math.sin(TILT);
-    const zz = y * Math.sin(TILT) + z * Math.cos(TILT);
-    return {x: cx + x * R, y: cy - yy * R, z: zz};
+    const x = Math.cos(p) * Math.sin(l), y = Math.sin(p), z = Math.cos(p) * Math.cos(l);
+    return {x: cx + x * R, y: cy - (y * cosT - z * sinT) * R, z: y * sinT + z * cosT};
   }
 
-  function strokePath(pts, close, color, w){
-    ctx.strokeStyle = color; ctx.lineWidth = w; ctx.beginPath();
-    let pen = false;
-    for (let i = 0; i < pts.length; i++){
-      const q = proj(pts[i][1], pts[i][0]);
-      if (q.z > 0.02){ if (!pen){ ctx.moveTo(q.x, q.y); pen = true; } else ctx.lineTo(q.x, q.y); }
-      else pen = false;
-    }
-    if (close) ctx.closePath();
-    ctx.stroke();
-  }
-
+  /* ---------- 3. render ---------- */
+  const TAU = Math.PI * 2;
   function draw(){
     ctx.clearRect(0, 0, S, S);
 
-    /* sphere fill + soft halo */
-    const halo = ctx.createRadialGradient(cx - R*.3, cy - R*.35, R*.1, cx, cy, R*1.25);
-    halo.addColorStop(0, 'rgba(255,255,255,.9)');
-    halo.addColorStop(.62, 'rgba(16,26,51,.045)');
-    halo.addColorStop(.78, 'rgba(16,26,51,.05)');
-    halo.addColorStop(1, 'rgba(16,26,51,0)');
-    ctx.fillStyle = halo; ctx.beginPath(); ctx.arc(cx, cy, R*1.25, 0, 7); ctx.fill();
+    /* atmospheric bloom behind the planet */
+    const glow = ctx.createRadialGradient(cx, cy, R * .95, cx, cy, R * 1.3);
+    glow.addColorStop(0, 'rgba(96,158,224,.32)');
+    glow.addColorStop(.45, 'rgba(70,124,190,.11)');
+    glow.addColorStop(1, 'rgba(70,124,190,0)');
+    ctx.fillStyle = glow; ctx.beginPath(); ctx.arc(cx, cy, R * 1.3, 0, TAU); ctx.fill();
 
-    /* sphere edge */
-    ctx.strokeStyle = 'rgba(16,26,51,.42)'; ctx.lineWidth = 1.2;
-    ctx.beginPath(); ctx.arc(cx, cy, R, 0, 7); ctx.stroke();
-
-    /* graticule */
-    for (let lon = -180; lon < 180; lon += 20){
-      const pts = []; for (let lat = -90; lat <= 90; lat += 3) pts.push([lon, lat]);
-      strokePath(pts, false, GRID, .75);
+    /* texture-mapped sphere */
+    const n2 = N * N;
+    for (let p = 0; p < n2; p++){
+      const o = p << 2;
+      if (!pOn[p]){ sD[o+3] = 0; continue; }
+      let lon = pLon[p] - rot;
+      let u = (lon / TAU + 0.5) % 1; if (u < 0) u += 1;
+      const t = (pRow[p] + (u * TW | 0)) << 2;
+      const lit = pLit[p];
+      const f = 0.14 + 0.96 * (lit > 0 ? lit : 0);
+      const rim = pRim[p] * 130;
+      const night = lit < -0.05 ? 1 : 0;
+      sD[o]   = Math.min(255, TEX[t] * f + rim * .48 + night * 6);
+      sD[o+1] = Math.min(255, TEX[t+1] * f + rim * .72 + night * 9);
+      sD[o+2] = Math.min(255, TEX[t+2] * f + rim * 1.0 + night * 18);
+      sD[o+3] = 255;
     }
-    for (let lat = -60; lat <= 60; lat += 20){
-      const pts = []; for (let lon = -180; lon <= 180; lon += 3) pts.push([lon, lat]);
-      strokePath(pts, false, GRID, .75);
-    }
+    sx.putImageData(sImg, 0, 0);
+    ctx.save();
+    ctx.beginPath(); ctx.arc(cx, cy, R, 0, TAU); ctx.clip();
+    ctx.imageSmoothingEnabled = true; ctx.imageSmoothingQuality = 'high';
+    ctx.drawImage(sph, cx - R, cy - R, R * 2, R * 2);
+    ctx.restore();
 
-    /* continents */
-    LANDS.forEach(poly => strokePath(poly, false, LAND, 1.9));
+    /* crisp atmospheric limb */
+    ctx.strokeStyle = 'rgba(150,200,255,.5)'; ctx.lineWidth = 1.4;
+    ctx.beginPath(); ctx.arc(cx, cy, R - .5, 0, TAU); ctx.stroke();
 
     /* orbit ring — Rocket City */
     ctx.save();
     ctx.translate(cx, cy); ctx.rotate(-0.36);
-    ctx.strokeStyle = 'rgba(201,169,97,.5)'; ctx.lineWidth = 1;
-    ctx.beginPath(); ctx.ellipse(0, 0, R * 1.16, R * 0.3, 0, 0, 7); ctx.stroke();
-    const oa = (Date.now() % 9000) / 9000 * Math.PI * 2;
-    ctx.fillStyle = GOLD;
-    ctx.beginPath(); ctx.arc(Math.cos(oa) * R * 1.16, Math.sin(oa) * R * 0.3, 3.4, 0, 7); ctx.fill();
+    ctx.strokeStyle = 'rgba(201,169,97,.42)'; ctx.lineWidth = 1;
+    ctx.beginPath(); ctx.ellipse(0, 0, R * 1.17, R * .3, 0, 0, TAU); ctx.stroke();
+    const oa = (Date.now() % 11000) / 11000 * TAU;
+    const ox = Math.cos(oa) * R * 1.17, oy = Math.sin(oa) * R * .3;
+    const sg = ctx.createRadialGradient(ox, oy, 0, ox, oy, 9);
+    sg.addColorStop(0, 'rgba(230,205,150,1)'); sg.addColorStop(1, 'rgba(201,169,97,0)');
+    ctx.fillStyle = sg; ctx.beginPath(); ctx.arc(ox, oy, 9, 0, TAU); ctx.fill();
     ctx.restore();
 
     /* Huntsville marker */
@@ -968,13 +1071,15 @@ document.getElementById('gf').addEventListener('submit', send);
       ctx.beginPath(); ctx.arc(h.x, h.y, 4.8, 0, 7); ctx.fill();
       if (h.z > 0.3){
         const lf = Math.min(1, (h.z - 0.3) / 0.25);
-        const lx = h.x + 32, ly = h.y - 28;
-        ctx.strokeStyle = `rgba(201,169,97,${.85 * lf})`; ctx.lineWidth = 1;
-        ctx.beginPath(); ctx.moveTo(h.x + 5, h.y - 4); ctx.lineTo(lx - 6, ly + 4); ctx.lineTo(lx + 92, ly + 4); ctx.stroke();
-        ctx.fillStyle = `rgba(16,26,51,${lf})`;
-        ctx.font = `600 ${Math.max(10, S * .027)}px Inter, sans-serif`;
+        const lx = h.x + 30, ly = h.y - 30;
+        ctx.strokeStyle = `rgba(230,205,150,${.9 * lf})`; ctx.lineWidth = 1;
+        ctx.beginPath(); ctx.moveTo(h.x + 5, h.y - 4); ctx.lineTo(lx - 6, ly + 4); ctx.lineTo(lx + 98, ly + 4); ctx.stroke();
+        ctx.font = `600 ${Math.max(11, S * .031)}px Inter, sans-serif`;
         ctx.textBaseline = 'bottom';
+        ctx.shadowColor = 'rgba(0,0,0,.8)'; ctx.shadowBlur = 8;
+        ctx.fillStyle = `rgba(255,255,255,${lf})`;
         ctx.fillText('HUNTSVILLE, AL', lx - 4, ly + 1);
+        ctx.shadowBlur = 0;
       }
     }
 
@@ -984,6 +1089,38 @@ document.getElementById('gf').addEventListener('submit', send);
     requestAnimationFrame(draw);
   }
   draw();
+
+  /* ---------- starfield ---------- */
+  const st = document.getElementById('stars');
+  if (st){
+    const sc = st.getContext('2d');
+    let stars = [];
+    function seed(){
+      const b = st.getBoundingClientRect();
+      st.width = b.width * dpr; st.height = b.height * dpr;
+      sc.setTransform(dpr, 0, 0, dpr, 0, 0);
+      stars = [];
+      const count = Math.round(b.width * b.height / 2600);
+      for (let i = 0; i < count; i++) stars.push({
+        x: Math.random() * b.width, y: Math.random() * b.height,
+        r: Math.random() * 1.15 + .25, a: Math.random() * .55 + .18,
+        s: Math.random() * .9 + .25, p: Math.random() * TAU
+      });
+      paint();
+    }
+    function paint(){
+      const b = st.getBoundingClientRect();
+      sc.clearRect(0, 0, b.width, b.height);
+      const t = Date.now() / 1000;
+      stars.forEach(s2 => {
+        const tw = s2.a * (.62 + .38 * Math.sin(t * s2.s + s2.p));
+        sc.fillStyle = `rgba(228,238,255,${tw})`;
+        sc.beginPath(); sc.arc(s2.x, s2.y, s2.r, 0, TAU); sc.fill();
+      });
+      requestAnimationFrame(paint);
+    }
+    new ResizeObserver(seed).observe(st); seed();
+  }
 })();
 </script>
 </body>
