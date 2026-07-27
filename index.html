@@ -426,6 +426,13 @@ body.chov .cring{width:48px;height:48px}
   .cmp-row>div:last-child::before{content:'Elsewhere';display:block;font-size:.56rem;letter-spacing:.28em;opacity:.35;margin-bottom:.25rem}
   .cmp-row>div:last-child{padding-bottom:1.5rem!important}
   .f-top{justify-content:center;text-align:center}
+  /* phone: search pills in two tidy rows */
+  .stags{display:grid;grid-template-columns:1fr 1fr;gap:.7rem;max-width:430px;margin:1.4rem auto 0}
+  .stags .gtab{width:100%;padding:.72rem .5rem}
+  /* phone: OUR MARKET text first, Earth below it (right above the rocket) */
+  .space .split{display:flex;flex-direction:column}
+  .space .split .globe-stage{order:2;margin-top:1.6rem;min-height:min(430px,92vw)}
+  .space .split > div:not(.globe-stage){order:1}
   .f-marks{justify-content:center;flex-wrap:wrap}
   .gsearch{padding:.4rem .4rem .4rem 1.2rem}
   .gsearch input{font-size:.92rem;padding:.9rem .7rem}
@@ -501,8 +508,8 @@ body.chov .cring{width:48px;height:48px}
     </form>
     <div class="stags rv d1">
       <a href="#" class="gtab q-link" data-q="luxury"><span>Luxury Homes</span></a>
-      <a href="#" class="gtab q-link" data-q="new"><span>New Construction</span></a>
       <a href="#" class="gtab q-link" data-q="open"><span>Open Houses</span></a>
+      <a href="#" class="gtab q-link" data-q="new"><span>New Construction</span></a>
       <a href="#" class="gtab q-link" data-q="land"><span>Land</span></a>
     </div>
   </div>
