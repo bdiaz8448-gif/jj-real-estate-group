@@ -8,6 +8,8 @@
 <meta property="og:title" content="J&J Real Estate Group — Exceptional Properties. Extraordinary Results.">
 <meta property="og:description" content="A private real estate advisory in Huntsville & North Alabama.">
 <meta property="og:type" content="website">
+<meta property="og:image" content="https://bdiaz8448-gif.github.io/jj-real-estate-group/assets/logo-framed.jpg">
+<meta name="theme-color" content="#0f0f10">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%230f0f10'/%3E%3Ctext x='32' y='44' font-family='Georgia,serif' font-size='30' fill='%23d9c08c' text-anchor='middle'%3EJ%26%23038;J%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -103,6 +105,10 @@ h3{font-size:var(--t-h3);font-weight:500}
 .tlink{font-size:.7rem;letter-spacing:.24em;text-transform:uppercase;position:relative;padding-bottom:.45rem;display:inline-block}
 .tlink::after{content:'';position:absolute;left:0;bottom:0;width:100%;height:1px;background:currentColor;opacity:.4;transform:scaleX(0);transform-origin:right;transition:transform .5s var(--ease),opacity .3s}
 .tlink:hover::after{transform:scaleX(1);transform-origin:left;opacity:1}
+
+/* keyboard focus */
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:2px solid var(--gold);outline-offset:3px;border-radius:4px}
+.gtab:focus-visible{outline:2px solid var(--gold-lt);outline-offset:3px}
 
 /* ============== GLOSSY LUXURY TABS ============== */
 .gtab{
@@ -361,7 +367,7 @@ textarea{resize:vertical;min-height:84px}
 .consent input:hover{box-shadow:inset 0 1px 0 rgba(255,255,255,.3),0 0 14px rgba(201,169,97,.5)}
 .consent input:checked{background:linear-gradient(180deg,#f0dcae,#c9a961)}
 .consent input:checked::after{content:'';position:absolute;left:6px;top:2.5px;width:5px;height:10px;border-right:2.2px solid #17130a;border-bottom:2.2px solid #17130a;transform:rotate(45deg)}
-.fine{font-size:.65rem;color:#6f6d68;line-height:1.75}
+.fine{font-size:.65rem;color:#918e86;line-height:1.75}
 
 /* modal */
 #gm{position:fixed;inset:0;z-index:340;background:rgba(8,8,9,.88);backdrop-filter:blur(16px);display:flex;align-items:center;justify-content:center;padding:5vw var(--gutter);opacity:0;pointer-events:none;transition:opacity .45s var(--ease)}
@@ -773,10 +779,10 @@ body.chov .cring{width:48px;height:48px}
       </div>
       <form class="rv d1" id="cf">
         <div class="frow">
-          <input type="text" name="name" placeholder="Name" required>
-          <input type="tel" name="phone" placeholder="Phone">
+          <input type="text" name="name" placeholder="Name" autocomplete="name" required>
+          <input type="tel" name="phone" placeholder="Phone" autocomplete="tel">
         </div>
-        <input type="email" name="email" placeholder="Email" required>
+        <input type="email" name="email" placeholder="Email" autocomplete="email" required>
         <select name="interest" required>
           <option value="" disabled selected>How can we help?</option>
           <option>Selling</option><option>Buying</option><option>New Construction</option><option>Investing</option><option>Relocating</option><option>Other</option>
@@ -801,10 +807,10 @@ body.chov .cring{width:48px;height:48px}
     <p class="gm-sub">Tell us where you're headed. We'll handle the rest.</p>
     <form id="gf">
       <div class="frow">
-        <input type="text" name="name" placeholder="Name" required>
-        <input type="tel" name="phone" placeholder="Phone">
+        <input type="text" name="name" placeholder="Name" autocomplete="name" required>
+        <input type="tel" name="phone" placeholder="Phone" autocomplete="tel">
       </div>
-      <input type="email" name="email" placeholder="Email" required>
+      <input type="email" name="email" placeholder="Email" autocomplete="email" required>
       <select name="interest" required>
         <option value="" disabled selected>How can we help?</option>
         <option>Selling</option><option>Buying</option><option>New Construction</option><option>Investing</option><option>Relocating</option><option>Other</option>
@@ -1125,7 +1131,11 @@ document.getElementById('gf').addEventListener('submit', send);
   /* ---------- 3. render ---------- */
   const TAU = Math.PI * 2;
   let cloudOff = 0;
+  /* render only while visible — saves battery and keeps 60fps for the rest of the page */
+  let globeLive = true;
+  new IntersectionObserver(es => { globeLive = es[0].isIntersecting; }, {rootMargin:'120px'}).observe(cv);
   function draw(){
+    if (!globeLive || document.hidden){ requestAnimationFrame(draw); return; }
     ctx.clearRect(0, 0, S, S);
     cloudOff = (cloudOff + 0.00004) % 1;
 
@@ -1245,6 +1255,7 @@ document.getElementById('gf').addEventListener('submit', send);
       paint();
     }
     function paint(){
+      if (!globeLive || document.hidden){ requestAnimationFrame(paint); return; }
       const b = st.getBoundingClientRect();
       sc.clearRect(0, 0, b.width, b.height);
       const t = Date.now() / 1000;
