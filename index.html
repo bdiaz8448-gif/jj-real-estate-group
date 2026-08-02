@@ -180,8 +180,17 @@ nav.shrunk .brand img{height:40px;width:40px}
 
 /* ============== HERO ============== */
 header{height:100svh;min-height:640px;position:relative;display:flex;align-items:center;justify-content:center;text-align:center;overflow:hidden;padding-bottom:5rem}
-.hero-img{position:absolute;inset:-6%;background:url('https://d8j0ntlcm91z4.cloudfront.net/user_3HL2JjvRaed2EHyIIvQAThD5XM2/hf_20260802_013611_fa9faf47-7f92-4f67-bc4e-894c52c42b0b_min.webp') center/cover,url('assets/living-dusk.jpg') center/cover;transform:scale(1.05);animation:hz 2.6s var(--ease) forwards;filter:brightness(1.12) saturate(1.06)}
-@keyframes hz{to{transform:scale(1)}}
+.hero-img{position:absolute;inset:-6%;overflow:hidden}
+.hslide{position:absolute;inset:0;background-size:cover;background-position:center;opacity:0;will-change:transform,opacity;filter:brightness(1.1) saturate(1.05)}
+.hslide.s1{background-image:url('https://d8j0ntlcm91z4.cloudfront.net/user_3HL2JjvRaed2EHyIIvQAThD5XM2/hf_20260802_013611_fa9faf47-7f92-4f67-bc4e-894c52c42b0b_min.webp'),url('assets/living-dusk.jpg');animation:fadeCycle 24s linear infinite 0s,droneIn 24s linear infinite 0s}
+.hslide.s2{background-image:url('https://d8j0ntlcm91z4.cloudfront.net/user_3HL2JjvRaed2EHyIIvQAThD5XM2/hf_20260802_013734_a1a7d01f-d017-4316-a5e4-f0b6ad55814a_min.webp'),url('assets/hero-kitchen.jpg');animation:fadeCycle 24s linear infinite 8s,droneRise 24s linear infinite 8s}
+.hslide.s3{background-image:url('https://d8j0ntlcm91z4.cloudfront.net/user_3HL2JjvRaed2EHyIIvQAThD5XM2/hf_20260802_013838_10b8e856-d6f1-4d76-a6a4-86e11323c9c5_min.webp'),url('assets/modern-exterior.jpg');animation:fadeCycle 24s linear infinite 16s,droneDrift 24s linear infinite 16s}
+@keyframes fadeCycle{0%{opacity:0}5%{opacity:1}33.3%{opacity:1}39%{opacity:0}100%{opacity:0}}
+/* each scene plays during its first 39% of the timeline — camera moves are slow and stabilized, like a drone */
+@keyframes droneIn{0%{transform:scale(1.16) translateY(2.5%)}39%{transform:scale(1.02) translateY(-1%)}100%{transform:scale(1.02) translateY(-1%)}}
+@keyframes droneRise{0%{transform:scale(1.18) translateY(4%)}39%{transform:scale(1.03) translateY(-2.5%)}100%{transform:scale(1.03) translateY(-2.5%)}}
+@keyframes droneDrift{0%{transform:scale(1.16) translateX(3%)}39%{transform:scale(1.03) translateX(-2.5%)}100%{transform:scale(1.03) translateX(-2.5%)}}
+@media(prefers-reduced-motion:reduce){.hslide{animation:none!important}.hslide.s1{opacity:1}}
 .grade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(15,15,16,.58) 0%,rgba(15,15,16,.08) 24%,rgba(15,15,16,0) 55%,rgba(15,15,16,.38) 88%,rgba(15,15,16,.85) 100%)}
 .hero-in{position:relative;z-index:3;padding:0 var(--gutter);max-width:1060px}
 .hero-in::before{content:'';position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:150%;height:195%;background:radial-gradient(ellipse 50% 50% at 50% 50%,rgba(8,8,9,.72) 0%,rgba(8,8,9,.5) 45%,rgba(8,8,9,.2) 68%,transparent 82%);pointer-events:none;z-index:-1}
@@ -496,7 +505,11 @@ body.chov .cring{width:48px;height:48px}
 <!-- ============ DARK: HERO + SEARCH ============ -->
 <div class="dark">
 <header id="top">
-  <div class="hero-img" id="heroImg"></div>
+  <div class="hero-img" id="heroImg">
+    <div class="hslide s1"></div>
+    <div class="hslide s2"></div>
+    <div class="hslide s3"></div>
+  </div>
   <div class="grade"></div>
   <div class="hero-in">
     <h1><span class="ln"><span>Exceptional Properties.</span></span><span class="ln"><span><em>Extraordinary Results.</em></span></span></h1>
