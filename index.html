@@ -186,10 +186,14 @@ header{height:100svh;min-height:640px;position:relative;display:flex;align-items
 .hslide.s2{background-image:url('https://d8j0ntlcm91z4.cloudfront.net/user_3HL2JjvRaed2EHyIIvQAThD5XM2/hf_20260802_013734_a1a7d01f-d017-4316-a5e4-f0b6ad55814a_min.webp'),url('assets/hero-kitchen.jpg');animation:fadeCycle 24s linear infinite 8s,droneRise 24s linear infinite 8s}
 .hslide.s3{background-image:url('https://d8j0ntlcm91z4.cloudfront.net/user_3HL2JjvRaed2EHyIIvQAThD5XM2/hf_20260802_013838_10b8e856-d6f1-4d76-a6a4-86e11323c9c5_min.webp'),url('assets/modern-exterior.jpg');animation:fadeCycle 24s linear infinite 16s,droneDrift 24s linear infinite 16s}
 @keyframes fadeCycle{0%{opacity:0}5%{opacity:1}33.3%{opacity:1}39%{opacity:0}100%{opacity:0}}
-/* each scene plays during its first 39% of the timeline — camera moves are slow and stabilized, like a drone */
-@keyframes droneIn{0%{transform:scale(1.16) translateY(2.5%)}39%{transform:scale(1.02) translateY(-1%)}100%{transform:scale(1.02) translateY(-1%)}}
-@keyframes droneRise{0%{transform:scale(1.18) translateY(4%)}39%{transform:scale(1.03) translateY(-2.5%)}100%{transform:scale(1.03) translateY(-2.5%)}}
-@keyframes droneDrift{0%{transform:scale(1.16) translateX(3%)}39%{transform:scale(1.03) translateX(-2.5%)}100%{transform:scale(1.03) translateX(-2.5%)}}
+/* the flight: approach over the pool, accelerate THROUGH the glass into the lit living room,
+   dissolve to the foyer already inside, climb the staircase, then pull away on the exterior reveal */
+.hslide.s1{transform-origin:30% 48%}
+.hslide.s2{transform-origin:50% 42%}
+.hslide.s3{transform-origin:60% 50%}
+@keyframes droneIn{0%{transform:scale(1.02) translateY(1.5%)}22%{transform:scale(1.14) translateY(.5%)}39%{transform:scale(1.62) translateY(-1.5%)}100%{transform:scale(1.62) translateY(-1.5%)}}
+@keyframes droneRise{0%{transform:scale(1.06) translateY(3.5%)}39%{transform:scale(1.34) translateY(-3%)}100%{transform:scale(1.34) translateY(-3%)}}
+@keyframes droneDrift{0%{transform:scale(1.24) translateX(3%)}39%{transform:scale(1.04) translateX(-2%)}100%{transform:scale(1.04) translateX(-2%)}}
 @media(prefers-reduced-motion:reduce){.hslide{animation:none!important}.hslide.s1{opacity:1}}
 .grade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(15,15,16,.58) 0%,rgba(15,15,16,.08) 24%,rgba(15,15,16,0) 55%,rgba(15,15,16,.38) 88%,rgba(15,15,16,.85) 100%)}
 .hero-in{position:relative;z-index:3;padding:0 var(--gutter);max-width:1060px}
